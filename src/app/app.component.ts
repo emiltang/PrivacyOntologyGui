@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { ElectronService } from './core/services';
-import { TranslateService } from '@ngx-translate/core';
-import { APP_CONFIG } from '../environments/environment';
+import {Component} from '@angular/core';
+import {ElectronService} from './core/services';
+import {TranslateService} from '@ngx-translate/core';
+import {APP_CONFIG} from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,9 @@ import { APP_CONFIG } from '../environments/environment';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  showFiller = false;
+
   constructor(
     private electronService: ElectronService,
     private translate: TranslateService
