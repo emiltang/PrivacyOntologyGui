@@ -13,6 +13,7 @@ import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [HomeComponent],
+  exports: [],
   imports: [
     CommonModule,
     SharedModule,
@@ -21,7 +22,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatGridListModule,
     MatCardModule,
     FlexLayoutModule,
-    MatIconModule
+    MatIconModule,
   ]
 })
 export class HomeModule {

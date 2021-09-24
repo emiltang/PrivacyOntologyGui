@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "name": "Building_1",
+      "type": "https: //ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Building",
+      "address": "https: //ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Building_1",
+      "superType": "https: //ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+      "attributes": []
+    },
+    {
+      "name": "AverageBMI_2",
+      "type": "https: //ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#AverageBMI",
+      "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#AverageBMI_2",
+      "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#External",
+      "attributes": [
+        {
+          "dataType": "int",
+          "name": "TemplateCount",
+          "value": "None"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "predicate": "https: //ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+      "subject": "https: //ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Building_1",
+      "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#AverageBMI_2"
+    }
+  ],
+  "namespace": "https: //ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#"
+}

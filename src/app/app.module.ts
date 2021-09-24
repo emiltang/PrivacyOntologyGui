@@ -15,12 +15,12 @@ import {HomeModule} from './home/home.module';
 import {DetailModule} from './detail/detail.module';
 
 import {AppComponent} from './app.component';
-import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {ToolbarModule} from './toolbar/toolbar.module';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 // AoT requires an exported function for factories
 const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader => new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -36,7 +36,6 @@ const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader => new Transla
     HomeModule,
     DetailModule,
     AppRoutingModule,
-    MatButtonModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     TranslateModule.forRoot({
@@ -47,7 +46,8 @@ const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader => new Transla
       }
     }),
     MatSidenavModule,
-    MatToolbarModule,
+    ToolbarModule,
+    MatButtonModule,
     MatIconModule
   ],
   providers: [],
