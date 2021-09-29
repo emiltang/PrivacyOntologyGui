@@ -4,10 +4,10 @@
   "main": "main.js",
   "private": true,
   "dependencies": {
-    "@electron/remote": "2.0.1",
     "ngx-electron": "^2.2.0"
   },
   "devDependencies": {
-    "electron": "^12.2.0"
+      "@comunica/actor-init-sparql": "^1.22.1",
+      "electron": "^12.2.0"
   }
 }
