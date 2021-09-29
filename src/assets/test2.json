@@ -2,7 +2,7 @@
   "nodes": [
     {
       "name": "Room_1",
-      "type": "https: //ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Room",
+      "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Room",
       "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room_1",
       "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
       "attributes": []
@@ -21,7 +21,7 @@
         {
           "dataType": "double",
           "name": "TemporalResolution",
-          "value": "60"
+          "value": 60
         }
       ]
     }

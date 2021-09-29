@@ -1,7 +1,8 @@
-import {app, BrowserWindow, screen} from 'electron';
+import {app, BrowserWindow, ipcMain, screen} from 'electron';
 import * as path from 'path';
 import * as fs from 'fs';
 import * as url from 'url';
+import {ActorInitSparql, IQueryResultBindings, newEngine} from '@comunica/actor-init-sparql';
 
 // Initialize remote module
 require('@electron/remote/main').initialize();
@@ -25,7 +26,7 @@ function createWindow(): BrowserWindow {
       nodeIntegration: true,
       allowRunningInsecureContent: (serve) ? true : false,
       contextIsolation: false,  // false if you want to run e2e test with Spectron
-      //enableRemoteModule: true // true if you want to run e2e test with Spectron or use remote module in renderer context (ie. Angular)
+      enableRemoteModule: true // true if you want to run e2e test with Spectron or use remote module in renderer context (ie. Angular)
     },
   });
 
@@ -91,3 +92,27 @@ try {
   // Catch Error
   // throw e;
 }
+
+ipcMain.on('get-context', event => {
+  const queryString = `
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        SELECT ?s
+        WHERE { ?s rdfs:subClassOf* <https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context>}
+  `
+  const engine: ActorInitSparql = newEngine();
+  const result = engine.query(queryString, {
+      sources: [
+        {type: 'file', value: 'http://localhost:4200/assets/privacyvunlv2.rdf'},
+        {type: 'file', value: 'http://localhost:4200/assets/privacyvunl.rdf'},
+        {type: 'file', value: 'http://localhost:4200/assets/smartbuildingprivacyvunl.rdf'}
+      ],
+    }
+  ) as unknown as IQueryResultBindings;
+
+  result.bindingsStream.on('data', binding => {
+    console.log(binding.get('?s').value);
+    console.log(binding.get('?s').termType);
+  });
+  result.bindingsStream.on('error', console.error);
+})

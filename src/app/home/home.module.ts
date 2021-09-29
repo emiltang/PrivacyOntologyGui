@@ -10,6 +10,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatIconModule} from '@angular/material/icon';
+import {ObjectModule} from '../object/object.module';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -23,6 +24,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatCardModule,
     FlexLayoutModule,
     MatIconModule,
+    ObjectModule,
   ]
 })
 export class HomeModule {

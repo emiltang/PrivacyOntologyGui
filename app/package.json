@@ -4,6 +4,10 @@
   "main": "main.js",
   "private": true,
   "dependencies": {
-    "@electron/remote": "2.0.1"
+    "@electron/remote": "2.0.1",
+    "ngx-electron": "^2.2.0"
+  },
+  "devDependencies": {
+    "electron": "^12.2.0"
   }
 }

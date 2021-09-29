@@ -1,0 +1,40 @@
+<!--Title-->
+<h2 mat-dialog-title>{{node.name}}</h2>
+<!--Content-->
+<mat-dialog-content class="mat-typography" fxLayout="column" fxLayoutGap="1rem">
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input [(ngModel)]="node.name" matInput placeholder="name">
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+  <mat-divider></mat-divider>
+  <mat-form-field appearance="fill">
+    <mat-label>Type</mat-label>
+    <mat-select>
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+    <mat-hint>Here's the dropdown arrow ^</mat-hint>
+  </mat-form-field>
+  <!--Attributes-->
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Attributes
+      </mat-panel-title>
+      <mat-panel-description>
+        This is a summary of the content
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div>
+      <mat-card>
+
+      </mat-card>
+    </div>
+  </mat-expansion-panel>
+  <mat-divider></mat-divider>
+</mat-dialog-content>
+<!--Footer-->
+<!--suppress HtmlDeprecatedAttribute-->
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

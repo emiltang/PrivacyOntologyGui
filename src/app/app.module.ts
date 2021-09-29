@@ -12,7 +12,6 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import {HomeModule} from './home/home.module';
-import {DetailModule} from './detail/detail.module';
 
 import {AppComponent} from './app.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -21,6 +20,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {ToolbarModule} from './toolbar/toolbar.module';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {NgxElectronModule} from 'ngx-electron';
 
 // AoT requires an exported function for factories
 const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader => new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -34,10 +34,10 @@ const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader => new Transla
     CoreModule,
     SharedModule,
     HomeModule,
-    DetailModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    NgxElectronModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
