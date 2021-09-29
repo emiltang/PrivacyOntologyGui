@@ -7,15 +7,15 @@ const options = {headers: {'Content-Type': 'application/json'}};
 const url = 'http://localhost:5002/api/v1';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class ToolchainApiService {
 
-  constructor(private http: HttpClient) {
-  }
+    constructor(private http: HttpClient) {
+    }
 
-  // noinspection JSUnusedGlobalSymbols
-  public postToolchain(data: string): Observable<any> {
-    return this.http.post<any>(url, data, options);
-  }
+    // noinspection JSUnusedGlobalSymbols
+    public postToolchain(data: string): Observable<any> {
+        return this.http.post<any>(url, data, options);
+    }
 }

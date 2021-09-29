@@ -11,22 +11,22 @@ import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
-  declarations: [
-    ToolbarComponent,
-    SelectOntologyComponent
-  ],
-  exports: [
-    ToolbarComponent
-  ],
-  imports: [
-    CommonModule,
-    MatToolbarModule,
-    MatIconModule,
-    HomeModule,
-    MatSelectModule,
-    ReactiveFormsModule,
-    MatButtonModule
-  ]
+    declarations: [
+        ToolbarComponent,
+        SelectOntologyComponent
+    ],
+    exports: [
+        ToolbarComponent
+    ],
+    imports: [
+        CommonModule,
+        MatToolbarModule,
+        MatIconModule,
+        HomeModule,
+        MatSelectModule,
+        ReactiveFormsModule,
+        MatButtonModule
+    ]
 })
 export class ToolbarModule {
 }

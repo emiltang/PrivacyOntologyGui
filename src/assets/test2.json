@@ -1,37 +1,37 @@
 {
-  "nodes": [
-    {
-      "name": "Room_1",
-      "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Room",
-      "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room_1",
-      "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
-      "attributes": []
-    },
-    {
-      "name": "CO2",
-      "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
-      "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2",
-      "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
-      "attributes": [
+    "nodes": [
         {
-          "dataType": "int",
-          "name": "TemplateCount",
-          "value": ""
+            "name": "Room_1",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room_1",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
         },
         {
-          "dataType": "double",
-          "name": "TemporalResolution",
-          "value": 60
+            "name": "CO2",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "int",
+                    "name": "TemplateCount",
+                    "value": ""
+                },
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "links": [
-    {
-      "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
-      "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room_1",
-      "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2"
-    }
-  ],
-  "namespace": "https: //ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#"
+    ],
+    "links": [
+        {
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room_1",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2"
+        }
+    ],
+    "namespace": "https: //ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#"
 }

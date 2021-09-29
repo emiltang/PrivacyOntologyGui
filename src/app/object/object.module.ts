@@ -15,26 +15,26 @@ import {MatDividerModule} from '@angular/material/divider';
 
 
 @NgModule({
-  declarations: [
-    ObjectComponent,
-    ObjectDialogComponent
-  ],
-  exports: [
-    ObjectComponent
-  ],
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatSelectModule,
-    FlexLayoutModule,
-    MatExpansionModule,
-    MatDividerModule
-  ]
+    declarations: [
+        ObjectComponent,
+        ObjectDialogComponent
+    ],
+    exports: [
+        ObjectComponent
+    ],
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatButtonModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule,
+        MatSelectModule,
+        FlexLayoutModule,
+        MatExpansionModule,
+        MatDividerModule
+    ]
 })
 export class ObjectModule {
 }

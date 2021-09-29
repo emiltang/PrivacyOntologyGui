@@ -13,19 +13,19 @@ import {MatIconModule} from '@angular/material/icon';
 import {ObjectModule} from '../object/object.module';
 
 @NgModule({
-  declarations: [HomeComponent],
-  exports: [],
-  imports: [
-    CommonModule,
-    SharedModule,
-    HomeRoutingModule,
-    MatButtonModule,
-    MatGridListModule,
-    MatCardModule,
-    FlexLayoutModule,
-    MatIconModule,
-    ObjectModule,
-  ]
+    declarations: [HomeComponent],
+    exports: [],
+    imports: [
+        CommonModule,
+        SharedModule,
+        HomeRoutingModule,
+        MatButtonModule,
+        MatGridListModule,
+        MatCardModule,
+        FlexLayoutModule,
+        MatIconModule,
+        ObjectModule,
+    ]
 })
 export class HomeModule {
 }
