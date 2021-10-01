@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {ObjectDialogComponent} from './object-dialog/object-dialog.component';
+import INode from '../core/model/INode';
 
 @Component({
     selector: 'app-object',
@@ -9,6 +10,8 @@ import {ObjectDialogComponent} from './object-dialog/object-dialog.component';
 })
 export class ObjectComponent implements OnInit {
 
+    @Input() node?: INode;
+
     constructor(private dialog: MatDialog) {
     }
 
@@ -16,7 +19,7 @@ export class ObjectComponent implements OnInit {
     }
 
     public openDialog() {
-        const dialog = this.dialog.open(ObjectDialogComponent);
+        const dialog = this.dialog.open(ObjectDialogComponent, this.node);
         dialog.afterClosed().subscribe(result => {
             console.log(`Dialog result: ${result}`);
         });

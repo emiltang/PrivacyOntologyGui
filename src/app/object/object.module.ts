@@ -12,6 +12,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import {MatDividerModule} from '@angular/material/divider';
         MatSelectModule,
         FlexLayoutModule,
         MatExpansionModule,
-        MatDividerModule
+        MatDividerModule,
+        MatIconModule
     ]
 })
 export class ObjectModule {

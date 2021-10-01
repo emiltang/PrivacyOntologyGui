@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
 import ontologies from '../../../assets/ontologies.json';
 import {ElectronService} from 'ngx-electron';
+import {defer, Observable} from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
 })
 export class OntologiesService {
-
 
     constructor(private electronService: ElectronService) {
     }
@@ -15,9 +15,7 @@ export class OntologiesService {
         return ontologies.ontologies;
     }
 
-
-    public context() {
-        this.electronService.ipcRenderer.send('get-context');
+    public get context(): Observable<string[]> {
+        return defer(async () => await this.electronService.ipcRenderer.invoke('get-context'));
     }
-
 }

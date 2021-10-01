@@ -2,7 +2,7 @@ import {app, BrowserWindow, ipcMain as ipc, screen} from 'electron';
 import * as path from 'path';
 import * as fs from 'fs';
 import * as url from 'url';
-import {queryContext} from "./sparql";
+import {Sparql} from "./sparql";
 
 // Initialize remote module
 import {initialize} from "@electron/remote/main";
@@ -12,10 +12,9 @@ initialize();
 let win: BrowserWindow = null;
 const args = process.argv.slice(1), serve = args.some(val => val === '--serve');
 
-
-ipc.on('get-context', event => {
-    queryContext()
-})
+// IPC
+ipc.handle('get-context', async () => await Sparql.queryContext());
+ipc.handle('get-data', async () => await Sparql.queryData());
 
 function createWindow(): BrowserWindow {
 
@@ -23,6 +22,7 @@ function createWindow(): BrowserWindow {
     const size = electronScreen.getPrimaryDisplay().workAreaSize;
 
     // Create the browser window.
+    // noinspection RedundantConditionalExpressionJS
     win = new BrowserWindow({
         x: 0,
         y: 0,

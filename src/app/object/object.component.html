@@ -1,11 +1,11 @@
 <mat-card>
-    <mat-card-title-group>
-        <mat-card-title>title</mat-card-title>
-        <mat-card-subtitle>type</mat-card-subtitle>
-    </mat-card-title-group>
-    <mat-card-content></mat-card-content>
-    <mat-card-actions>
+    <mat-card-header>
+        <mat-icon mat-card-avatar>assessment</mat-icon>
+        <mat-card-title>{{node.name}}</mat-card-title>
+        <mat-card-subtitle>{{node.type.displayName}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions align="end">
+        <button (click)="openDialog()" mat-button>DELETE</button>
         <button (click)="openDialog()" mat-button>EDIT</button>
     </mat-card-actions>
-    <mat-card-footer></mat-card-footer>
 </mat-card>

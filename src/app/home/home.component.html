@@ -2,7 +2,7 @@
      fxLayout="row wrap"
      fxLayoutAlign="start start"
      fxLayoutGap="1rem grid">
-    <app-object *ngFor="let num of array"></app-object>
+    <app-object *ngFor="let node of nodes | async" [node]="node"></app-object>
     <mat-card>
         <mat-card-content>
             <button mat-button>
