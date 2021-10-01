@@ -18,4 +18,8 @@ export class OntologiesService {
     public get context(): Observable<string[]> {
         return defer(async () => await this.electronService.ipcRenderer.invoke('get-context'));
     }
+
+    public get data(): Observable<string[]> {
+        return defer(async () => await this.electronService.ipcRenderer.invoke('get-data'));
+    }
 }

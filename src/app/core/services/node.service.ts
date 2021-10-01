@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import INode from '../model/INode';
+import INode, {NodeType} from '../model/INode';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {OntologiesService} from './ontologies.service';
 import {HttpClient} from '@angular/common/http';
@@ -47,6 +47,7 @@ export class NodeService {
     private async init(): Promise<INode[]> {
         const dto = await this.httpClient.get<DTO>('./assets/test1.json').toPromise();
         return dto.nodes.map(nodeDTO => ({
+            nodeType: NodeType.data,
             id: uuidv4(),
             name: nodeDTO.name,
             type: {displayName: NodeService.truncateDisplayName(nodeDTO.type), fullName: nodeDTO.type},
