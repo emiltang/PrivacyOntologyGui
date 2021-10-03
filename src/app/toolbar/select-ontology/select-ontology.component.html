@@ -1,6 +1,6 @@
 <mat-form-field appearance="fill">
     <mat-label>Ontologies</mat-label>
-    <mat-select [formControl]="formControl" multiple>
+    <mat-select [formControl]="formControl">
         <mat-option *ngFor="let ontology of ontologies" [value]="ontology">{{ontology}}</mat-option>
     </mat-select>
 </mat-form-field>

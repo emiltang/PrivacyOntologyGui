@@ -27,7 +27,7 @@ export class NodeService {
      *
      * @param str removes everything before '#'
      */
-    private static truncateDisplayName(str: string): string {
+    public static truncateDisplayName(str: string): string {
         return str.replace(/^.*#(.*)$/, '$1');
     }
 

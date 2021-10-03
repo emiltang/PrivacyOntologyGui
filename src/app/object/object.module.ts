@@ -13,12 +13,15 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatIconModule} from '@angular/material/icon';
+import { NewObjectComponent } from './new-object/new-object.component';
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 
 @NgModule({
     declarations: [
         ObjectComponent,
-        ObjectDialogComponent
+        ObjectDialogComponent,
+        NewObjectComponent
     ],
     exports: [
         ObjectComponent
@@ -35,7 +38,8 @@ import {MatIconModule} from '@angular/material/icon';
         FlexLayoutModule,
         MatExpansionModule,
         MatDividerModule,
-        MatIconModule
+        MatIconModule,
+        MatTooltipModule
     ]
 })
 export class ObjectModule {

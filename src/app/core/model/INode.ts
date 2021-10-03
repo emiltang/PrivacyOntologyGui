@@ -1,6 +1,6 @@
 import IAttribute from './IAttribute';
 import ILink from './ILink';
-import IField from './IField';
+import IRdfType from './IRdfType';
 
 export enum NodeType { data, context}
 
@@ -9,8 +9,8 @@ export default interface INode {
     name: string;
     comment?: string;
     nodeType: NodeType;
-    type: IField;
-    superType: IField;
+    type: IRdfType;
+    superType: IRdfType;
     attributes: IAttribute<any>[];
     links: ILink[];
 }

@@ -1,4 +1,4 @@
-export default interface IField {
+export default interface IRdfType {
     displayName: string;
     fullName: string;
 }

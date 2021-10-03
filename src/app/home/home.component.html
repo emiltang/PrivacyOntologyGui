@@ -5,7 +5,7 @@
     <app-object *ngFor="let node of nodes | async" [node]="node"></app-object>
     <mat-card>
         <mat-card-content>
-            <button mat-button>
+            <button mat-button (click)="openNewNodeDialog()">
                 <mat-icon>add</mat-icon>
             </button>
         </mat-card-content>

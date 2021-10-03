@@ -3,11 +3,12 @@ import {IQueryResultBindings, newEngine} from "@comunica/actor-init-sparql";
 export namespace Sparql {
 
     const myEngine = newEngine();
+
     const queryContextString = `
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         SELECT ?s
-        WHERE { ?s rdfs:subClassOf* <https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context>}
+        WHERE { ?s rdfs:subClassOf* <https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context> }
     `
 
     export async function queryContext(): Promise<string[]> {
@@ -26,7 +27,7 @@ export namespace Sparql {
         PREFIX owl: <http://www.w3.org/2002/07/owl#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         SELECT ?s
-        WHERE { ?s rdfs:subClassOf* <https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Data>}
+        WHERE { ?s rdf:type/rdfs:subClassOf* <https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#Data> }
     `
 
     export async function queryData(): Promise<string[]> {

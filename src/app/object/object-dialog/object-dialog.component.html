@@ -11,7 +11,11 @@
     <mat-form-field appearance="fill">
         <mat-label>Type</mat-label>
         <mat-select>
-            <mat-option *ngFor="let c of context | async" value="option">{{c}}</mat-option>
+            <mat-option *ngFor="let rdfType of nodeType | async "
+                        matTooltip="{{rdfType.fullName}}"
+                        value="option">
+                {{rdfType.displayName}}
+            </mat-option>
         </mat-select>
         <mat-hint>Here's the dropdown arrow ^</mat-hint>
     </mat-form-field>
