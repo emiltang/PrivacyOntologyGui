@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {NodeService} from '../core/services/node.service';
-import INode from '../core/model/INode';
 import {Observable} from 'rxjs';
 import {MatDialog} from '@angular/material/dialog';
 import {NewObjectComponent} from '../object/new-object/new-object.component';
 import {ObjectDialogComponent} from '../object/object-dialog/object-dialog.component';
+import {INode} from '../core/model';
 
 @Component({
     selector: 'app-home',
@@ -16,7 +16,9 @@ export class HomeComponent implements OnInit {
 
     nodes: Observable<INode[]>;
 
-    constructor(private router: Router, private nodeService: NodeService, private dialog: MatDialog) {
+    constructor(private router: Router,
+                private nodeService: NodeService,
+                private dialog: MatDialog) {
     }
 
     ngOnInit(): void {
@@ -25,11 +27,14 @@ export class HomeComponent implements OnInit {
 
     public openNewNodeDialog() {
         const dialog = this.dialog.open(NewObjectComponent);
-        dialog.afterClosed().subscribe(this.openEditNodeDialog);
+        dialog.afterClosed().subscribe(node => {
+            console.log(`Dialog result: ${node}`);
+            this.dialog
+                .open(ObjectDialogComponent, {data: node})
+                .afterClosed()
+                .subscribe(value => console.log(value));
+        });
     }
 
-    public openEditNodeDialog(node: INode) {
-        console.log(`Dialog result: ${node}`);
-        this.dialog.open(ObjectDialogComponent, node);
-    }
+
 }

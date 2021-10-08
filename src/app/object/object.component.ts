@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
+import {MatDialog} from '@angular/material/dialog';
 import {ObjectDialogComponent} from './object-dialog/object-dialog.component';
-import INode, {NodeType} from '../core/model/INode';
+import {INode, NodeType} from '../core/model';
 
 @Component({
     selector: 'app-object',

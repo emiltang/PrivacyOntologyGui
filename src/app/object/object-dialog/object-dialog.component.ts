@@ -1,9 +1,8 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import INode, {NodeType} from '../../core/model/INode';
 import {OntologiesService} from '../../core/services/ontologies.service';
 import {Observable} from 'rxjs';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
-import IRdfType from '../../core/model/IRdfType';
+import {INode, IRdfType, NodeType} from '../../core/model';
 
 @Component({
     selector: 'app-object-dialog',
@@ -12,8 +11,9 @@ import IRdfType from '../../core/model/IRdfType';
 })
 export class ObjectDialogComponent implements OnInit {
 
-
     nodeType: Observable<IRdfType[]>;
+    superType: Observable<IRdfType[]>;
+    disabled: boolean = false;
 
     constructor(@Inject(MAT_DIALOG_DATA)
                 public node: INode,
@@ -30,6 +30,14 @@ export class ObjectDialogComponent implements OnInit {
                 this.nodeType = this.ontologiesService.context;
                 break;
         }
-    }
 
+        switch (this.node.nodeType) {
+            case NodeType.data:
+                this.superType = this.ontologiesService.dataTypes;
+                break;
+            case NodeType.context:
+                this.disabled = true;
+                break;
+        }
+    }
 }

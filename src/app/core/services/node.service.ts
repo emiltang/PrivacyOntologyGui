@@ -1,10 +1,10 @@
 import {Injectable} from '@angular/core';
-import INode, {NodeType} from '../model/INode';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {OntologiesService} from './ontologies.service';
 import {HttpClient} from '@angular/common/http';
-import {DTO} from '../dto/dto';
+import {DTO} from '../dto';
 import {v4 as uuidv4} from 'uuid';
+import {INode, NodeType} from '../model';
 
 
 @Injectable({

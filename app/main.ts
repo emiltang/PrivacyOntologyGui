@@ -15,6 +15,7 @@ const args = process.argv.slice(1), serve = args.some(val => val === '--serve');
 // IPC
 ipc.handle('get-context', async () => await Sparql.queryContext());
 ipc.handle('get-data', async () => await Sparql.queryData());
+ipc.handle('get-data-types', async () => await Sparql.queryDataTypes());
 
 function createWindow(): BrowserWindow {
 

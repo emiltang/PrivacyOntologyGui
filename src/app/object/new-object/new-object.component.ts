@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialogRef} from '@angular/material/dialog';
-import INode, {NodeType} from '../../core/model/INode';
 import {v4 as uuidv4} from 'uuid';
+import {INode, NodeType} from '../../core/model';
 
 @Component({
     selector: 'app-new-object',
