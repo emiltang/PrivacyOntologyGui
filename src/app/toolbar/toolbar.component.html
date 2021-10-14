@@ -1,16 +1,17 @@
 <mat-toolbar color="primary">
     <!-- TODO: fix drawer -->
-    <button (click)="drawer.toggle()" aria-label="Example icon-button with menu icon" class="example-icon"
+    <!-- TODO: use fxLayout -->
+    <button (click)="drawer.toggle()"
+            aria-label="Example icon-button with menu icon"
+            class="example-icon"
             mat-icon-button>
         <mat-icon>menu</mat-icon>
     </button>
     <span>My App</span>
     <app-select-ontology></app-select-ontology>
     <span class="spacer"></span>
-    <button aria-label="Example icon-button with heart icon" class="example-icon favorite-icon" mat-icon-button>
-        <mat-icon>favorite</mat-icon>
-    </button>
-    <button aria-label="Example icon-button with share icon" class="example-icon" mat-icon-button>
-        <mat-icon>share</mat-icon>
+    <button mat-raised-button>
+        <mat-icon>verified_user</mat-icon>
+        ANALYZE
     </button>
 </mat-toolbar>

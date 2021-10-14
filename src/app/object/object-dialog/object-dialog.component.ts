@@ -3,6 +3,7 @@ import {OntologiesService} from '../../core/services/ontologies.service';
 import {Observable} from 'rxjs';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {INode, IRdfType, NodeType} from '../../core/model';
+import { FormControl } from '@angular/forms';
 
 @Component({
     selector: 'app-object-dialog',
@@ -13,8 +14,8 @@ export class ObjectDialogComponent implements OnInit {
 
     nodeType: Observable<IRdfType[]>;
     superType: Observable<IRdfType[]>;
-    disabled: boolean = false;
-
+    disabled = false;
+    formControl = new FormControl('');
     constructor(@Inject(MAT_DIALOG_DATA)
                 public node: INode,
                 private ontologiesService: OntologiesService) {

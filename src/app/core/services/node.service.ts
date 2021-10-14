@@ -1,10 +1,11 @@
-import {Injectable} from '@angular/core';
-import {BehaviorSubject, Observable} from 'rxjs';
-import {OntologiesService} from './ontologies.service';
-import {HttpClient} from '@angular/common/http';
-import {DTO} from '../dto';
-import {v4 as uuidv4} from 'uuid';
-import {INode, NodeType} from '../model';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { OntologiesService } from './ontologies.service';
+import { HttpClient } from '@angular/common/http';
+import { DTO } from '../dto';
+import { v4 as uuidv4 } from 'uuid';
+import { INode, NodeType } from '../model';
 
 
 @Injectable({
@@ -42,6 +43,12 @@ export class NodeService {
     public deleteNode(node: INode): void {
         const index = this._nodes.value.findIndex(value => value.id === node.id);
         this._nodes.getValue().splice(index, 1);
+    }
+
+    public links(node: INode): Observable<INode[]> {
+        return this.nodes.pipe(
+            map(n => n.filter(x => x.id !== node.id))
+        );
     }
 
     private async init(): Promise<INode[]> {
