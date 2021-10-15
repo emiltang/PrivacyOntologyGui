@@ -1,8 +1,8 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {OntologiesService} from '../../core/services/ontologies.service';
-import {Observable} from 'rxjs';
-import {MAT_DIALOG_DATA} from '@angular/material/dialog';
-import {INode, IRdfType, NodeType} from '../../core/model';
+import { Component, Inject, OnInit } from '@angular/core';
+import { OntologiesService } from '../../core/services/ontologies.service';
+import { Observable } from 'rxjs';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { INode, NodeType } from '../../core/model';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -12,13 +12,16 @@ import { FormControl } from '@angular/forms';
 })
 export class ObjectDialogComponent implements OnInit {
 
-    nodeType: Observable<IRdfType[]>;
-    superType: Observable<IRdfType[]>;
+    nodeType: Observable<string[]>;
+    superType: Observable<string[]>;
     disabled = false;
     formControl = new FormControl('');
+
     constructor(@Inject(MAT_DIALOG_DATA)
                 public node: INode,
-                private ontologiesService: OntologiesService) {
+                private ontologiesService: OntologiesService,
+                public matDialogRef: MatDialogRef<ObjectDialogComponent>) {
+        matDialogRef.beforeClosed().subscribe(() => matDialogRef.close(this.node));
     }
 
     public ngOnInit() {
@@ -40,5 +43,9 @@ export class ObjectDialogComponent implements OnInit {
                 this.disabled = true;
                 break;
         }
+    }
+
+    typeof(value: any) {
+        return typeof value;
     }
 }

@@ -7,12 +7,12 @@
 <mat-dialog-content class="mat-typography"
                     fxLayout="row"
                     fxLayoutGap="1rem">
-    <!--Name-->
     <div>
+        <!--Name-->
         <mat-form-field appearance="fill">
             <mat-label>Name</mat-label>
-            <input matInput
-                   [(ngModel)]="node.name"
+            <input [(ngModel)]="node.name"
+                   matInput
                    placeholder="name">
             <mat-hint>Enter name of the node</mat-hint>
         </mat-form-field>
@@ -20,14 +20,11 @@
         <!--Base Type-->
         <mat-form-field appearance="fill">
             <mat-label>Type</mat-label>
-            <mat-select name="type"
-                        id="type"
-                        [(ngModel)]="node.type"
-                        [(value)]="nodeType">
+            <mat-select [(ngModel)]="node.type">
                 <mat-option *ngFor="let rdfType of nodeType | async"
-                            matTooltip="{{rdfType.fullName}}"
-                            [value]="node">
-                    {{rdfType.displayName}}
+                            [value]="rdfType"
+                            matTooltip="{{rdfType}}">
+                    {{rdfType | truncateRdfUrl}}
                 </mat-option>
             </mat-select>
             <mat-hint>Type of the node</mat-hint>
@@ -36,22 +33,23 @@
         <!--Super Type-->
         <mat-form-field *ngIf="disabled" appearance="fill">
             <mat-label>Super Type</mat-label>
-            <mat-select disabled="true">
+            <mat-select [(ngModel)]="node.superType"
+                        disabled="true">
                 <mat-option *ngFor="let rdfType of superType | async"
-                            matTooltip="{{rdfType.fullName}}"
-                            value="option">
-                    {{rdfType.displayName}}
+                            [value]="rdfType"
+                            matTooltip="{{rdfType}}">
+                    {{rdfType | truncateRdfUrl}}
                 </mat-option>
             </mat-select>
             <mat-hint>Super type</mat-hint>
         </mat-form-field>
         <mat-form-field *ngIf="!disabled" appearance="fill">
             <mat-label>Super Type</mat-label>
-            <mat-select>
+            <mat-select [(ngModel)]="node.superType">
                 <mat-option *ngFor="let rdfType of superType | async "
-                            matTooltip="{{rdfType.fullName}}"
-                            value="option">
-                    {{rdfType.displayName}}
+                            [value]="rdfType"
+                            matTooltip="{{rdfType}}">
+                    {{rdfType | truncateRdfUrl}}
                 </mat-option>
             </mat-select>
             <mat-hint>Here's the dropdown arrow ^</mat-hint>
@@ -69,8 +67,9 @@
                 </mat-panel-description>
             </mat-expansion-panel-header>
             <div>
-                <mat-card>
-
+                <mat-card *ngFor="let attribute of node.attributes">
+                    <mat-card-title>{{attribute.name}}</mat-card-title>
+                    <mat-card-subtitle>{{typeof(attribute.value)}} {{attribute.value}}</mat-card-subtitle>
                 </mat-card>
             </div>
         </mat-expansion-panel>
@@ -85,8 +84,8 @@
             </mat-expansion-panel-header>
             <div>
                 <mat-card *ngFor="let link of node.links">
-                    <mat-card-title>{{link.object}}</mat-card-title>
-                    <mat-card-subtitle>{{link.predicate}}</mat-card-subtitle>
+                    <mat-card-title>{{link.object | truncateRdfUrl}}</mat-card-title>
+                    <mat-card-subtitle>{{link.predicate | truncateRdfUrl}}</mat-card-subtitle>
                 </mat-card>
             </div>
         </mat-expansion-panel>

@@ -23,8 +23,8 @@ export class ToolchainApiService {
             nodes: nodes.map(node => ({
                 name: node.name,
                 address: node.name,
-                type: node.type.fullName,
-                superType: node.superType.fullName,
+                type: node.type,
+                superType: node.superType,
                 attributes: node.attributes.map(attr => ({
                     value: attr.value,
                     name: attr.name,

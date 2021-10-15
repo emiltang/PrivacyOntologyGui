@@ -1,11 +1,11 @@
-import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
-import {NodeService} from '../core/services/node.service';
-import {Observable} from 'rxjs';
-import {MatDialog} from '@angular/material/dialog';
-import {NewObjectComponent} from '../object/new-object/new-object.component';
-import {ObjectDialogComponent} from '../object/object-dialog/object-dialog.component';
-import {INode} from '../core/model';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NodeService } from '../core/services/node.service';
+import { Observable } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { NewObjectComponent } from '../object/new-object/new-object.component';
+import { ObjectDialogComponent } from '../object/object-dialog/object-dialog.component';
+import { INode } from '../core/model';
 
 @Component({
     selector: 'app-home',
@@ -26,15 +26,13 @@ export class HomeComponent implements OnInit {
     }
 
     public openNewNodeDialog() {
-        const dialog = this.dialog.open(NewObjectComponent);
-        dialog.afterClosed().subscribe(node => {
-            console.log(`Dialog result: ${node}`);
-            this.dialog
+        this.dialog
+            .open(NewObjectComponent)
+            .afterClosed()
+            .subscribe((node: INode) => this.dialog
                 .open(ObjectDialogComponent, {data: node})
                 .afterClosed()
-                .subscribe(value => console.log(value));
-        });
+                .subscribe((value: INode) => this.nodeService.addNode(value))
+            );
     }
-
-
 }

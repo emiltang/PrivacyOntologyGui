@@ -1,6 +1,5 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" fxLayout="row">
     <!-- TODO: fix drawer -->
-    <!-- TODO: use fxLayout -->
     <button (click)="drawer.toggle()"
             aria-label="Example icon-button with menu icon"
             class="example-icon"
@@ -9,7 +8,7 @@
     </button>
     <span>My App</span>
     <app-select-ontology></app-select-ontology>
-    <span class="spacer"></span>
+    <span fxFlex ></span>
     <button mat-raised-button>
         <mat-icon>verified_user</mat-icon>
         ANALYZE

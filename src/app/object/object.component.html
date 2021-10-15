@@ -2,10 +2,10 @@
     <mat-card-header>
         <mat-icon mat-card-avatar>{{icon}}</mat-icon>
         <mat-card-title>{{node.name}}</mat-card-title>
-        <mat-card-subtitle>{{node.type.displayName}}</mat-card-subtitle>
+        <mat-card-subtitle>{{node.type | truncateRdfUrl}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-actions align="end">
-        <button (click)="openDialog()" mat-button>DELETE</button>
+        <button (click)="deleteNode()" mat-button>DELETE</button>
         <button (click)="openDialog()" mat-button>EDIT</button>
     </mat-card-actions>
 </mat-card>

@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import ontologies from '../../../assets/ontologies.json';
 import { ElectronService } from 'ngx-electron';
 import { defer, Observable } from 'rxjs';
-import { IRdfType } from '../model';
-import { NodeService } from './node.service';
 
 @Injectable({
     providedIn: 'root'
@@ -17,33 +15,15 @@ export class OntologiesService {
         return ontologies.ontologies;
     }
 
-    public get context(): Observable<IRdfType[]> {
-        return defer(async () => {
-            const result = await this.electronService.ipcRenderer.invoke('get-context');
-            return result.map(str => ({
-                displayName: NodeService.truncateDisplayName(str),
-                fullName: str
-            }));
-        });
+    public get context(): Observable<string[]> {
+        return defer(async () => await this.electronService.ipcRenderer.invoke('get-context'));
     }
 
-    public get data(): Observable<IRdfType[]> {
-        return defer(async () => {
-            const result = await this.electronService.ipcRenderer.invoke('get-data');
-            return result.map(str => ({
-                displayName: NodeService.truncateDisplayName(str),
-                fullName: str
-            }));
-        });
+    public get data(): Observable<string[]> {
+        return defer(async () => await this.electronService.ipcRenderer.invoke('get-data'));
     }
 
-    public get dataTypes(): Observable<IRdfType[]> {
-        return defer(async () => {
-            const result = await this.electronService.ipcRenderer.invoke('get-data-types');
-            return result.map(str => ({
-                displayName: NodeService.truncateDisplayName(str),
-                fullName: str
-            }));
-        });
+    public get dataTypes(): Observable<string[]> {
+        return defer(async () => await this.electronService.ipcRenderer.invoke('get-data-types'));
     }
 }

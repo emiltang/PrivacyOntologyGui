@@ -15,13 +15,9 @@ export interface INode {
     name: string;
     comment?: string;
     nodeType: NodeType;
-    type: IRdfType;
-    superType: IRdfType;
+    type: string;
+    superType: string;
     attributes: IAttribute<any>[];
     links: ILink[];
 }
 
-export interface IRdfType {
-    displayName: string;
-    fullName: string;
-}

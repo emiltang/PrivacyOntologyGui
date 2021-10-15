@@ -23,15 +23,6 @@ export class NodeService {
         });
     }
 
-    /**
-     *  https://try2explore.com/questions/10187968
-     *
-     * @param str removes everything before '#'
-     */
-    public static truncateDisplayName(str: string): string {
-        return str.replace(/^.*#(.*)$/, '$1');
-    }
-
     public findNodeById(id: string): INode {
         return this._nodes.getValue().find(value => value.id === id);
     }
@@ -53,20 +44,19 @@ export class NodeService {
 
     private async init(): Promise<INode[]> {
         const dto = await this.httpClient.get<DTO>('./assets/test1.json').toPromise();
+        console.log('NodeService', dto);
         return dto.nodes.map(nodeDTO => ({
             nodeType: NodeType.data,
             id: uuidv4(),
             name: nodeDTO.name,
-            type: {displayName: NodeService.truncateDisplayName(nodeDTO.type), fullName: nodeDTO.type},
-            superType: {
-                displayName: NodeService.truncateDisplayName(nodeDTO.superType),
-                fullName: nodeDTO.superType
-            },
+            type: nodeDTO.type,
+            superType: nodeDTO.superType,
             attributes: nodeDTO.attributes.map(attributeDTO => ({
                 name: attributeDTO.name,
                 value: attributeDTO.value
             })),
-            links: dto.links.filter(link => link.subject === nodeDTO.address)
+            links: dto.links
+                .filter(link => link.subject === nodeDTO.address)
                 .map(linkDTO => ({
                     predicate: linkDTO.predicate,
                     object: linkDTO.object

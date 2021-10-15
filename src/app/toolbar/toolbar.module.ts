@@ -8,6 +8,7 @@ import {SelectOntologyComponent} from './select-ontology/select-ontology.compone
 import {MatSelectModule} from '@angular/material/select';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
+import { FlexModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {MatButtonModule} from '@angular/material/button';
         HomeModule,
         MatSelectModule,
         ReactiveFormsModule,
-        MatButtonModule
+        MatButtonModule,
+        FlexModule
     ]
 })
 export class ToolbarModule {

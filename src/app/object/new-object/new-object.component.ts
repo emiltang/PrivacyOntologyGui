@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {MatDialogRef} from '@angular/material/dialog';
-import {v4 as uuidv4} from 'uuid';
-import {INode, NodeType} from '../../core/model';
+import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+import { v4 as uuidv4 } from 'uuid';
+import { INode, NodeType } from '../../core/model';
 
 @Component({
     selector: 'app-new-object',
@@ -10,6 +10,16 @@ import {INode, NodeType} from '../../core/model';
 })
 export class NewObjectComponent implements OnInit {
 
+    private node: INode = {
+        id: uuidv4(),
+        name: '',
+        nodeType: NodeType.data,
+        type: '',
+        superType: '',
+        links: [],
+        attributes: []
+    };
+
     constructor(public dialog: MatDialogRef<NewObjectComponent>) {
     }
 
@@ -17,28 +27,13 @@ export class NewObjectComponent implements OnInit {
     }
 
     public newData() {
-        const node: INode = {
-            id: uuidv4(),
-            name: '',
-            nodeType: NodeType.data,
-            type: null,
-            superType: null,
-            links: [],
-            attributes: []
-        };
-        this.dialog.close(node);
+        this.node.nodeType = NodeType.data;
+        this.dialog.close(this.node);
     }
 
     public newContext() {
-        const node: INode = {
-            id: uuidv4(),
-            name: '',
-            nodeType: NodeType.context,
-            type: null,
-            superType: null,
-            links: [],
-            attributes: []
-        };
-        this.dialog.close(node);
+        this.node.nodeType = NodeType.context;
+        this.dialog.close(this.node);
     }
+
 }
