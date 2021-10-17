@@ -3,7 +3,6 @@ import { OntologiesService } from '../../core/services/ontologies.service';
 import { Observable } from 'rxjs';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { INode, NodeType } from '../../core/model';
-import { FormControl } from '@angular/forms';
 
 @Component({
     selector: 'app-object-dialog',
@@ -15,7 +14,6 @@ export class ObjectDialogComponent implements OnInit {
     nodeType: Observable<string[]>;
     superType: Observable<string[]>;
     disabled = false;
-    formControl = new FormControl('');
 
     constructor(@Inject(MAT_DIALOG_DATA)
                 public node: INode,
@@ -43,9 +41,5 @@ export class ObjectDialogComponent implements OnInit {
                 this.disabled = true;
                 break;
         }
-    }
-
-    typeof(value: any) {
-        return typeof value;
     }
 }

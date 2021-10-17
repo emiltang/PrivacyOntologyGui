@@ -1,0 +1,21 @@
+<mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Attributes
+        </mat-panel-title>
+        <mat-panel-description>
+            This is a summary of the content
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div>
+        <mat-card *ngFor="let attribute of attributes">
+            <mat-card-title>{{attribute.name}}</mat-card-title>
+            <mat-card-subtitle>{{typeof(attribute.value)}} {{attribute.value}}</mat-card-subtitle>
+            <mat-card-actions>
+                <button (click)="deleteAttribute(attribute)" mat-button>
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</mat-expansion-panel>

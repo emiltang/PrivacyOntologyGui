@@ -16,13 +16,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { NewObjectComponent } from './new-object/new-object.component';
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { CoreModule } from '../core/core.module';
+import { LinksComponent } from './object-dialog/links/links.component';
+import { AttributesComponent } from './object-dialog/attributes/attributes.component';
 
 
 @NgModule({
     declarations: [
         ObjectComponent,
         ObjectDialogComponent,
-        NewObjectComponent],
+        NewObjectComponent,
+        LinksComponent,
+        AttributesComponent],
     exports: [
         ObjectComponent
     ],

@@ -1,0 +1,21 @@
+<mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Links
+        </mat-panel-title>
+        <mat-panel-description>
+            This is a summary of the content
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div>
+        <mat-card *ngFor="let link of links">
+            <mat-card-title>{{link.object | truncateRdfUrl}}</mat-card-title>
+            <mat-card-subtitle>{{link.predicate | truncateRdfUrl}}</mat-card-subtitle>
+            <mat-card-actions>
+                <button (click)="deleteLink(link)" mat-button>
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</mat-expansion-panel>
