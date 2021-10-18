@@ -1,5 +1,4 @@
 <!--Title-->
-<!--suppress CheckEmptyScriptTag -->
 <div fxLayout="row">
     <mat-icon>home</mat-icon>
     <h2 mat-dialog-title>{{node.name}}</h2>
@@ -17,7 +16,7 @@
                    placeholder="name">
             <mat-hint>Enter name of the node</mat-hint>
         </mat-form-field>
-        <mat-divider/>
+        <mat-divider></mat-divider>
         <!--Base Type-->
         <mat-form-field appearance="fill">
             <mat-label>Type</mat-label>
@@ -58,8 +57,8 @@
     </div>
     <!--Attributes-->
     <mat-accordion multi>
-        <app-attributes [attributes]="node.attributes"/>
-        <app-links [links]="node.links"/>
+        <app-attributes [attributes]="node.attributes"></app-attributes>
+        <app-links [links]="node.links"></app-links>
     </mat-accordion>
 </mat-dialog-content>
 <!--Footer-->

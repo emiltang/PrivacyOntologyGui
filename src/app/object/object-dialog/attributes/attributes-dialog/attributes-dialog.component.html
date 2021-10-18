@@ -1,0 +1,11 @@
+<div mat-dialog-content fxLayout="column">
+    <mat-form-field appearance="fill" >
+        <input [(ngModel)]="attribute.name" matInput name="name">
+    </mat-form-field>
+    <mat-form-field appearance="fill" >
+        <input [(ngModel)]="attribute.value" matInput name="value">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button [mat-dialog-close]="attribute" mat-button>Save</button>
+</div>

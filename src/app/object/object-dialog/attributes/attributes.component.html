@@ -8,9 +8,11 @@
         </mat-panel-description>
     </mat-expansion-panel-header>
     <div>
-        <mat-card *ngFor="let attribute of attributes">
-            <mat-card-title>{{attribute.name}}</mat-card-title>
-            <mat-card-subtitle>{{typeof(attribute.value)}} {{attribute.value}}</mat-card-subtitle>
+        <mat-card *ngFor="let attribute of attributes" fxLayout="row">
+            <mat-card-title-group>
+                <mat-card-title>{{attribute.name}}</mat-card-title>
+                <mat-card-subtitle>{{typeof(attribute.value)}} {{attribute.value}}</mat-card-subtitle>
+            </mat-card-title-group>
             <mat-card-actions>
                 <button (click)="deleteAttribute(attribute)" mat-button>
                     <mat-icon>delete</mat-icon>
@@ -18,4 +20,8 @@
             </mat-card-actions>
         </mat-card>
     </div>
+    <mat-divider></mat-divider>
+    <button mat-button (click)="openNewDialog()">
+        <mat-icon>add_circle</mat-icon>
+    </button>
 </mat-expansion-panel>

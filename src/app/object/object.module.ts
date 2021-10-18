@@ -14,10 +14,11 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { NewObjectComponent } from './new-object/new-object.component';
-import { MatTooltipModule } from "@angular/material/tooltip";
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { CoreModule } from '../core/core.module';
 import { LinksComponent } from './object-dialog/links/links.component';
 import { AttributesComponent } from './object-dialog/attributes/attributes.component';
+import { AttributesDialogComponent } from './object-dialog/attributes/attributes-dialog/attributes-dialog.component';
 
 
 @NgModule({
@@ -26,9 +27,11 @@ import { AttributesComponent } from './object-dialog/attributes/attributes.compo
         ObjectDialogComponent,
         NewObjectComponent,
         LinksComponent,
-        AttributesComponent],
+        AttributesComponent,
+        AttributesDialogComponent,
+    ],
     exports: [
-        ObjectComponent
+        ObjectComponent,
     ],
     imports: [
         CoreModule,

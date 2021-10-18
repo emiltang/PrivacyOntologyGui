@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IAttribute } from '../../../core/model';
+import { MatDialog } from '@angular/material/dialog';
+import { AttributesDialogComponent } from './attributes-dialog/attributes-dialog.component';
 
 @Component({
     selector: 'app-attributes',
@@ -10,7 +12,7 @@ export class AttributesComponent implements OnInit {
 
     @Input() attributes: IAttribute<any>[];
 
-    constructor() {
+    constructor(private dialog: MatDialog,) {
     }
 
     ngOnInit(): void {
@@ -22,5 +24,12 @@ export class AttributesComponent implements OnInit {
 
     public typeof(value: any) {
         return typeof value;
+    }
+
+    openNewDialog() {
+        this.dialog
+            .open(AttributesDialogComponent)
+            .afterClosed()
+            .subscribe((attr: IAttribute<any>) => this.attributes.push(attr));
     }
 }
