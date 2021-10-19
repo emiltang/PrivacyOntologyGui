@@ -7,7 +7,7 @@ export interface IAttribute<T> {
 
 export interface ILink {
     predicate: string;
-    object: string;
+    object: INode;
 }
 
 export interface INode {

@@ -1,11 +1,11 @@
-import {app, BrowserWindow, ipcMain as ipc, screen} from 'electron';
+import { app, BrowserWindow, ipcMain as ipc, screen } from 'electron';
 import * as path from 'path';
 import * as fs from 'fs';
 import * as url from 'url';
-import {Sparql} from "./sparql";
+import { Sparql } from "./sparql";
 
 // Initialize remote module
-import {initialize} from "@electron/remote/main";
+import { initialize } from "@electron/remote/main";
 
 initialize();
 
@@ -13,9 +13,10 @@ let win: BrowserWindow = null;
 const args = process.argv.slice(1), serve = args.some(val => val === '--serve');
 
 // IPC
-ipc.handle('get-context', async () => await Sparql.queryContext());
-ipc.handle('get-data', async () => await Sparql.queryData());
-ipc.handle('get-data-types', async () => await Sparql.queryDataTypes());
+ipc.handle('get-context', async (event, namespace) => await Sparql.queryContext(namespace));
+ipc.handle('get-data', async (event, namespace) => await Sparql.queryData(namespace));
+ipc.handle('get-data-types', async (event, namespace) => await Sparql.queryDataTypes(namespace));
+ipc.handle('get-data-attributes', async (event, namespace, type) => await Sparql.queryDataAttributes(namespace, type));
 
 function createWindow(): BrowserWindow {
 

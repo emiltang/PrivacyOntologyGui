@@ -1,7 +1,7 @@
 {
     "ontologies": [
-        "healthprivacyvunl.ttl",
-        "smartbuildingprivacyvunl.ttl",
-        "smarthomeprivacyvunl.ttl"
+        "smartbuildingprivacyvunl.rdf",
+        "healthprivacyvunl.rdf",
+        "smarthomeprivacyvunl.rdf"
     ]
 }

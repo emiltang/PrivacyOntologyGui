@@ -10,7 +10,7 @@
     <div>
         <mat-card *ngFor="let attribute of attributes" fxLayout="row">
             <mat-card-title-group>
-                <mat-card-title>{{attribute.name}}</mat-card-title>
+                <mat-card-title>{{attribute.name |truncateRdfUrl}}</mat-card-title>
                 <mat-card-subtitle>{{typeof(attribute.value)}} {{attribute.value}}</mat-card-subtitle>
             </mat-card-title-group>
             <mat-card-actions>
@@ -21,7 +21,7 @@
         </mat-card>
     </div>
     <mat-divider></mat-divider>
-    <button mat-button (click)="openNewDialog()">
+    <button (click)="openNewDialog()" mat-button>
         <mat-icon>add_circle</mat-icon>
     </button>
 </mat-expansion-panel>

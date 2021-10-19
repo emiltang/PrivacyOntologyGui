@@ -57,7 +57,8 @@
     </div>
     <!--Attributes-->
     <mat-accordion multi>
-        <app-attributes [attributes]="node.attributes"></app-attributes>
+        <!-- TODO: attributes is part of node-->
+        <app-attributes [attributes]="node.attributes" [node]="node"></app-attributes>
         <app-links [links]="node.links"></app-links>
     </mat-accordion>
 </mat-dialog-content>

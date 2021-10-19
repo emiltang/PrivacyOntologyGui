@@ -1,8 +1,18 @@
-<div mat-dialog-content fxLayout="column">
-    <mat-form-field appearance="fill" >
-        <input [(ngModel)]="attribute.name" matInput name="name">
+<div fxLayout="column" mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <mat-select [(ngModel)]="attribute.name"
+                    name="name">
+            <mat-option *ngFor="let attr of attributeNameList | async"
+                        [value]="attr">
+                {{attr |truncateRdfUrl}}
+            </mat-option>
+        </mat-select>
     </mat-form-field>
-    <mat-form-field appearance="fill" >
+    <!--    <mat-form-field appearance="fill">-->
+    <!--        <input [(ngModel)]="attribute.name" matInput name="name">-->
+    <!--    </mat-form-field>-->
+    <mat-form-field appearance="fill">
         <input [(ngModel)]="attribute.value" matInput name="value">
     </mat-form-field>
 </div>

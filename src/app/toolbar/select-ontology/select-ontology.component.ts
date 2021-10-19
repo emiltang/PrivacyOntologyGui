@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {FormControl} from '@angular/forms';
-import {OntologiesService} from '../../core/services/ontologies.service';
+import { Component, OnInit } from '@angular/core';
+import { OntologiesService } from '../../core/services/ontologies.service';
+import { Observable } from 'rxjs';
+import { MatSelectChange } from '@angular/material/select';
 
 @Component({
     selector: 'app-select-ontology',
@@ -9,7 +10,8 @@ import {OntologiesService} from '../../core/services/ontologies.service';
 })
 export class SelectOntologyComponent implements OnInit {
 
-    formControl = new FormControl();
+    currentNamespace: Observable<string>;
+
     ontologies: string[];
 
     constructor(private ontologiesService: OntologiesService) {
@@ -17,5 +19,12 @@ export class SelectOntologyComponent implements OnInit {
 
     ngOnInit(): void {
         this.ontologies = this.ontologiesService.ontologies;
+        this.currentNamespace = this.ontologiesService.currentNamespace;
+
+    }
+
+    public setCurrentNamespace(event: MatSelectChange) {
+        this.ontologiesService.namespace = event.value;
     }
 }
+

@@ -44,23 +44,36 @@ export class NodeService {
 
     private async init(): Promise<INode[]> {
         const dto = await this.httpClient.get<DTO>('./assets/test1.json').toPromise();
-        console.log('NodeService', dto);
-        return dto.nodes.map(nodeDTO => ({
-            nodeType: NodeType.data,
-            id: uuidv4(),
-            name: nodeDTO.name,
-            type: nodeDTO.type,
-            superType: nodeDTO.superType,
-            attributes: nodeDTO.attributes.map(attributeDTO => ({
-                name: attributeDTO.name,
-                value: attributeDTO.value
-            })),
-            links: dto.links
-                .filter(link => link.subject === nodeDTO.address)
-                .map(linkDTO => ({
-                    predicate: linkDTO.predicate,
-                    object: linkDTO.object
-                }))
-        }));
+
+        const addressMap: Map<string, INode> = new Map<string, INode>();
+        const nodes = dto.nodes.map(nodeDTO => {
+            const node = {
+                nodeType: NodeType.data,
+                id: uuidv4(),
+                name: nodeDTO.name,
+                type: nodeDTO.type,
+                superType: nodeDTO.superType,
+                attributes: nodeDTO.attributes.map(attributeDTO => ({
+                    name: attributeDTO.name,
+                    value: attributeDTO.value
+                })),
+                links: [] // leave empty and add when all nodes are constructed
+            };
+            // remember the mapping between address and node
+            addressMap[ nodeDTO.address ] = node;
+            return node;
+        });
+
+        // sort out links
+        dto.links.forEach(linkDTO => {
+            // find node matching link subject
+            const node = addressMap[ linkDTO.subject ];
+            const link = {
+                predicate: linkDTO.predicate,
+                object: addressMap[ linkDTO.object ]
+            };
+            node.links.push(link);
+        });
+        return nodes;
     }
 }

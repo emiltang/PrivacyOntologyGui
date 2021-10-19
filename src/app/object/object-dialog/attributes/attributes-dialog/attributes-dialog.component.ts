@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { IAttribute } from "../../../../core/model";
+import { Component, Inject, OnInit } from '@angular/core';
+import { IAttribute, INode } from '../../../../core/model';
+import { Observable } from 'rxjs';
+import { OntologiesService } from '../../../../core/services/ontologies.service';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
     selector: 'app-attributes-dialog',
@@ -8,15 +11,20 @@ import { IAttribute } from "../../../../core/model";
 })
 export class AttributesDialogComponent implements OnInit {
 
-    attribute: IAttribute<any> = {
+
+    public attributeNameList: Observable<string[]>;
+
+    public attribute: IAttribute<any> = {
         value: null,
         name: ''
     };
 
-    constructor() {
+    public constructor(@Inject(MAT_DIALOG_DATA)
+                       public node: INode,
+                       private ontologiesService: OntologiesService) {
     }
 
-    ngOnInit(): void {
+    public ngOnInit(): void {
+        this.attributeNameList = this.ontologiesService.dataAttributes(this.node.type);
     }
-
 }
