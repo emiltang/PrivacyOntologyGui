@@ -1,1 +1,10 @@
-<p>result works!</p>
+<div *ngIf="result | async as result; else loading">
+    <p>{{result.graph}}</p>
+    <p *ngFor="let p of result.privacy_report | keyvalue">{{p.key}}{{p.value}}</p>
+</div>
+
+<ng-template #loading>
+    <div class="spinner-container" fxLayoutAlign="center center">
+        <mat-spinner></mat-spinner>
+    </div>
+</ng-template>

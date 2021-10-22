@@ -16,7 +16,7 @@
                 {
                     "dataType": "int",
                     "name": "TemplateCount",
-                    "value": null
+                    "value": 0
                 }
             ]
         }

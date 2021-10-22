@@ -12,9 +12,9 @@ import { INode, NodeType } from '../model';
     providedIn: 'root'
 })
 export class NodeService {
+
     private _nodes = new BehaviorSubject<INode[]>([]);
-    // eslint-disable-next-line
-    public readonly nodes: Observable<INode[]> = this._nodes.asObservable();
+    readonly nodes: Observable<INode[]> = this._nodes.asObservable();
 
     public constructor(private ontologiesService: OntologiesService,
                        private httpClient: HttpClient) {

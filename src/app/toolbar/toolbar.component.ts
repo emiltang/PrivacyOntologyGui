@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ToolchainApiService } from '../core/services/toolchain-api.service';
 import { NodeService } from '../core/services/node.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-toolbar',
@@ -9,13 +10,15 @@ import { NodeService } from '../core/services/node.service';
 })
 export class ToolbarComponent implements OnInit {
 
-    constructor(private toolchainApiService: ToolchainApiService, private nodeService: NodeService) {
+    constructor(private router: Router,
+                private toolchainApiService: ToolchainApiService,
+                private nodeService: NodeService) {
     }
 
     ngOnInit(): void {
     }
 
     runAnalysis() {
-        this.nodeService.nodes.subscribe(value => this.toolchainApiService.postToolchain(value).subscribe(value1 => console.log(value1)));
+        this.router.navigate(['/result']);
     }
 }

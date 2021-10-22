@@ -1,24 +1,24 @@
+<main fxFlexFill fxLayout="column">
+    <!--Toolbar-->
+    <app-toolbar></app-toolbar>
+    <!--Drawer-->
+    <mat-drawer-container class="sidenav-container" fxFlex>
+        <mat-drawer #drawer class="sidenav" mode="side">
+            <p>Auto-resizing sidenav</p>
+            <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+            <button (click)="showFiller = !showFiller" mat-raised-button>
+                <!--                    Toggle extra text-->
+            </button>
+        </mat-drawer>
+        <!--Main Application Content-->
+        <div class="sidenav-content" fxFlex>
+            <router-outlet></router-outlet>
 
-<!--Toolbar-->
-<app-toolbar></app-toolbar>
-<!--Drawer-->
-<mat-drawer-container autosize class="sidenav-container" fxFill>
-    <mat-drawer #drawer class="sidenav" mode="side">
-        <p>Auto-resizing sidenav</p>
-        <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-        <button (click)="showFiller = !showFiller" mat-raised-button>
-            Toggle extra text
-        </button>
-    </mat-drawer>
-    <!--Main Application Content-->
-    <main>
-        <router-outlet></router-outlet>
-    </main>
-    <div class="sidenav-content">
-        <button (click)="drawer.toggle()" mat-button type="button">
-            Toggle sidenav
-        </button>
-    </div>
+            <button (click)="drawer.toggle()" mat-button type="button">
+                Toggle sidenav
+            </button>
+        </div>
 
-</mat-drawer-container>
+    </mat-drawer-container>
+</main>
 

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 export interface DTO {
     nodes: NodeDTO[];
     links: LinkDTO[];
@@ -22,5 +23,16 @@ export interface LinkDTO {
     predicate: string;
     subject: string;
     object: string;
+}
+
+export interface ResultDTO {
+    graph: string;
+    privacy_report: Map<string, PrivacyRiskDTO>;
+}
+
+export interface PrivacyRiskDTO {
+    privacy_risks: any;
+    privacy_score: number;
+    type: string;
 }
 

@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
-import {APP_CONFIG} from '../environments/environment';
+import { Component, ViewChild } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { APP_CONFIG } from '../environments/environment';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
     selector: 'app-root',
@@ -8,6 +9,8 @@ import {APP_CONFIG} from '../environments/environment';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+    @ViewChild('drawer') public drawer: MatSidenav;
 
     showFiller = false;
 
