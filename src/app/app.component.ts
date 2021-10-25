@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { APP_CONFIG } from '../environments/environment';
-import { MatSidenav } from '@angular/material/sidenav';
+import { MatDrawer, MatSidenav } from '@angular/material/sidenav';
 
 @Component({
     selector: 'app-root',
@@ -10,7 +10,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class AppComponent {
 
-    @ViewChild('drawer') public drawer: MatSidenav;
+    @ViewChild('drawer') public drawer: MatDrawer;
 
     showFiller = false;
 

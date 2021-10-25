@@ -4,18 +4,24 @@
             Links
         </mat-panel-title>
         <mat-panel-description>
-            This is a summary of the content
+            Links to other objects with a relation in between
         </mat-panel-description>
     </mat-expansion-panel-header>
-    <div>
-        <mat-card *ngFor="let link of links">
-            <mat-card-title>{{link.object | truncateRdfUrl}}</mat-card-title>
-            <mat-card-subtitle>{{link.predicate | truncateRdfUrl}}</mat-card-subtitle>
-            <mat-card-actions>
-                <button (click)="deleteLink(link)" mat-button>
-                    <mat-icon>delete</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
+    <mat-list>
+        <mat-list-item *ngFor="let link of links">
+            <mat-icon mat-list-icon> share</mat-icon>
+            <div mat-line>
+                {{link.object.name | truncateRdfUrl}}
+            </div>
+            <div mat-line>
+                {{link.predicate | truncateRdfUrl}}
+            </div>
+            <button (click)="deleteLink(link)" mat-button>
+                <mat-icon>delete</mat-icon>
+            </button>
+        </mat-list-item>
+    </mat-list>
+    <div fxLayoutAlign="end">
+        <button (click)="openNewDialog()" mat-button color="accent">NEW</button>
     </div>
 </mat-expansion-panel>

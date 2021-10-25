@@ -13,9 +13,20 @@
     <!--        <input [(ngModel)]="attribute.name" matInput name="name">-->
     <!--    </mat-form-field>-->
     <mat-form-field appearance="fill">
+        <mat-label>Value</mat-label>
         <input [(ngModel)]="attribute.value" matInput name="value">
     </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>DataType</mat-label>
+        <mat-select [(ngModel)]="attribute.dataType"
+                    name="dataType">
+            <mat-option *ngFor="let dataType of dataTypes "
+                        [value]="dataType">
+                {{dataType}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
 </div>
-<div mat-dialog-actions>
+<mat-dialog-actions fxLayoutAlign="end">
     <button [mat-dialog-close]="attribute" mat-button>Save</button>
-</div>
+</mat-dialog-actions>

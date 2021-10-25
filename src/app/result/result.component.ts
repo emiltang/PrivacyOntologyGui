@@ -4,6 +4,7 @@ import { NodeService } from '../core/services/node.service';
 import { Observable } from 'rxjs';
 import { ToolchainApiService } from '../core/services/toolchain-api.service';
 import { ResultDTO } from '../core/dto';
+import { Location } from '@angular/common';
 
 @Component({
     selector: 'app-result',
@@ -16,6 +17,7 @@ export class ResultComponent implements OnInit {
 
 
     constructor(private router: Router,
+                private location: Location,
                 private nodeService: NodeService,
                 private toolchainApiService: ToolchainApiService) {
     }
@@ -30,4 +32,7 @@ export class ResultComponent implements OnInit {
     }
 
 
+    back() {
+        this.location.back();
+    }
 }

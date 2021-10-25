@@ -4,6 +4,9 @@ import { ResultComponent } from './result.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { FlexModule } from '@angular/flex-layout';
+import { CoreModule } from "../core/core.module";
+import { MatIconModule } from "@angular/material/icon";
+import { MatDividerModule } from "@angular/material/divider";
 
 @NgModule({
     declarations: [
@@ -13,7 +16,10 @@ import { FlexModule } from '@angular/flex-layout';
         CommonModule,
         MatButtonModule,
         MatProgressSpinnerModule,
-        FlexModule
+        FlexModule,
+        CoreModule,
+        MatIconModule,
+        MatDividerModule
     ]
 })
 export class ResultModule {

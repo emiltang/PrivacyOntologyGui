@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>New Link</h2>
+<mat-dialog-content fxLayout="column">
+
+    <mat-form-field appearance="fill">
+        <label>Predicate</label>
+        <mat-select [(ngModel)]="link.object">
+            <mat-option></mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <label>Link to</label>
+        <mat-select [(ngModel)]="link.object">
+            <mat-option></mat-option>
+        </mat-select>
+    </mat-form-field>
+
+</mat-dialog-content>
+<mat-dialog-actions fxLayoutAlign="end">
+    <button mat-button [mat-dialog-close]="link">CLOSE</button>
+</mat-dialog-actions>

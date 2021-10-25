@@ -9,17 +9,17 @@ export namespace Sparql {
     const myEngine = newEngine();
 
     export async function queryContext(namespace: string): Promise<string[]> {
-
+    console.log(namespace)
         const query = `
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            SELECT ?s
+            SELECT  ?s
             WHERE { ?s rdfs:subClassOf* <https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context> }
         `;
         const result = <IQueryResultBindings>await myEngine.query(query, {
             sources: [
                 {type: 'file', value: 'http://localhost:4200/assets/privacyvunlv2.rdf'},
                 {type: 'file', value: 'http://localhost:4200/assets/privacyvunl.rdf'},
-                {type: 'file', value: `http://localhost:4200/assets/${namespace}.rdf`}
+                {type: 'file', value: `http://localhost:4200/assets/${namespace}`}
             ],
         });
         const bindings = await result.bindings();
@@ -31,7 +31,7 @@ export namespace Sparql {
 
         const query = `
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            SELECT ?s
+            SELECT  ?s
             WHERE {
                 ?s rdf:type/rdfs:subClassOf* <https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#Data>
             }
@@ -40,7 +40,7 @@ export namespace Sparql {
             sources: [
                 {type: 'file', value: 'http://localhost:4200/assets/privacyvunlv2.rdf'},
                 {type: 'file', value: 'http://localhost:4200/assets/privacyvunl.rdf'},
-                {type: 'file', value: `http://localhost:4200/assets/${namespace}.rdf`}
+                {type: 'file', value: `http://localhost:4200/assets/${namespace}`}
             ],
         });
         const bindings = await result.bindings();
@@ -51,14 +51,14 @@ export namespace Sparql {
     export async function queryDataTypes(namespace: string): Promise<string[]> {
         const query = `
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            SELECT ?s
+            SELECT  ?s
             WHERE { ?s rdfs:subClassOf <https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#Data> }
         `;
         const result = <IQueryResultBindings>await myEngine.query(query, {
             sources: [
                 {type: 'file', value: 'http://localhost:4200/assets/privacyvunlv2.rdf'},
                 {type: 'file', value: 'http://localhost:4200/assets/privacyvunl.rdf'},
-                {type: 'file', value: `http://localhost:4200/assets/${namespace}.rdf`}
+                {type: 'file', value: `http://localhost:4200/assets/${namespace}`}
             ],
         });
         const bindings = await result.bindings();
@@ -85,7 +85,7 @@ export namespace Sparql {
             sources: [
                 {type: 'file', value: 'http://localhost:4200/assets/privacyvunlv2.rdf'},
                 {type: 'file', value: 'http://localhost:4200/assets/privacyvunl.rdf'},
-                {type: 'file', value: `http://localhost:4200/assets/${namespace}.rdf`}
+                {type: 'file', value: `http://localhost:4200/assets/${namespace}`}
             ]
         };
         const result = <IQueryResultBindings>await myEngine.query(query, sources);

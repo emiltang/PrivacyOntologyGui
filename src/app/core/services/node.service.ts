@@ -15,6 +15,7 @@ export class NodeService {
 
     private _nodes = new BehaviorSubject<INode[]>([]);
     readonly nodes: Observable<INode[]> = this._nodes.asObservable();
+    private readonly url = './assets/test3.json';
 
     public constructor(private ontologiesService: OntologiesService,
                        private httpClient: HttpClient) {
@@ -42,20 +43,30 @@ export class NodeService {
         );
     }
 
+    private resolveNodeType(type: string): NodeType {
+        switch (type) {
+            case 'https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context':
+                return NodeType.context;
+            default:
+                return NodeType.data;
+        }
+    }
+
     private async init(): Promise<INode[]> {
-        const dto = await this.httpClient.get<DTO>('./assets/test1.json').toPromise();
+        const dto = await this.httpClient.get<DTO>(this.url).toPromise();
 
         const addressMap: Map<string, INode> = new Map<string, INode>();
         const nodes = dto.nodes.map(nodeDTO => {
             const node = {
-                nodeType: NodeType.data,
+                nodeType: this.resolveNodeType(nodeDTO.superType),
                 id: uuidv4(),
                 name: nodeDTO.name,
                 type: nodeDTO.type,
                 superType: nodeDTO.superType,
                 attributes: nodeDTO.attributes.map(attributeDTO => ({
                     name: attributeDTO.name,
-                    value: attributeDTO.value
+                    value: attributeDTO.value,
+                    dataType: attributeDTO.dataType
                 })),
                 links: [] // leave empty and add when all nodes are constructed
             };

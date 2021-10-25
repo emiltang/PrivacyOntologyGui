@@ -27,12 +27,20 @@ export interface LinkDTO {
 
 export interface ResultDTO {
     graph: string;
-    privacy_report: Map<string, PrivacyRiskDTO>;
+    privacy_report: Map<string, PrivacyRiskResultDTO>;
+}
+
+export interface PrivacyRiskResultDTO {
+    privacy_risks: PrivacyRiskDTO[];
+    privacy_score: number;
+    type: string;
 }
 
 export interface PrivacyRiskDTO {
-    privacy_risks: any;
+    privacy_risk_description: string;
+    privacy_risks_name: string;
     privacy_score: number;
-    type: string;
+    privacy_strategies: any[];
+    template_count: number;
 }
 

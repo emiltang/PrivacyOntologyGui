@@ -1,0 +1,2521 @@
+{
+    "namespace": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#",
+    "nodes": [
+        {
+            "name": "Outside",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Outside",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Outside",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "Temperature_outside",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Temperature",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature_outside",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Building",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Building",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Building",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "ContextLocation",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#ContextLocation",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ContextLocation",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#Metadata",
+            "attributes": []
+        },
+        {
+            "name": "Room",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "ContextLocation2",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#ContextLocation",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ContextLocation2",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#Metadata",
+            "attributes": []
+        },
+        {
+            "name": "ParticulateMatter25_room",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#ParticulateMatter25",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ParticulateMatter25_room",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "DewPoint_room",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#DewPoint",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#DewPoint_room",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC_room",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC_room",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "Enthalpy_room",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Enthalpy",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Enthalpy_room",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "Humidity_room",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Humidity",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity_room",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "Noise_room",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Noise",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise_room",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Conference",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Meeting_Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Conference",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "ContextLocation3",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#ContextLocation",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ContextLocation3",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#Metadata",
+            "attributes": []
+        },
+        {
+            "name": "CO_Conference",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_Conference",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "CO2_Conference",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_Conference",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC_Conference",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC_Conference",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Temperature_conference",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Temperature",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature_conference",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Humidity_conference",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Humidity",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity_conference",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Illuminance_conference",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Illuminance",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance_conference",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "PIR_Conference",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#PIR",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR_Conference",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Noise_Conference",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Noise",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise_Conference",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "ParticulateMatter25_Conference",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#ParticulateMatter25",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ParticulateMatter25_Conference",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "DewPoint_Conference",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#DewPoint",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#DewPoint_Conference",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "Enthalpy_Conference",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Enthalpy",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Enthalpy_Conference",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Bay_1",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Single_Office_Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_1",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "CO_0",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_0",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "CO2_0",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_0",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC0",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC0",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Bay_2",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Single_Office_Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_2",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "CO_1",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_1",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "CO2_1",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_1",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC1",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC1",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Temperature1",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Temperature",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature1",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Humidity1",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Humidity",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity1",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Illuminance1",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Illuminance",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance1",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "PIR1",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#PIR",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR1",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Noise1",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Noise",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise1",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Bay_3",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Single_Office_Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_3",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "CO_2",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_2",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "CO2_2",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_2",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC2",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC2",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Temperature2",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Temperature",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature2",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Humidity2",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Humidity",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity2",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Illuminance2",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Illuminance",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance2",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "PIR2",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#PIR",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR2",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Noise2",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Noise",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise2",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Bay_4",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Single_Office_Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_4",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "CO_3",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_3",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "CO2_3",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_3",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC3",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC3",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Temperature3",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Temperature",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature3",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Humidity3",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Humidity",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity3",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Illuminance3",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Illuminance",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance3",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "PIR3",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#PIR",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR3",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Noise3",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Noise",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise3",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Bay_5",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Single_Office_Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_5",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "CO_4",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_4",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "CO2_4",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_4",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC4",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC4",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Temperature4",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Temperature",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature4",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Humidity4",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Humidity",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity4",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Illuminance4",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Illuminance",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance4",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "PIR4",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#PIR",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR4",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Noise4",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Noise",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise4",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Bay_6",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Single_Office_Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_6",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "CO_5",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_5",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "CO2_5",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_5",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC5",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC5",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Temperature5",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Temperature",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature5",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Humidity5",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Humidity",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity5",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Illuminance5",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Illuminance",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance5",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "PIR5",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#PIR",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR5",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Noise5",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Noise",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise5",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "ParticulateMatter25_5",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#ParticulateMatter25",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ParticulateMatter25_5",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "DewPoint_5",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#DewPoint",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#DewPoint_5",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC_5",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC_5",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "Enthalpy_5",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Enthalpy",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Enthalpy_5",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "Bay_7",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Single_Office_Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_7",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "CO_6",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_6",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "CO2_6",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_6",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC6",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC6",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Temperature6",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Temperature",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature6",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Humidity6",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Humidity",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity6",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Illuminance6",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Illuminance",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance6",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "PIR6",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#PIR",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR6",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Noise6",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Noise",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise6",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Bay_8",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Single_Office_Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_8",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "CO_7",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_7",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "CO2_7",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_7",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC7",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC7",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Temperature7",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Temperature",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature7",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Humidity7",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Humidity",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity7",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Illuminance7",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Illuminance",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance7",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "PIR7",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#PIR",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR7",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Noise7",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Noise",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise7",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Bay_9",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Single_Office_Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_9",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "CO_8",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_8",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "CO2_8",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_8",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC8",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC8",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Temperature8",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Temperature",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature8",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Humidity8",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Humidity",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity8",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Illuminance8",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Illuminance",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance8",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "PIR8",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#PIR",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR8",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Noise8",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Noise",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise8",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Bay_10",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Single_Office_Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_10",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "CO_9",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_9",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "CO2_9",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_9",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC9",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC9",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Temperature9",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Temperature",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature9",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Humidity9",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Humidity",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity9",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Illuminance9",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Illuminance",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance9",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "PIR9",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#PIR",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR9",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Noise9",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Noise",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise9",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Bay_11",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Single_Office_Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_11",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "CO_10",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_10",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "CO2_10",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_10",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC10",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC10",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Bay_12",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Single_Office_Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_12",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "CO_11",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_11",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "CO2_11",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_11",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC11",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC11",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "ParticulateMatter25_11",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#ParticulateMatter25",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ParticulateMatter25_11",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "DewPoint_11",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#DewPoint",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#DewPoint_11",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC_11",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC_11",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "Enthalpy_11",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Enthalpy",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Enthalpy_11",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "Bay_13",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Single_Office_Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_13",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "CO_12",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_12",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "CO2_12",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_12",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC12",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC12",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Temperature12",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Temperature",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature12",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Humidity12",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Humidity",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity12",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Illuminance12",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Illuminance",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance12",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "PIR12",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#PIR",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR12",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Noise12",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Noise",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise12",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "ParticulateMatter25_12",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#ParticulateMatter25",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ParticulateMatter25_12",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "DewPoint_12",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#DewPoint",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#DewPoint_12",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC_12",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC_12",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "Enthalpy_12",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Enthalpy",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Enthalpy_12",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 1200.0
+                }
+            ]
+        },
+        {
+            "name": "Bay_14",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Single_Office_Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_14",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "CO_13",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_13",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "CO2_13",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_13",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC13",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC13",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "Bay_15",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#Single_Office_Room",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_15",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#Context",
+            "attributes": []
+        },
+        {
+            "name": "CO_14",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_14",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "CO2_14",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#CO2",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_14",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        },
+        {
+            "name": "TVOC14",
+            "type": "https://ontology.hviidnet.com/2020/01/03/smartbuildingprivacyvunl.ttl#TVOC",
+            "address": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC14",
+            "superType": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#TimeSeries",
+            "attributes": [
+                {
+                    "dataType": "double",
+                    "name": "TemporalResolution",
+                    "value": 60.0
+                }
+            ]
+        }
+    ],
+    "links": [
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Outside",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature_outside"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Outside",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Building"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Building",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ContextLocation"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Outside",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Building"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ContextLocation2"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ParticulateMatter25_room"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#DewPoint_room"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC_room"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Enthalpy_room"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity_room"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise_room"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Building",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Conference"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Conference",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ContextLocation3"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Conference",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_Conference"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Conference",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_Conference"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Conference",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC_Conference"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Conference",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature_conference"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Conference",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity_conference"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Conference",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance_conference"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Conference",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR_Conference"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Conference",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise_Conference"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Conference",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ParticulateMatter25_Conference"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Conference",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#DewPoint_Conference"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Conference",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Enthalpy_Conference"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_1"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_1",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_0"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_1",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_0"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_1",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC0"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_2"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_2",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_1"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_2",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_1"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_2",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC1"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_2",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature1"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_2",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity1"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_2",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance1"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_2",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR1"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_2",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise1"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_3"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_3",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_2"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_3",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_2"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_3",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC2"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_3",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature2"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_3",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity2"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_3",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance2"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_3",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR2"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_3",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise2"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_4"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_4",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_3"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_4",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_3"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_4",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC3"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_4",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature3"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_4",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity3"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_4",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance3"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_4",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR3"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_4",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise3"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_5"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_5",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_4"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_5",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_4"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_5",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC4"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_5",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature4"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_5",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity4"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_5",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance4"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_5",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR4"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_5",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise4"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_6"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_6",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_5"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_6",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_5"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_6",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC5"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_6",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature5"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_6",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity5"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_6",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance5"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_6",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR5"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_6",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise5"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_6",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ParticulateMatter25_5"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_6",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#DewPoint_5"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_6",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC_5"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_6",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Enthalpy_5"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_7"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_7",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_6"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_7",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_6"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_7",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC6"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_7",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature6"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_7",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity6"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_7",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance6"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_7",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR6"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_7",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise6"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_8"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_8",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_7"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_8",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_7"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_8",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC7"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_8",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature7"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_8",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity7"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_8",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance7"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_8",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR7"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_8",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise7"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_9"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_9",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_8"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_9",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_8"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_9",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC8"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_9",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature8"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_9",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity8"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_9",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance8"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_9",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR8"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_9",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise8"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_10"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_10",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_9"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_10",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_9"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_10",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC9"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_10",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature9"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_10",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity9"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_10",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance9"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_10",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR9"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_10",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise9"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_11"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_11",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_10"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_11",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_10"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_11",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC10"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_12"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_12",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_11"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_12",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_11"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_12",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC11"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_12",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ParticulateMatter25_11"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_12",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#DewPoint_11"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_12",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC_11"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_12",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Enthalpy_11"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_13"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_13",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_12"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_13",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_12"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_13",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC12"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_13",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature12"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_13",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity12"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_13",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance12"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_13",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR12"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_13",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise12"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_13",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ParticulateMatter25_12"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_13",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#DewPoint_12"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_13",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC_12"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_13",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Enthalpy_12"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_14"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_14",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_13"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_14",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_13"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_14",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC13"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunl.ttl#star",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_15"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_15",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_14"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_15",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_14"
+        },
+        {
+            "subject": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_15",
+            "predicate": "https://ontology.hviidnet.com/2020/01/03/privacyvunlV2.ttl#has",
+            "object": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC14"
+        }
+    ]
+}

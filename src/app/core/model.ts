@@ -3,6 +3,7 @@ export enum NodeType { data, context}
 export interface IAttribute<T> {
     name: string;
     value: T;
+    dataType: string;
 }
 
 export interface ILink {

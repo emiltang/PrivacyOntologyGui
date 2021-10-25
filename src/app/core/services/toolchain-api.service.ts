@@ -42,7 +42,7 @@ export class ToolchainApiService {
                 attributes: node.attributes.map(attr => ({
                     value: attr.value,
                     name: attr.name,
-                    dataType: ToolchainApiService.resolveType(typeof attr.value, attr.value)
+                    dataType: attr.dataType
                 }))
             })),
             links: nodes.flatMap(node => node.links.map(link => ({

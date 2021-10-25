@@ -13,7 +13,7 @@ export class AttributesComponent implements OnInit {
     @Input() node: INode;
     @Input() attributes: IAttribute<any>[];
 
-    constructor(private dialog: MatDialog,) {
+    constructor(private dialog: MatDialog) {
     }
 
     ngOnInit(): void {

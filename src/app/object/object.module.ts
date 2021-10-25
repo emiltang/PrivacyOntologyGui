@@ -19,6 +19,9 @@ import { CoreModule } from '../core/core.module';
 import { LinksComponent } from './object-dialog/links/links.component';
 import { AttributesComponent } from './object-dialog/attributes/attributes.component';
 import { AttributesDialogComponent } from './object-dialog/attributes/attributes-dialog/attributes-dialog.component';
+import { MatListModule } from "@angular/material/list";
+import { MatLineModule } from "@angular/material/core";
+import { LinksDialogComponent } from './object-dialog/links/links-dialog/links-dialog.component';
 
 
 @NgModule({
@@ -29,6 +32,7 @@ import { AttributesDialogComponent } from './object-dialog/attributes/attributes
         LinksComponent,
         AttributesComponent,
         AttributesDialogComponent,
+        LinksDialogComponent,
     ],
     exports: [
         ObjectComponent,
@@ -47,7 +51,9 @@ import { AttributesDialogComponent } from './object-dialog/attributes/attributes
         MatExpansionModule,
         MatDividerModule,
         MatIconModule,
-        MatTooltipModule
+        MatTooltipModule,
+        MatListModule,
+        MatLineModule
     ]
 })
 export class ObjectModule {

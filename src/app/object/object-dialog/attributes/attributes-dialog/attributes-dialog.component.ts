@@ -11,13 +11,13 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class AttributesDialogComponent implements OnInit {
 
-
     public attributeNameList: Observable<string[]>;
-
     public attribute: IAttribute<any> = {
         value: null,
-        name: ''
+        name: '',
+        dataType: ''
     };
+    public readonly dataTypes = ['int', 'double', 'string'];
 
     public constructor(@Inject(MAT_DIALOG_DATA)
                        public node: INode,

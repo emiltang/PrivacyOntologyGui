@@ -1,6 +1,6 @@
 <main fxFlexFill fxLayout="column">
     <!--Toolbar-->
-    <app-toolbar></app-toolbar>
+    <app-toolbar [drawer]="drawer"></app-toolbar>
     <!--Drawer-->
     <mat-drawer-container class="sidenav-container" fxFlex>
         <mat-drawer #drawer class="sidenav" mode="side">
@@ -13,12 +13,10 @@
         <!--Main Application Content-->
         <div class="sidenav-content" fxFlex>
             <router-outlet></router-outlet>
-
-            <button (click)="drawer.toggle()" mat-button type="button">
-                Toggle sidenav
-            </button>
+<!--            <button (click)="drawer.toggle()" mat-button type="button">-->
+<!--                Toggle sidenav-->
+<!--            </button>-->
         </div>
-
     </mat-drawer-container>
 </main>
 

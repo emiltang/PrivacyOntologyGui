@@ -1,8 +1,31 @@
-<div *ngIf="result | async as result; else loading">
-    <p>{{result.graph}}</p>
-    <p *ngFor="let p of result.privacy_report | keyvalue">{{p.key}}{{p.value}}</p>
+<button (click)="back()" mat-button>
+    <mat-icon>arrow_back</mat-icon>
+    BACK
+</button>
+<div class="padding">
+    <div *ngIf="result | async as result; else loading">
+        <div *ngFor="let p of result.privacy_report | keyvalue">
+            <h2>{{p.key | truncateRdfUrl}}</h2>
+            <div class="padding">
+                <p><label>Privacy Score</label> {{p.value.privacy_score}}</p>
+                <p><label>Type</label> {{p.value.type}}</p>
+                <p><label>Privacy Risks</label></p>
+                <div class="padding">
+                    <div *ngFor="let r of p.value.privacy_risks">
+                        <p><label>Name</label> {{r.privacy_risks_name}}</p>
+                        <p><label>Description</label> {{r.privacy_risk_description}}
+                        <p>
+                        <p><label>Score</label> {{r.privacy_score}}
+                        <p>
+                        <p><label>Template Count</label> {{r.template_count}}
+                        <p>
+                        <mat-divider></mat-divider>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
 <ng-template #loading>
     <div class="spinner-container" fxLayoutAlign="center center">
         <mat-spinner></mat-spinner>

@@ -4,24 +4,22 @@
             Attributes
         </mat-panel-title>
         <mat-panel-description>
-            This is a summary of the content
+            Additional properties related to the object
         </mat-panel-description>
     </mat-expansion-panel-header>
-    <div>
-        <mat-card *ngFor="let attribute of attributes" fxLayout="row">
-            <mat-card-title-group>
-                <mat-card-title>{{attribute.name |truncateRdfUrl}}</mat-card-title>
-                <mat-card-subtitle>{{typeof(attribute.value)}} {{attribute.value}}</mat-card-subtitle>
-            </mat-card-title-group>
-            <mat-card-actions>
-                <button (click)="deleteAttribute(attribute)" mat-button>
-                    <mat-icon>delete</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
+    <mat-list>
+        <mat-list-item *ngFor="let attribute of attributes">
+            <mat-icon mat-list-icon>attach_file</mat-icon>
+            <div mat-line>{{attribute.name |truncateRdfUrl}}</div>
+            <div mat-line>{{attribute.value}} : {{attribute.dataType}}</div>
+            <button (click)="deleteAttribute(attribute)" mat-button>
+                <mat-icon>delete</mat-icon>
+            </button>
+        </mat-list-item>
+    </mat-list>
+    <div fxLayoutAlign="end">
+        <button (click)="openNewDialog()" color="accent" mat-button>
+            NEW
+        </button>
     </div>
-    <mat-divider></mat-divider>
-    <button (click)="openNewDialog()" mat-button>
-        <mat-icon>add_circle</mat-icon>
-    </button>
 </mat-expansion-panel>
