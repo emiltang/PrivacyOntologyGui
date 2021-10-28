@@ -14,7 +14,10 @@ import { INode } from '../core/model';
 })
 export class HomeComponent implements OnInit {
 
+    query = '';
+
     nodes: Observable<INode[]>;
+    options: any[] = ['one', 'two', 'three'];
 
     constructor(private router: Router,
                 private nodeService: NodeService,

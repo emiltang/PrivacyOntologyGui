@@ -17,6 +17,7 @@ ipc.handle('get-context', async (event, namespace) => await Sparql.queryContext(
 ipc.handle('get-data', async (event, namespace) => await Sparql.queryData(namespace));
 ipc.handle('get-data-types', async (event, namespace) => await Sparql.queryDataTypes(namespace));
 ipc.handle('get-data-attributes', async (event, namespace, type) => await Sparql.queryDataAttributes(namespace, type));
+ipc.handle('get-predicates', async (event, namespace) => await Sparql.queryPredicates(namespace));
 
 function createWindow(): BrowserWindow {
 

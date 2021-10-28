@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ILink } from '../../../../core/model';
+import { ILink, INode } from '../../../../core/model';
+import { Observable } from 'rxjs';
+import { NodeService } from '../../../../core/services/node.service';
+import { OntologiesService } from '../../../../core/services/ontologies.service';
 
 @Component({
     selector: 'app-links-dialog',
@@ -13,10 +16,17 @@ export class LinksDialogComponent implements OnInit {
         object: null
     };
 
-    constructor() {
+    predicates: Observable<string[]>;
+    nodes: Observable<INode[]>;
+
+    constructor(private nodeService: NodeService,
+                private ontologiesService: OntologiesService) {
+
     }
 
     ngOnInit(): void {
+        this.nodes = this.nodeService.nodes;
+        this.predicates = this.ontologiesService.predicates;
     }
 
 }

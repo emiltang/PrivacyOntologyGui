@@ -1,5 +1,6 @@
 import { IQueryResultBindings, newEngine } from "@comunica/actor-init-sparql";
 
+
 /**
  * TODO:
  * WARNING injection attacks
@@ -9,7 +10,7 @@ export namespace Sparql {
     const myEngine = newEngine();
 
     export async function queryContext(namespace: string): Promise<string[]> {
-    console.log(namespace)
+        console.log(namespace);
         const query = `
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
             SELECT  ?s
@@ -92,4 +93,27 @@ export namespace Sparql {
         const bindings = await result.bindings();
         return bindings.map(row => row.get('?s').value);
     }
+
+    export async function queryPredicates(namespace: string) {
+        const query = `
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+            SELECT ?s
+            WHERE {
+                ?s a owl:ObjectProperty
+            }
+	    `;
+        const sources = {
+            sources: [
+                {type: 'file', value: 'http://localhost:4200/assets/privacyvunlv2.rdf'},
+                {type: 'file', value: 'http://localhost:4200/assets/privacyvunl.rdf'},
+                {type: 'file', value: `http://localhost:4200/assets/${namespace}`}
+            ]
+        };
+        const result = <IQueryResultBindings>await myEngine.query(query, sources);
+        const bindings = await result.bindings();
+        return bindings.map(row => row.get('?s').value);
+
+    }
+
 }

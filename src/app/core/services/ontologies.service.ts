@@ -8,11 +8,17 @@ import { BehaviorSubject, defer, Observable } from 'rxjs';
 })
 export class OntologiesService {
 
-    private _currentNamespace = new BehaviorSubject<string>(ontologies.ontologies[ 0 ]);
+    private _currentNamespace = new BehaviorSubject<string>('');
     // eslint-disable-next-line
     public readonly currentNamespace: Observable<string> = this._currentNamespace.asObservable();
 
     constructor(private electronService: ElectronService) {
+    }
+
+    public get predicates(): Observable<string[]> {
+        return defer(async () =>
+            await this.electronService.ipcRenderer.invoke('get-predicates', this._currentNamespace.getValue())
+        );
     }
 
     public get ontologies(): string[] {

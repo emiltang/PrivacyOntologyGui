@@ -1,21 +1,27 @@
 <h2 mat-dialog-title>New Link</h2>
 <mat-dialog-content fxLayout="column">
-
     <mat-form-field appearance="fill">
         <label>Predicate</label>
-        <mat-select [(ngModel)]="link.object">
-            <mat-option></mat-option>
+        <mat-select [(ngModel)]="link.predicate">
+            <mat-option *ngFor="let p of predicates | async"
+                        [value]="p">
+                {{p | truncateRdfUrl}}
+            </mat-option>
         </mat-select>
     </mat-form-field>
-
     <mat-form-field appearance="fill">
         <label>Link to</label>
         <mat-select [(ngModel)]="link.object">
-            <mat-option></mat-option>
+            <mat-option *ngFor="let node of nodes | async"
+                        [value]="node">
+                {{node.name}}
+            </mat-option>
         </mat-select>
     </mat-form-field>
-
 </mat-dialog-content>
 <mat-dialog-actions fxLayoutAlign="end">
-    <button mat-button [mat-dialog-close]="link">CLOSE</button>
+    <button [mat-dialog-close]="link"
+            mat-button>
+        CLOSE
+    </button>
 </mat-dialog-actions>

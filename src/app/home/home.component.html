@@ -1,12 +1,31 @@
+<div class="search-container" fxLayoutAlign="center">
+    <mat-form-field appearance="fill" class="example-full-width">
+        <mat-label>Search</mat-label>
+        <input [(ngModel)]="query"
+               [matAutocomplete]="auto"
+               matInput
+               placeholder="Search"
+               type="text">
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let node of nodes | async | filterNodes: query"
+                        [value]="node.name">
+                {{node.name}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+</div>
 <div class="container"
      fxFlexFill
      fxLayout="row wrap"
      fxLayoutAlign="start start"
      fxLayoutGap="1rem grid">
-    <app-object *ngFor="let node of nodes | async" [node]="node"></app-object>
+    <app-object *ngFor="let node of nodes | async | filterNodes: query"
+                [node]="node"
+                fxFlex>
+    </app-object>
     <mat-card>
         <mat-card-content>
-            <button mat-button (click)="openNewNodeDialog()">
+            <button (click)="openNewNodeDialog()" mat-button>
                 <mat-icon>add</mat-icon>
             </button>
         </mat-card-content>
