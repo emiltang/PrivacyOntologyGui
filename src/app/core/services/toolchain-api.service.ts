@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { DTO, ResultDTO } from '../dto';
 import { INode } from '../model';
-import { OntologiesService } from './ontologies.service';
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
 const options = {headers: {'Content-Type': 'application/json'}};
@@ -17,12 +16,12 @@ export class ToolchainApiService {
 
     private readonly namespace = 'https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#';
 
-    public constructor(private http: HttpClient,
-                       private ontologiesService: OntologiesService) {
+    public constructor(private http: HttpClient) {
     }
 
 
-    public static resolveType(param: 'undefined' | 'object' | 'boolean' | 'number' | 'string' | 'function' | 'symbol' | 'bigint', value: any): string {
+    public static resolveType(param: 'undefined' | 'object' | 'boolean' | 'number' | 'string' | 'function' | 'symbol'
+        | 'bigint', value: any): string {
         switch (param) {
             case 'number':
                 return Number.isInteger(value) ? 'int' : 'double';
@@ -52,7 +51,7 @@ export class ToolchainApiService {
             }))),
             namespace: this.namespace
         };
-        console.log(JSON.stringify(data));
+        // console.log(JSON.stringify(data));
         return this.http.post<ResultDTO>(url, data, options);
     }
 }

@@ -1,4 +1,4 @@
-<mat-expansion-panel hideToggle>
+<mat-expansion-panel>
     <mat-expansion-panel-header>
         <mat-panel-title>
             Links
@@ -9,7 +9,9 @@
     </mat-expansion-panel-header>
     <mat-list>
         <mat-list-item *ngFor="let link of links">
-            <mat-icon mat-list-icon> share</mat-icon>
+            <mat-icon mat-list-icon>
+                share
+            </mat-icon>
             <div mat-line>
                 {{link.object.name | truncateRdfUrl}}
             </div>
@@ -21,7 +23,11 @@
             </button>
         </mat-list-item>
     </mat-list>
-    <div fxLayoutAlign="end">
-        <button (click)="openNewDialog()" mat-button color="accent">NEW</button>
-    </div>
+    <mat-action-row>
+        <button (click)="openNewDialog()"
+                color="accent"
+                mat-button>
+            NEW
+        </button>
+    </mat-action-row>
 </mat-expansion-panel>

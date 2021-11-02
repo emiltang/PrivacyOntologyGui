@@ -1,0 +1,2340 @@
+{
+    "graph": "digraph {\n\tsize=\"6,6\"\n\tBuilding [label=Building color=\"#999999\" style=filled]\n\tConference [label=Conference color=\"#999999\" style=filled]\n\tBuilding -> Conference [color=black]\n\tPIR_Conference [label=PIR_Conference color=\"#377EB8\" style=filled]\n\tConference -> PIR_Conference [color=black]\n\t\"PIRToPresence56de0e99-b87f-400b-b8fc-4704b9dc44a4\" [label=PIRToPresence color=\"#A65628\" style=filled]\n\tPIR_Conference -> \"PIRToPresence56de0e99-b87f-400b-b8fc-4704b9dc44a4\" [color=black]\n\t\"PresenceStream56de0e99-b87f-400b-b8fc-4704b9dc44a4\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"PIRToPresence56de0e99-b87f-400b-b8fc-4704b9dc44a4\" -> \"PresenceStream56de0e99-b87f-400b-b8fc-4704b9dc44a4\" [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCount648aaffa-f161-4802-b9f5-da34cad51c28\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\t\"PresenceStream56de0e99-b87f-400b-b8fc-4704b9dc44a4\" -> \"PresenceCO2AndTemperatureToOccupantCount648aaffa-f161-4802-b9f5-da34cad51c28\" [color=black]\n\t\"OccupantCount648aaffa-f161-4802-b9f5-da34cad51c28\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCount648aaffa-f161-4802-b9f5-da34cad51c28\" -> \"OccupantCount648aaffa-f161-4802-b9f5-da34cad51c28\" [color=black]\n\tCO2_Conference [label=CO2_Conference color=\"#377EB8\" style=filled]\n\tConference -> CO2_Conference [color=black]\n\tCO2_Conference -> \"PresenceCO2AndTemperatureToOccupantCount648aaffa-f161-4802-b9f5-da34cad51c28\" [color=black]\n\t\"CO2ToPresence009f7038-b1f9-4bc3-8f9c-90e0e0c00787\" [label=CO2ToPresence color=\"#A65628\" style=filled]\n\tCO2_Conference -> \"CO2ToPresence009f7038-b1f9-4bc3-8f9c-90e0e0c00787\" [color=black]\n\t\"PresenceStream009f7038-b1f9-4bc3-8f9c-90e0e0c00787\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"CO2ToPresence009f7038-b1f9-4bc3-8f9c-90e0e0c00787\" -> \"PresenceStream009f7038-b1f9-4bc3-8f9c-90e0e0c00787\" [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCount561da4c6-877f-4091-9d4e-a122121d8434\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\t\"PresenceStream009f7038-b1f9-4bc3-8f9c-90e0e0c00787\" -> \"PresenceCO2AndTemperatureToOccupantCount561da4c6-877f-4091-9d4e-a122121d8434\" [color=black]\n\t\"OccupantCount561da4c6-877f-4091-9d4e-a122121d8434\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCount561da4c6-877f-4091-9d4e-a122121d8434\" -> \"OccupantCount561da4c6-877f-4091-9d4e-a122121d8434\" [color=black]\n\tCO2_Conference -> \"PresenceCO2AndTemperatureToOccupantCount561da4c6-877f-4091-9d4e-a122121d8434\" [color=black]\n\t\"CO2ToOccupantCountf1ea01de-80ed-465f-bc9b-6b666017c51c\" [label=CO2ToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_Conference -> \"CO2ToOccupantCountf1ea01de-80ed-465f-bc9b-6b666017c51c\" [color=black]\n\t\"OccupantCountf1ea01de-80ed-465f-bc9b-6b666017c51c\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"CO2ToOccupantCountf1ea01de-80ed-465f-bc9b-6b666017c51c\" -> \"OccupantCountf1ea01de-80ed-465f-bc9b-6b666017c51c\" [color=black]\n\tEnthalpy_Conference [label=Enthalpy_Conference color=\"#377EB8\" style=filled]\n\tConference -> Enthalpy_Conference [color=black]\n\tHumidity_conference [label=Humidity_conference color=\"#377EB8\" style=filled]\n\tConference -> Humidity_conference [color=black]\n\tParticulateMatter25_Conference [label=ParticulateMatter25_Conference color=\"#377EB8\" style=filled]\n\tConference -> ParticulateMatter25_Conference [color=black]\n\tNoise_Conference [label=Noise_Conference color=\"#377EB8\" style=filled]\n\tConference -> Noise_Conference [color=black]\n\tDewPoint_Conference [label=DewPoint_Conference color=\"#377EB8\" style=filled]\n\tConference -> DewPoint_Conference [color=black]\n\tTemperature_conference [label=Temperature_conference color=\"#377EB8\" style=filled]\n\tConference -> Temperature_conference [color=black]\n\tTemperature_conference -> \"PresenceCO2AndTemperatureToOccupantCount648aaffa-f161-4802-b9f5-da34cad51c28\" [color=black]\n\tTemperature_conference -> \"PresenceCO2AndTemperatureToOccupantCount561da4c6-877f-4091-9d4e-a122121d8434\" [color=black]\n\tCO_Conference [label=CO_Conference color=\"#377EB8\" style=filled]\n\tConference -> CO_Conference [color=black]\n\tContextLocation3 [label=ContextLocation3 color=\"#FF7F00\" style=filled]\n\tConference -> ContextLocation3 [color=black]\n\t\"ContextLocationToRoomIdentity81ef84f4-ee43-425d-ab0d-6c6e8ce0a8b2\" [label=ContextLocationToRoomIdentity color=\"#FFFF33\" style=filled]\n\tContextLocation3 -> \"ContextLocationToRoomIdentity81ef84f4-ee43-425d-ab0d-6c6e8ce0a8b2\" [color=black]\n\tContextIdentity_Room [label=ContextIdentity_Room color=\"#E41A1C\" style=filled]\n\t\"ContextLocationToRoomIdentity81ef84f4-ee43-425d-ab0d-6c6e8ce0a8b2\" -> ContextIdentity_Room [color=black]\n\tTVOC_Conference [label=TVOC_Conference color=\"#377EB8\" style=filled]\n\tConference -> TVOC_Conference [color=black]\n\tIlluminance_conference [label=Illuminance_conference color=\"#377EB8\" style=filled]\n\tConference -> Illuminance_conference [color=black]\n\tContextLocation [label=ContextLocation color=\"#FF7F00\" style=filled]\n\tBuilding -> ContextLocation [color=black]\n\tRoom [label=Room color=\"#999999\" style=filled]\n\tBay_10 [label=Bay_10 color=\"#999999\" style=filled]\n\tRoom -> Bay_10 [color=black]\n\tTVOC9 [label=TVOC9 color=\"#377EB8\" style=filled]\n\tBay_10 -> TVOC9 [color=black]\n\tCO_9 [label=CO_9 color=\"#377EB8\" style=filled]\n\tBay_10 -> CO_9 [color=black]\n\tTemperature9 [label=Temperature9 color=\"#377EB8\" style=filled]\n\tBay_10 -> Temperature9 [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCount3f6b2d27-9caf-4212-ae3f-770c1e651511\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\tTemperature9 -> \"PresenceCO2AndTemperatureToOccupantCount3f6b2d27-9caf-4212-ae3f-770c1e651511\" [color=black]\n\t\"OccupantCount3f6b2d27-9caf-4212-ae3f-770c1e651511\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCount3f6b2d27-9caf-4212-ae3f-770c1e651511\" -> \"OccupantCount3f6b2d27-9caf-4212-ae3f-770c1e651511\" [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCounteeee39c3-c475-46b2-b56c-8042b4f47863\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\tTemperature9 -> \"PresenceCO2AndTemperatureToOccupantCounteeee39c3-c475-46b2-b56c-8042b4f47863\" [color=black]\n\t\"OccupantCounteeee39c3-c475-46b2-b56c-8042b4f47863\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCounteeee39c3-c475-46b2-b56c-8042b4f47863\" -> \"OccupantCounteeee39c3-c475-46b2-b56c-8042b4f47863\" [color=black]\n\tNoise9 [label=Noise9 color=\"#377EB8\" style=filled]\n\tBay_10 -> Noise9 [color=black]\n\tIlluminance9 [label=Illuminance9 color=\"#377EB8\" style=filled]\n\tBay_10 -> Illuminance9 [color=black]\n\tPIR9 [label=PIR9 color=\"#377EB8\" style=filled]\n\tBay_10 -> PIR9 [color=black]\n\t\"PIRToPresence9ebd036a-93eb-495a-9991-1eba4fb680ef\" [label=PIRToPresence color=\"#A65628\" style=filled]\n\tPIR9 -> \"PIRToPresence9ebd036a-93eb-495a-9991-1eba4fb680ef\" [color=black]\n\t\"PresenceStream9ebd036a-93eb-495a-9991-1eba4fb680ef\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"PIRToPresence9ebd036a-93eb-495a-9991-1eba4fb680ef\" -> \"PresenceStream9ebd036a-93eb-495a-9991-1eba4fb680ef\" [color=black]\n\t\"PresenceToWorkDays27278d4f-cb0e-48b8-a488-acc205bc9698\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStream9ebd036a-93eb-495a-9991-1eba4fb680ef\" -> \"PresenceToWorkDays27278d4f-cb0e-48b8-a488-acc205bc9698\" [color=black]\n\tWork_day_Single_Office_Room [label=Work_day_Single_Office_Room color=\"#E41A1C\" style=filled]\n\t\"PresenceToWorkDays27278d4f-cb0e-48b8-a488-acc205bc9698\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceToOccupantOfficeHours6146f5db-f9eb-4869-bbeb-0d40961846d0\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStream9ebd036a-93eb-495a-9991-1eba4fb680ef\" -> \"PresenceToOccupantOfficeHours6146f5db-f9eb-4869-bbeb-0d40961846d0\" [color=black]\n\tOccupantOfficeHours_Single_Office_Room [label=OccupantOfficeHours_Single_Office_Room color=\"#E41A1C\" style=filled]\n\t\"PresenceToOccupantOfficeHours6146f5db-f9eb-4869-bbeb-0d40961846d0\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"PresenceStream9ebd036a-93eb-495a-9991-1eba4fb680ef\" -> \"PresenceCO2AndTemperatureToOccupantCount3f6b2d27-9caf-4212-ae3f-770c1e651511\" [color=black]\n\tHumidity9 [label=Humidity9 color=\"#377EB8\" style=filled]\n\tBay_10 -> Humidity9 [color=black]\n\tCO2_9 [label=CO2_9 color=\"#377EB8\" style=filled]\n\tBay_10 -> CO2_9 [color=black]\n\t\"PresenceToLunchLength10b8fc54-5c2f-466c-9073-582d3febcfd1\" [label=PresenceToLunchLength color=\"#FFFF33\" style=filled]\n\tCO2_9 -> \"PresenceToLunchLength10b8fc54-5c2f-466c-9073-582d3febcfd1\" [color=black]\n\tLunch_Length [label=Lunch_Length color=\"#E41A1C\" style=filled]\n\t\"PresenceToLunchLength10b8fc54-5c2f-466c-9073-582d3febcfd1\" -> Lunch_Length [color=black]\n\tCO2_9 -> \"PresenceCO2AndTemperatureToOccupantCounteeee39c3-c475-46b2-b56c-8042b4f47863\" [color=black]\n\t\"CO2ToPresenced5bb0baf-f7c4-4b77-841d-6f04038178eb\" [label=CO2ToPresence color=\"#A65628\" style=filled]\n\tCO2_9 -> \"CO2ToPresenced5bb0baf-f7c4-4b77-841d-6f04038178eb\" [color=black]\n\t\"PresenceStreamd5bb0baf-f7c4-4b77-841d-6f04038178eb\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"CO2ToPresenced5bb0baf-f7c4-4b77-841d-6f04038178eb\" -> \"PresenceStreamd5bb0baf-f7c4-4b77-841d-6f04038178eb\" [color=black]\n\t\"PresenceStreamd5bb0baf-f7c4-4b77-841d-6f04038178eb\" -> \"PresenceCO2AndTemperatureToOccupantCounteeee39c3-c475-46b2-b56c-8042b4f47863\" [color=black]\n\t\"PresenceToWorkDaysa77e1ee8-197c-4009-95d7-ed2556a92ecb\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStreamd5bb0baf-f7c4-4b77-841d-6f04038178eb\" -> \"PresenceToWorkDaysa77e1ee8-197c-4009-95d7-ed2556a92ecb\" [color=black]\n\t\"PresenceToWorkDaysa77e1ee8-197c-4009-95d7-ed2556a92ecb\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceToOccupantOfficeHours9ebb03c5-bf98-4e2a-a622-a88172000650\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStreamd5bb0baf-f7c4-4b77-841d-6f04038178eb\" -> \"PresenceToOccupantOfficeHours9ebb03c5-bf98-4e2a-a622-a88172000650\" [color=black]\n\t\"PresenceToOccupantOfficeHours9ebb03c5-bf98-4e2a-a622-a88172000650\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\tCO2_9 -> \"PresenceCO2AndTemperatureToOccupantCount3f6b2d27-9caf-4212-ae3f-770c1e651511\" [color=black]\n\t\"CO2ToOccupantCount5efcef78-c2c4-4b43-b6d9-5606d9a821e2\" [label=CO2ToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_9 -> \"CO2ToOccupantCount5efcef78-c2c4-4b43-b6d9-5606d9a821e2\" [color=black]\n\t\"OccupantCount5efcef78-c2c4-4b43-b6d9-5606d9a821e2\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"CO2ToOccupantCount5efcef78-c2c4-4b43-b6d9-5606d9a821e2\" -> \"OccupantCount5efcef78-c2c4-4b43-b6d9-5606d9a821e2\" [color=black]\n\tBay_15 [label=Bay_15 color=\"#999999\" style=filled]\n\tRoom -> Bay_15 [color=black]\n\tTVOC14 [label=TVOC14 color=\"#377EB8\" style=filled]\n\tBay_15 -> TVOC14 [color=black]\n\tCO_14 [label=CO_14 color=\"#377EB8\" style=filled]\n\tBay_15 -> CO_14 [color=black]\n\tCO2_14 [label=CO2_14 color=\"#377EB8\" style=filled]\n\tBay_15 -> CO2_14 [color=black]\n\t\"CO2ToPresence3e06fc8a-7106-4c95-8d34-f8571074c8d1\" [label=CO2ToPresence color=\"#A65628\" style=filled]\n\tCO2_14 -> \"CO2ToPresence3e06fc8a-7106-4c95-8d34-f8571074c8d1\" [color=black]\n\t\"PresenceStream3e06fc8a-7106-4c95-8d34-f8571074c8d1\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"CO2ToPresence3e06fc8a-7106-4c95-8d34-f8571074c8d1\" -> \"PresenceStream3e06fc8a-7106-4c95-8d34-f8571074c8d1\" [color=black]\n\t\"PresenceToWorkDays43fa23ad-4aed-4392-9b15-372536849dca\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStream3e06fc8a-7106-4c95-8d34-f8571074c8d1\" -> \"PresenceToWorkDays43fa23ad-4aed-4392-9b15-372536849dca\" [color=black]\n\t\"PresenceToWorkDays43fa23ad-4aed-4392-9b15-372536849dca\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceToOccupantOfficeHours6f1f856a-96e9-4bcc-bf67-a5a6b640130a\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStream3e06fc8a-7106-4c95-8d34-f8571074c8d1\" -> \"PresenceToOccupantOfficeHours6f1f856a-96e9-4bcc-bf67-a5a6b640130a\" [color=black]\n\t\"PresenceToOccupantOfficeHours6f1f856a-96e9-4bcc-bf67-a5a6b640130a\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"CO2ToOccupantCountdda80029-85c7-4c5e-830d-4cb4180418bc\" [label=CO2ToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_14 -> \"CO2ToOccupantCountdda80029-85c7-4c5e-830d-4cb4180418bc\" [color=black]\n\t\"OccupantCountdda80029-85c7-4c5e-830d-4cb4180418bc\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"CO2ToOccupantCountdda80029-85c7-4c5e-830d-4cb4180418bc\" -> \"OccupantCountdda80029-85c7-4c5e-830d-4cb4180418bc\" [color=black]\n\t\"PresenceToLunchLengthdcde63c0-ec10-469e-9424-a480ff012cdc\" [label=PresenceToLunchLength color=\"#FFFF33\" style=filled]\n\tCO2_14 -> \"PresenceToLunchLengthdcde63c0-ec10-469e-9424-a480ff012cdc\" [color=black]\n\t\"PresenceToLunchLengthdcde63c0-ec10-469e-9424-a480ff012cdc\" -> Lunch_Length [color=black]\n\tBay_1 [label=Bay_1 color=\"#999999\" style=filled]\n\tRoom -> Bay_1 [color=black]\n\tCO_0 [label=CO_0 color=\"#377EB8\" style=filled]\n\tBay_1 -> CO_0 [color=black]\n\tTVOC0 [label=TVOC0 color=\"#377EB8\" style=filled]\n\tBay_1 -> TVOC0 [color=black]\n\tCO2_0 [label=CO2_0 color=\"#377EB8\" style=filled]\n\tBay_1 -> CO2_0 [color=black]\n\t\"CO2ToOccupantCount61840884-2291-496f-8e3a-fb326dac3575\" [label=CO2ToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_0 -> \"CO2ToOccupantCount61840884-2291-496f-8e3a-fb326dac3575\" [color=black]\n\t\"OccupantCount61840884-2291-496f-8e3a-fb326dac3575\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"CO2ToOccupantCount61840884-2291-496f-8e3a-fb326dac3575\" -> \"OccupantCount61840884-2291-496f-8e3a-fb326dac3575\" [color=black]\n\t\"CO2ToPresence039d5364-2c1e-4465-97ab-a8f68c19fc14\" [label=CO2ToPresence color=\"#A65628\" style=filled]\n\tCO2_0 -> \"CO2ToPresence039d5364-2c1e-4465-97ab-a8f68c19fc14\" [color=black]\n\t\"PresenceStream039d5364-2c1e-4465-97ab-a8f68c19fc14\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"CO2ToPresence039d5364-2c1e-4465-97ab-a8f68c19fc14\" -> \"PresenceStream039d5364-2c1e-4465-97ab-a8f68c19fc14\" [color=black]\n\t\"PresenceToWorkDays10a5a700-3fc5-4b73-b1c8-0bb223b2937d\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStream039d5364-2c1e-4465-97ab-a8f68c19fc14\" -> \"PresenceToWorkDays10a5a700-3fc5-4b73-b1c8-0bb223b2937d\" [color=black]\n\t\"PresenceToWorkDays10a5a700-3fc5-4b73-b1c8-0bb223b2937d\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceToOccupantOfficeHours5ecdea1a-16db-4745-8778-13e2af17d23d\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStream039d5364-2c1e-4465-97ab-a8f68c19fc14\" -> \"PresenceToOccupantOfficeHours5ecdea1a-16db-4745-8778-13e2af17d23d\" [color=black]\n\t\"PresenceToOccupantOfficeHours5ecdea1a-16db-4745-8778-13e2af17d23d\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"PresenceToLunchLengthe7709d43-b008-4843-bef6-04b3b9b74323\" [label=PresenceToLunchLength color=\"#FFFF33\" style=filled]\n\tCO2_0 -> \"PresenceToLunchLengthe7709d43-b008-4843-bef6-04b3b9b74323\" [color=black]\n\t\"PresenceToLunchLengthe7709d43-b008-4843-bef6-04b3b9b74323\" -> Lunch_Length [color=black]\n\tBay_14 [label=Bay_14 color=\"#999999\" style=filled]\n\tRoom -> Bay_14 [color=black]\n\tCO_13 [label=CO_13 color=\"#377EB8\" style=filled]\n\tBay_14 -> CO_13 [color=black]\n\tTVOC13 [label=TVOC13 color=\"#377EB8\" style=filled]\n\tBay_14 -> TVOC13 [color=black]\n\tCO2_13 [label=CO2_13 color=\"#377EB8\" style=filled]\n\tBay_14 -> CO2_13 [color=black]\n\t\"CO2ToPresencea13978e1-f919-49d6-86d6-c286da0a53ad\" [label=CO2ToPresence color=\"#A65628\" style=filled]\n\tCO2_13 -> \"CO2ToPresencea13978e1-f919-49d6-86d6-c286da0a53ad\" [color=black]\n\t\"PresenceStreama13978e1-f919-49d6-86d6-c286da0a53ad\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"CO2ToPresencea13978e1-f919-49d6-86d6-c286da0a53ad\" -> \"PresenceStreama13978e1-f919-49d6-86d6-c286da0a53ad\" [color=black]\n\t\"PresenceToWorkDaysb63952d8-b602-4670-972f-c6a5c904ac53\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStreama13978e1-f919-49d6-86d6-c286da0a53ad\" -> \"PresenceToWorkDaysb63952d8-b602-4670-972f-c6a5c904ac53\" [color=black]\n\t\"PresenceToWorkDaysb63952d8-b602-4670-972f-c6a5c904ac53\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceToOccupantOfficeHours021cbecb-fb24-477f-b73e-0306acdf92e1\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStreama13978e1-f919-49d6-86d6-c286da0a53ad\" -> \"PresenceToOccupantOfficeHours021cbecb-fb24-477f-b73e-0306acdf92e1\" [color=black]\n\t\"PresenceToOccupantOfficeHours021cbecb-fb24-477f-b73e-0306acdf92e1\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"PresenceToLunchLengthc40336e4-84a2-4998-9e37-ca6b84885e52\" [label=PresenceToLunchLength color=\"#FFFF33\" style=filled]\n\tCO2_13 -> \"PresenceToLunchLengthc40336e4-84a2-4998-9e37-ca6b84885e52\" [color=black]\n\t\"PresenceToLunchLengthc40336e4-84a2-4998-9e37-ca6b84885e52\" -> Lunch_Length [color=black]\n\t\"CO2ToOccupantCountfb47fe2a-eeff-44a5-b432-ca48ab4d2267\" [label=CO2ToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_13 -> \"CO2ToOccupantCountfb47fe2a-eeff-44a5-b432-ca48ab4d2267\" [color=black]\n\t\"OccupantCountfb47fe2a-eeff-44a5-b432-ca48ab4d2267\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"CO2ToOccupantCountfb47fe2a-eeff-44a5-b432-ca48ab4d2267\" -> \"OccupantCountfb47fe2a-eeff-44a5-b432-ca48ab4d2267\" [color=black]\n\tBay_9 [label=Bay_9 color=\"#999999\" style=filled]\n\tRoom -> Bay_9 [color=black]\n\tCO_8 [label=CO_8 color=\"#377EB8\" style=filled]\n\tBay_9 -> CO_8 [color=black]\n\tPIR8 [label=PIR8 color=\"#377EB8\" style=filled]\n\tBay_9 -> PIR8 [color=black]\n\t\"PIRToPresence86c3131b-19a2-4c61-903f-952b9c054a39\" [label=PIRToPresence color=\"#A65628\" style=filled]\n\tPIR8 -> \"PIRToPresence86c3131b-19a2-4c61-903f-952b9c054a39\" [color=black]\n\t\"PresenceStream86c3131b-19a2-4c61-903f-952b9c054a39\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"PIRToPresence86c3131b-19a2-4c61-903f-952b9c054a39\" -> \"PresenceStream86c3131b-19a2-4c61-903f-952b9c054a39\" [color=black]\n\t\"PresenceToWorkDayse6d224c7-cd47-4567-9f1c-7d2d1c3d35de\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStream86c3131b-19a2-4c61-903f-952b9c054a39\" -> \"PresenceToWorkDayse6d224c7-cd47-4567-9f1c-7d2d1c3d35de\" [color=black]\n\t\"PresenceToWorkDayse6d224c7-cd47-4567-9f1c-7d2d1c3d35de\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceToOccupantOfficeHours8c96b320-decb-44ac-a507-cf648a37fc20\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStream86c3131b-19a2-4c61-903f-952b9c054a39\" -> \"PresenceToOccupantOfficeHours8c96b320-decb-44ac-a507-cf648a37fc20\" [color=black]\n\t\"PresenceToOccupantOfficeHours8c96b320-decb-44ac-a507-cf648a37fc20\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCountee90ec43-5ceb-45b6-9d4a-cb7434487299\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\t\"PresenceStream86c3131b-19a2-4c61-903f-952b9c054a39\" -> \"PresenceCO2AndTemperatureToOccupantCountee90ec43-5ceb-45b6-9d4a-cb7434487299\" [color=black]\n\t\"OccupantCountee90ec43-5ceb-45b6-9d4a-cb7434487299\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCountee90ec43-5ceb-45b6-9d4a-cb7434487299\" -> \"OccupantCountee90ec43-5ceb-45b6-9d4a-cb7434487299\" [color=black]\n\tNoise8 [label=Noise8 color=\"#377EB8\" style=filled]\n\tBay_9 -> Noise8 [color=black]\n\tTVOC8 [label=TVOC8 color=\"#377EB8\" style=filled]\n\tBay_9 -> TVOC8 [color=black]\n\tHumidity8 [label=Humidity8 color=\"#377EB8\" style=filled]\n\tBay_9 -> Humidity8 [color=black]\n\tTemperature8 [label=Temperature8 color=\"#377EB8\" style=filled]\n\tBay_9 -> Temperature8 [color=black]\n\tTemperature8 -> \"PresenceCO2AndTemperatureToOccupantCountee90ec43-5ceb-45b6-9d4a-cb7434487299\" [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCount8f2bf800-3a72-4098-940f-12f4227900d0\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\tTemperature8 -> \"PresenceCO2AndTemperatureToOccupantCount8f2bf800-3a72-4098-940f-12f4227900d0\" [color=black]\n\t\"OccupantCount8f2bf800-3a72-4098-940f-12f4227900d0\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCount8f2bf800-3a72-4098-940f-12f4227900d0\" -> \"OccupantCount8f2bf800-3a72-4098-940f-12f4227900d0\" [color=black]\n\tIlluminance8 [label=Illuminance8 color=\"#377EB8\" style=filled]\n\tBay_9 -> Illuminance8 [color=black]\n\tCO2_8 [label=CO2_8 color=\"#377EB8\" style=filled]\n\tBay_9 -> CO2_8 [color=black]\n\tCO2_8 -> \"PresenceCO2AndTemperatureToOccupantCount8f2bf800-3a72-4098-940f-12f4227900d0\" [color=black]\n\t\"PresenceToLunchLength2b410140-28bb-4ad7-b1a7-2ca4d85afe78\" [label=PresenceToLunchLength color=\"#FFFF33\" style=filled]\n\tCO2_8 -> \"PresenceToLunchLength2b410140-28bb-4ad7-b1a7-2ca4d85afe78\" [color=black]\n\t\"PresenceToLunchLength2b410140-28bb-4ad7-b1a7-2ca4d85afe78\" -> Lunch_Length [color=black]\n\t\"CO2ToPresence8781db52-d795-480a-888d-07e9e3fada6d\" [label=CO2ToPresence color=\"#A65628\" style=filled]\n\tCO2_8 -> \"CO2ToPresence8781db52-d795-480a-888d-07e9e3fada6d\" [color=black]\n\t\"PresenceStream8781db52-d795-480a-888d-07e9e3fada6d\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"CO2ToPresence8781db52-d795-480a-888d-07e9e3fada6d\" -> \"PresenceStream8781db52-d795-480a-888d-07e9e3fada6d\" [color=black]\n\t\"PresenceToWorkDaysb0240d54-e51e-4993-a1d7-7c1bfaf72b62\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStream8781db52-d795-480a-888d-07e9e3fada6d\" -> \"PresenceToWorkDaysb0240d54-e51e-4993-a1d7-7c1bfaf72b62\" [color=black]\n\t\"PresenceToWorkDaysb0240d54-e51e-4993-a1d7-7c1bfaf72b62\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceStream8781db52-d795-480a-888d-07e9e3fada6d\" -> \"PresenceCO2AndTemperatureToOccupantCount8f2bf800-3a72-4098-940f-12f4227900d0\" [color=black]\n\t\"PresenceToOccupantOfficeHours07ff46b2-124c-49d6-8e5a-dd6ebecb6ed7\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStream8781db52-d795-480a-888d-07e9e3fada6d\" -> \"PresenceToOccupantOfficeHours07ff46b2-124c-49d6-8e5a-dd6ebecb6ed7\" [color=black]\n\t\"PresenceToOccupantOfficeHours07ff46b2-124c-49d6-8e5a-dd6ebecb6ed7\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\tCO2_8 -> \"PresenceCO2AndTemperatureToOccupantCountee90ec43-5ceb-45b6-9d4a-cb7434487299\" [color=black]\n\t\"CO2ToOccupantCounta667ed90-51bf-47d7-b726-c9be23fb1192\" [label=CO2ToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_8 -> \"CO2ToOccupantCounta667ed90-51bf-47d7-b726-c9be23fb1192\" [color=black]\n\t\"OccupantCounta667ed90-51bf-47d7-b726-c9be23fb1192\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"CO2ToOccupantCounta667ed90-51bf-47d7-b726-c9be23fb1192\" -> \"OccupantCounta667ed90-51bf-47d7-b726-c9be23fb1192\" [color=black]\n\tBay_2 [label=Bay_2 color=\"#999999\" style=filled]\n\tRoom -> Bay_2 [color=black]\n\tCO2_1 [label=CO2_1 color=\"#377EB8\" style=filled]\n\tBay_2 -> CO2_1 [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCount093fbd79-0d91-4c95-be8d-c32da365e326\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_1 -> \"PresenceCO2AndTemperatureToOccupantCount093fbd79-0d91-4c95-be8d-c32da365e326\" [color=black]\n\t\"OccupantCount093fbd79-0d91-4c95-be8d-c32da365e326\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCount093fbd79-0d91-4c95-be8d-c32da365e326\" -> \"OccupantCount093fbd79-0d91-4c95-be8d-c32da365e326\" [color=black]\n\t\"PresenceToLunchLengthf2c6b791-5fe7-46f5-8f03-fc658da0354f\" [label=PresenceToLunchLength color=\"#FFFF33\" style=filled]\n\tCO2_1 -> \"PresenceToLunchLengthf2c6b791-5fe7-46f5-8f03-fc658da0354f\" [color=black]\n\t\"PresenceToLunchLengthf2c6b791-5fe7-46f5-8f03-fc658da0354f\" -> Lunch_Length [color=black]\n\t\"CO2ToPresence60c35f14-c2b0-4024-912b-63cda8edf597\" [label=CO2ToPresence color=\"#A65628\" style=filled]\n\tCO2_1 -> \"CO2ToPresence60c35f14-c2b0-4024-912b-63cda8edf597\" [color=black]\n\t\"PresenceStream60c35f14-c2b0-4024-912b-63cda8edf597\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"CO2ToPresence60c35f14-c2b0-4024-912b-63cda8edf597\" -> \"PresenceStream60c35f14-c2b0-4024-912b-63cda8edf597\" [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCountc3802850-0f90-4030-8a0f-667087aaab4e\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\t\"PresenceStream60c35f14-c2b0-4024-912b-63cda8edf597\" -> \"PresenceCO2AndTemperatureToOccupantCountc3802850-0f90-4030-8a0f-667087aaab4e\" [color=black]\n\t\"OccupantCountc3802850-0f90-4030-8a0f-667087aaab4e\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCountc3802850-0f90-4030-8a0f-667087aaab4e\" -> \"OccupantCountc3802850-0f90-4030-8a0f-667087aaab4e\" [color=black]\n\t\"PresenceToOccupantOfficeHours5ae70cd4-21be-46a4-a197-19c9f42b01d2\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStream60c35f14-c2b0-4024-912b-63cda8edf597\" -> \"PresenceToOccupantOfficeHours5ae70cd4-21be-46a4-a197-19c9f42b01d2\" [color=black]\n\t\"PresenceToOccupantOfficeHours5ae70cd4-21be-46a4-a197-19c9f42b01d2\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"PresenceToWorkDays638945a6-8a60-4123-91ba-a2648bc1d993\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStream60c35f14-c2b0-4024-912b-63cda8edf597\" -> \"PresenceToWorkDays638945a6-8a60-4123-91ba-a2648bc1d993\" [color=black]\n\t\"PresenceToWorkDays638945a6-8a60-4123-91ba-a2648bc1d993\" -> Work_day_Single_Office_Room [color=black]\n\t\"CO2ToOccupantCount6e3b077f-a7b2-4412-8944-7c93965a9fc0\" [label=CO2ToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_1 -> \"CO2ToOccupantCount6e3b077f-a7b2-4412-8944-7c93965a9fc0\" [color=black]\n\t\"OccupantCount6e3b077f-a7b2-4412-8944-7c93965a9fc0\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"CO2ToOccupantCount6e3b077f-a7b2-4412-8944-7c93965a9fc0\" -> \"OccupantCount6e3b077f-a7b2-4412-8944-7c93965a9fc0\" [color=black]\n\tCO2_1 -> \"PresenceCO2AndTemperatureToOccupantCountc3802850-0f90-4030-8a0f-667087aaab4e\" [color=black]\n\tIlluminance1 [label=Illuminance1 color=\"#377EB8\" style=filled]\n\tBay_2 -> Illuminance1 [color=black]\n\tTVOC1 [label=TVOC1 color=\"#377EB8\" style=filled]\n\tBay_2 -> TVOC1 [color=black]\n\tNoise1 [label=Noise1 color=\"#377EB8\" style=filled]\n\tBay_2 -> Noise1 [color=black]\n\tTemperature1 [label=Temperature1 color=\"#377EB8\" style=filled]\n\tBay_2 -> Temperature1 [color=black]\n\tTemperature1 -> \"PresenceCO2AndTemperatureToOccupantCount093fbd79-0d91-4c95-be8d-c32da365e326\" [color=black]\n\tTemperature1 -> \"PresenceCO2AndTemperatureToOccupantCountc3802850-0f90-4030-8a0f-667087aaab4e\" [color=black]\n\tHumidity1 [label=Humidity1 color=\"#377EB8\" style=filled]\n\tBay_2 -> Humidity1 [color=black]\n\tPIR1 [label=PIR1 color=\"#377EB8\" style=filled]\n\tBay_2 -> PIR1 [color=black]\n\t\"PIRToPresencee4832801-1bc7-4d13-aab9-8594a2742c72\" [label=PIRToPresence color=\"#A65628\" style=filled]\n\tPIR1 -> \"PIRToPresencee4832801-1bc7-4d13-aab9-8594a2742c72\" [color=black]\n\t\"PresenceStreame4832801-1bc7-4d13-aab9-8594a2742c72\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"PIRToPresencee4832801-1bc7-4d13-aab9-8594a2742c72\" -> \"PresenceStreame4832801-1bc7-4d13-aab9-8594a2742c72\" [color=black]\n\t\"PresenceToWorkDays86ff6e27-6f26-4abb-b84b-ace8fa20542b\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStreame4832801-1bc7-4d13-aab9-8594a2742c72\" -> \"PresenceToWorkDays86ff6e27-6f26-4abb-b84b-ace8fa20542b\" [color=black]\n\t\"PresenceToWorkDays86ff6e27-6f26-4abb-b84b-ace8fa20542b\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceStreame4832801-1bc7-4d13-aab9-8594a2742c72\" -> \"PresenceCO2AndTemperatureToOccupantCount093fbd79-0d91-4c95-be8d-c32da365e326\" [color=black]\n\t\"PresenceToOccupantOfficeHoursd5cdf6a3-8e03-4dfc-8a31-acbef7939e14\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStreame4832801-1bc7-4d13-aab9-8594a2742c72\" -> \"PresenceToOccupantOfficeHoursd5cdf6a3-8e03-4dfc-8a31-acbef7939e14\" [color=black]\n\t\"PresenceToOccupantOfficeHoursd5cdf6a3-8e03-4dfc-8a31-acbef7939e14\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\tCO_1 [label=CO_1 color=\"#377EB8\" style=filled]\n\tBay_2 -> CO_1 [color=black]\n\tRoom -> Building [color=black]\n\tBay_4 [label=Bay_4 color=\"#999999\" style=filled]\n\tRoom -> Bay_4 [color=black]\n\tPIR3 [label=PIR3 color=\"#377EB8\" style=filled]\n\tBay_4 -> PIR3 [color=black]\n\t\"PIRToPresencef455ac52-3a61-44d8-9bae-aebcbab5359d\" [label=PIRToPresence color=\"#A65628\" style=filled]\n\tPIR3 -> \"PIRToPresencef455ac52-3a61-44d8-9bae-aebcbab5359d\" [color=black]\n\t\"PresenceStreamf455ac52-3a61-44d8-9bae-aebcbab5359d\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"PIRToPresencef455ac52-3a61-44d8-9bae-aebcbab5359d\" -> \"PresenceStreamf455ac52-3a61-44d8-9bae-aebcbab5359d\" [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCount1d3a663f-63bc-443a-b258-57eb98c6065a\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\t\"PresenceStreamf455ac52-3a61-44d8-9bae-aebcbab5359d\" -> \"PresenceCO2AndTemperatureToOccupantCount1d3a663f-63bc-443a-b258-57eb98c6065a\" [color=black]\n\t\"OccupantCount1d3a663f-63bc-443a-b258-57eb98c6065a\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCount1d3a663f-63bc-443a-b258-57eb98c6065a\" -> \"OccupantCount1d3a663f-63bc-443a-b258-57eb98c6065a\" [color=black]\n\t\"PresenceToOccupantOfficeHours64989139-26e2-4a0c-93b9-0f86b5a3de03\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStreamf455ac52-3a61-44d8-9bae-aebcbab5359d\" -> \"PresenceToOccupantOfficeHours64989139-26e2-4a0c-93b9-0f86b5a3de03\" [color=black]\n\t\"PresenceToOccupantOfficeHours64989139-26e2-4a0c-93b9-0f86b5a3de03\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"PresenceToWorkDays9da35c1f-0371-4019-bbc4-574122907f30\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStreamf455ac52-3a61-44d8-9bae-aebcbab5359d\" -> \"PresenceToWorkDays9da35c1f-0371-4019-bbc4-574122907f30\" [color=black]\n\t\"PresenceToWorkDays9da35c1f-0371-4019-bbc4-574122907f30\" -> Work_day_Single_Office_Room [color=black]\n\tCO2_3 [label=CO2_3 color=\"#377EB8\" style=filled]\n\tBay_4 -> CO2_3 [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCounted4baefa-24e8-4ce9-9d9e-f177d2ad5f47\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_3 -> \"PresenceCO2AndTemperatureToOccupantCounted4baefa-24e8-4ce9-9d9e-f177d2ad5f47\" [color=black]\n\t\"OccupantCounted4baefa-24e8-4ce9-9d9e-f177d2ad5f47\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCounted4baefa-24e8-4ce9-9d9e-f177d2ad5f47\" -> \"OccupantCounted4baefa-24e8-4ce9-9d9e-f177d2ad5f47\" [color=black]\n\t\"CO2ToOccupantCount2ca4b928-74d0-4df0-95d7-a363b77622dd\" [label=CO2ToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_3 -> \"CO2ToOccupantCount2ca4b928-74d0-4df0-95d7-a363b77622dd\" [color=black]\n\t\"OccupantCount2ca4b928-74d0-4df0-95d7-a363b77622dd\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"CO2ToOccupantCount2ca4b928-74d0-4df0-95d7-a363b77622dd\" -> \"OccupantCount2ca4b928-74d0-4df0-95d7-a363b77622dd\" [color=black]\n\t\"PresenceToLunchLengthc9a03131-1df0-471f-b3c2-54194d1be587\" [label=PresenceToLunchLength color=\"#FFFF33\" style=filled]\n\tCO2_3 -> \"PresenceToLunchLengthc9a03131-1df0-471f-b3c2-54194d1be587\" [color=black]\n\t\"PresenceToLunchLengthc9a03131-1df0-471f-b3c2-54194d1be587\" -> Lunch_Length [color=black]\n\tCO2_3 -> \"PresenceCO2AndTemperatureToOccupantCount1d3a663f-63bc-443a-b258-57eb98c6065a\" [color=black]\n\t\"CO2ToPresencec1253d50-f0e1-4e65-9527-d11ae4cbfb63\" [label=CO2ToPresence color=\"#A65628\" style=filled]\n\tCO2_3 -> \"CO2ToPresencec1253d50-f0e1-4e65-9527-d11ae4cbfb63\" [color=black]\n\t\"PresenceStreamc1253d50-f0e1-4e65-9527-d11ae4cbfb63\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"CO2ToPresencec1253d50-f0e1-4e65-9527-d11ae4cbfb63\" -> \"PresenceStreamc1253d50-f0e1-4e65-9527-d11ae4cbfb63\" [color=black]\n\t\"PresenceToWorkDaysdff4a1df-58a0-4bce-8748-abb143bf49c1\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStreamc1253d50-f0e1-4e65-9527-d11ae4cbfb63\" -> \"PresenceToWorkDaysdff4a1df-58a0-4bce-8748-abb143bf49c1\" [color=black]\n\t\"PresenceToWorkDaysdff4a1df-58a0-4bce-8748-abb143bf49c1\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceStreamc1253d50-f0e1-4e65-9527-d11ae4cbfb63\" -> \"PresenceCO2AndTemperatureToOccupantCounted4baefa-24e8-4ce9-9d9e-f177d2ad5f47\" [color=black]\n\t\"PresenceToOccupantOfficeHoursa776f9e6-2578-44b4-9c15-925af367a94b\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStreamc1253d50-f0e1-4e65-9527-d11ae4cbfb63\" -> \"PresenceToOccupantOfficeHoursa776f9e6-2578-44b4-9c15-925af367a94b\" [color=black]\n\t\"PresenceToOccupantOfficeHoursa776f9e6-2578-44b4-9c15-925af367a94b\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\tNoise3 [label=Noise3 color=\"#377EB8\" style=filled]\n\tBay_4 -> Noise3 [color=black]\n\tIlluminance3 [label=Illuminance3 color=\"#377EB8\" style=filled]\n\tBay_4 -> Illuminance3 [color=black]\n\tTVOC3 [label=TVOC3 color=\"#377EB8\" style=filled]\n\tBay_4 -> TVOC3 [color=black]\n\tTemperature3 [label=Temperature3 color=\"#377EB8\" style=filled]\n\tBay_4 -> Temperature3 [color=black]\n\tTemperature3 -> \"PresenceCO2AndTemperatureToOccupantCounted4baefa-24e8-4ce9-9d9e-f177d2ad5f47\" [color=black]\n\tTemperature3 -> \"PresenceCO2AndTemperatureToOccupantCount1d3a663f-63bc-443a-b258-57eb98c6065a\" [color=black]\n\tCO_3 [label=CO_3 color=\"#377EB8\" style=filled]\n\tBay_4 -> CO_3 [color=black]\n\tHumidity3 [label=Humidity3 color=\"#377EB8\" style=filled]\n\tBay_4 -> Humidity3 [color=black]\n\tBay_8 [label=Bay_8 color=\"#999999\" style=filled]\n\tRoom -> Bay_8 [color=black]\n\tNoise7 [label=Noise7 color=\"#377EB8\" style=filled]\n\tBay_8 -> Noise7 [color=black]\n\tCO_7 [label=CO_7 color=\"#377EB8\" style=filled]\n\tBay_8 -> CO_7 [color=black]\n\tHumidity7 [label=Humidity7 color=\"#377EB8\" style=filled]\n\tBay_8 -> Humidity7 [color=black]\n\tTemperature7 [label=Temperature7 color=\"#377EB8\" style=filled]\n\tBay_8 -> Temperature7 [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCount7eac2be0-1a50-4cde-b47d-4f659cd99dcb\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\tTemperature7 -> \"PresenceCO2AndTemperatureToOccupantCount7eac2be0-1a50-4cde-b47d-4f659cd99dcb\" [color=black]\n\t\"OccupantCount7eac2be0-1a50-4cde-b47d-4f659cd99dcb\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCount7eac2be0-1a50-4cde-b47d-4f659cd99dcb\" -> \"OccupantCount7eac2be0-1a50-4cde-b47d-4f659cd99dcb\" [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCount82da78f5-46a7-4533-afb9-76c07a97c06b\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\tTemperature7 -> \"PresenceCO2AndTemperatureToOccupantCount82da78f5-46a7-4533-afb9-76c07a97c06b\" [color=black]\n\t\"OccupantCount82da78f5-46a7-4533-afb9-76c07a97c06b\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCount82da78f5-46a7-4533-afb9-76c07a97c06b\" -> \"OccupantCount82da78f5-46a7-4533-afb9-76c07a97c06b\" [color=black]\n\tPIR7 [label=PIR7 color=\"#377EB8\" style=filled]\n\tBay_8 -> PIR7 [color=black]\n\t\"PIRToPresence737f9a78-e011-4ddf-89b1-3681d4acf9e0\" [label=PIRToPresence color=\"#A65628\" style=filled]\n\tPIR7 -> \"PIRToPresence737f9a78-e011-4ddf-89b1-3681d4acf9e0\" [color=black]\n\t\"PresenceStream737f9a78-e011-4ddf-89b1-3681d4acf9e0\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"PIRToPresence737f9a78-e011-4ddf-89b1-3681d4acf9e0\" -> \"PresenceStream737f9a78-e011-4ddf-89b1-3681d4acf9e0\" [color=black]\n\t\"PresenceStream737f9a78-e011-4ddf-89b1-3681d4acf9e0\" -> \"PresenceCO2AndTemperatureToOccupantCount82da78f5-46a7-4533-afb9-76c07a97c06b\" [color=black]\n\t\"PresenceToWorkDays91ce47b7-004d-4b78-9f2c-163d363e1004\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStream737f9a78-e011-4ddf-89b1-3681d4acf9e0\" -> \"PresenceToWorkDays91ce47b7-004d-4b78-9f2c-163d363e1004\" [color=black]\n\t\"PresenceToWorkDays91ce47b7-004d-4b78-9f2c-163d363e1004\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceToOccupantOfficeHours58392ed7-5e2a-4852-9048-04ff1ff3494d\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStream737f9a78-e011-4ddf-89b1-3681d4acf9e0\" -> \"PresenceToOccupantOfficeHours58392ed7-5e2a-4852-9048-04ff1ff3494d\" [color=black]\n\t\"PresenceToOccupantOfficeHours58392ed7-5e2a-4852-9048-04ff1ff3494d\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\tCO2_7 [label=CO2_7 color=\"#377EB8\" style=filled]\n\tBay_8 -> CO2_7 [color=black]\n\t\"CO2ToOccupantCount370ec533-4cb6-4c76-a8bc-001c1321f420\" [label=CO2ToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_7 -> \"CO2ToOccupantCount370ec533-4cb6-4c76-a8bc-001c1321f420\" [color=black]\n\t\"OccupantCount370ec533-4cb6-4c76-a8bc-001c1321f420\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"CO2ToOccupantCount370ec533-4cb6-4c76-a8bc-001c1321f420\" -> \"OccupantCount370ec533-4cb6-4c76-a8bc-001c1321f420\" [color=black]\n\tCO2_7 -> \"PresenceCO2AndTemperatureToOccupantCount7eac2be0-1a50-4cde-b47d-4f659cd99dcb\" [color=black]\n\t\"PresenceToLunchLength368398d1-9218-4076-bfde-7f727e29d402\" [label=PresenceToLunchLength color=\"#FFFF33\" style=filled]\n\tCO2_7 -> \"PresenceToLunchLength368398d1-9218-4076-bfde-7f727e29d402\" [color=black]\n\t\"PresenceToLunchLength368398d1-9218-4076-bfde-7f727e29d402\" -> Lunch_Length [color=black]\n\t\"CO2ToPresence455902dc-4236-4395-92c7-156aa35900d6\" [label=CO2ToPresence color=\"#A65628\" style=filled]\n\tCO2_7 -> \"CO2ToPresence455902dc-4236-4395-92c7-156aa35900d6\" [color=black]\n\t\"PresenceStream455902dc-4236-4395-92c7-156aa35900d6\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"CO2ToPresence455902dc-4236-4395-92c7-156aa35900d6\" -> \"PresenceStream455902dc-4236-4395-92c7-156aa35900d6\" [color=black]\n\t\"PresenceStream455902dc-4236-4395-92c7-156aa35900d6\" -> \"PresenceCO2AndTemperatureToOccupantCount7eac2be0-1a50-4cde-b47d-4f659cd99dcb\" [color=black]\n\t\"PresenceToOccupantOfficeHours0c8d8193-4729-444c-8eef-22b786fe13db\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStream455902dc-4236-4395-92c7-156aa35900d6\" -> \"PresenceToOccupantOfficeHours0c8d8193-4729-444c-8eef-22b786fe13db\" [color=black]\n\t\"PresenceToOccupantOfficeHours0c8d8193-4729-444c-8eef-22b786fe13db\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"PresenceToWorkDays11f66155-9f00-4401-abbd-8beb44feded7\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStream455902dc-4236-4395-92c7-156aa35900d6\" -> \"PresenceToWorkDays11f66155-9f00-4401-abbd-8beb44feded7\" [color=black]\n\t\"PresenceToWorkDays11f66155-9f00-4401-abbd-8beb44feded7\" -> Work_day_Single_Office_Room [color=black]\n\tCO2_7 -> \"PresenceCO2AndTemperatureToOccupantCount82da78f5-46a7-4533-afb9-76c07a97c06b\" [color=black]\n\tTVOC7 [label=TVOC7 color=\"#377EB8\" style=filled]\n\tBay_8 -> TVOC7 [color=black]\n\tIlluminance7 [label=Illuminance7 color=\"#377EB8\" style=filled]\n\tBay_8 -> Illuminance7 [color=black]\n\tBay_13 [label=Bay_13 color=\"#999999\" style=filled]\n\tRoom -> Bay_13 [color=black]\n\tIlluminance12 [label=Illuminance12 color=\"#377EB8\" style=filled]\n\tBay_13 -> Illuminance12 [color=black]\n\tCO2_12 [label=CO2_12 color=\"#377EB8\" style=filled]\n\tBay_13 -> CO2_12 [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCount23e8dabc-b873-4ecd-9d3a-89a0fecc8c11\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_12 -> \"PresenceCO2AndTemperatureToOccupantCount23e8dabc-b873-4ecd-9d3a-89a0fecc8c11\" [color=black]\n\t\"OccupantCount23e8dabc-b873-4ecd-9d3a-89a0fecc8c11\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCount23e8dabc-b873-4ecd-9d3a-89a0fecc8c11\" -> \"OccupantCount23e8dabc-b873-4ecd-9d3a-89a0fecc8c11\" [color=black]\n\t\"CO2ToPresence12df3592-bb00-4202-b31c-97c92f58b4d0\" [label=CO2ToPresence color=\"#A65628\" style=filled]\n\tCO2_12 -> \"CO2ToPresence12df3592-bb00-4202-b31c-97c92f58b4d0\" [color=black]\n\t\"PresenceStream12df3592-bb00-4202-b31c-97c92f58b4d0\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"CO2ToPresence12df3592-bb00-4202-b31c-97c92f58b4d0\" -> \"PresenceStream12df3592-bb00-4202-b31c-97c92f58b4d0\" [color=black]\n\t\"PresenceToOccupantOfficeHours67f7495f-1569-4f6d-8141-851f7ae7150c\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStream12df3592-bb00-4202-b31c-97c92f58b4d0\" -> \"PresenceToOccupantOfficeHours67f7495f-1569-4f6d-8141-851f7ae7150c\" [color=black]\n\t\"PresenceToOccupantOfficeHours67f7495f-1569-4f6d-8141-851f7ae7150c\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"PresenceToWorkDaysab4cf3eb-227b-4355-8a61-c2a59f3fe9c6\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStream12df3592-bb00-4202-b31c-97c92f58b4d0\" -> \"PresenceToWorkDaysab4cf3eb-227b-4355-8a61-c2a59f3fe9c6\" [color=black]\n\t\"PresenceToWorkDaysab4cf3eb-227b-4355-8a61-c2a59f3fe9c6\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceStream12df3592-bb00-4202-b31c-97c92f58b4d0\" -> \"PresenceCO2AndTemperatureToOccupantCount23e8dabc-b873-4ecd-9d3a-89a0fecc8c11\" [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCount9b64caa4-e270-4041-b19b-30bdae49c034\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_12 -> \"PresenceCO2AndTemperatureToOccupantCount9b64caa4-e270-4041-b19b-30bdae49c034\" [color=black]\n\t\"OccupantCount9b64caa4-e270-4041-b19b-30bdae49c034\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCount9b64caa4-e270-4041-b19b-30bdae49c034\" -> \"OccupantCount9b64caa4-e270-4041-b19b-30bdae49c034\" [color=black]\n\t\"PresenceToLunchLength1f6792d4-8083-4772-aa4e-5f5f9ac356f4\" [label=PresenceToLunchLength color=\"#FFFF33\" style=filled]\n\tCO2_12 -> \"PresenceToLunchLength1f6792d4-8083-4772-aa4e-5f5f9ac356f4\" [color=black]\n\t\"PresenceToLunchLength1f6792d4-8083-4772-aa4e-5f5f9ac356f4\" -> Lunch_Length [color=black]\n\t\"CO2ToOccupantCountae891443-cab5-4fc6-85c1-0a1489855eec\" [label=CO2ToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_12 -> \"CO2ToOccupantCountae891443-cab5-4fc6-85c1-0a1489855eec\" [color=black]\n\t\"OccupantCountae891443-cab5-4fc6-85c1-0a1489855eec\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"CO2ToOccupantCountae891443-cab5-4fc6-85c1-0a1489855eec\" -> \"OccupantCountae891443-cab5-4fc6-85c1-0a1489855eec\" [color=black]\n\tParticulateMatter25_12 [label=ParticulateMatter25_12 color=\"#377EB8\" style=filled]\n\tBay_13 -> ParticulateMatter25_12 [color=black]\n\tHumidity12 [label=Humidity12 color=\"#377EB8\" style=filled]\n\tBay_13 -> Humidity12 [color=black]\n\tPIR12 [label=PIR12 color=\"#377EB8\" style=filled]\n\tBay_13 -> PIR12 [color=black]\n\t\"PIRToPresence7456d6bb-9126-416b-be7d-d99fdf9bd4f8\" [label=PIRToPresence color=\"#A65628\" style=filled]\n\tPIR12 -> \"PIRToPresence7456d6bb-9126-416b-be7d-d99fdf9bd4f8\" [color=black]\n\t\"PresenceStream7456d6bb-9126-416b-be7d-d99fdf9bd4f8\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"PIRToPresence7456d6bb-9126-416b-be7d-d99fdf9bd4f8\" -> \"PresenceStream7456d6bb-9126-416b-be7d-d99fdf9bd4f8\" [color=black]\n\t\"PresenceToOccupantOfficeHours63c97fd1-bfcd-4722-a71e-be32f49d0782\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStream7456d6bb-9126-416b-be7d-d99fdf9bd4f8\" -> \"PresenceToOccupantOfficeHours63c97fd1-bfcd-4722-a71e-be32f49d0782\" [color=black]\n\t\"PresenceToOccupantOfficeHours63c97fd1-bfcd-4722-a71e-be32f49d0782\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"PresenceToWorkDays516f20dc-b63d-453d-956f-16f35acac1e5\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStream7456d6bb-9126-416b-be7d-d99fdf9bd4f8\" -> \"PresenceToWorkDays516f20dc-b63d-453d-956f-16f35acac1e5\" [color=black]\n\t\"PresenceToWorkDays516f20dc-b63d-453d-956f-16f35acac1e5\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceStream7456d6bb-9126-416b-be7d-d99fdf9bd4f8\" -> \"PresenceCO2AndTemperatureToOccupantCount9b64caa4-e270-4041-b19b-30bdae49c034\" [color=black]\n\tTemperature12 [label=Temperature12 color=\"#377EB8\" style=filled]\n\tBay_13 -> Temperature12 [color=black]\n\tTemperature12 -> \"PresenceCO2AndTemperatureToOccupantCount9b64caa4-e270-4041-b19b-30bdae49c034\" [color=black]\n\tTemperature12 -> \"PresenceCO2AndTemperatureToOccupantCount23e8dabc-b873-4ecd-9d3a-89a0fecc8c11\" [color=black]\n\tEnthalpy_12 [label=Enthalpy_12 color=\"#377EB8\" style=filled]\n\tBay_13 -> Enthalpy_12 [color=black]\n\tNoise12 [label=Noise12 color=\"#377EB8\" style=filled]\n\tBay_13 -> Noise12 [color=black]\n\tDewPoint_12 [label=DewPoint_12 color=\"#377EB8\" style=filled]\n\tBay_13 -> DewPoint_12 [color=black]\n\tCO_12 [label=CO_12 color=\"#377EB8\" style=filled]\n\tBay_13 -> CO_12 [color=black]\n\tTVOC12 [label=TVOC12 color=\"#377EB8\" style=filled]\n\tBay_13 -> TVOC12 [color=black]\n\tTVOC_12 [label=TVOC_12 color=\"#377EB8\" style=filled]\n\tBay_13 -> TVOC_12 [color=black]\n\tBay_6 [label=Bay_6 color=\"#999999\" style=filled]\n\tRoom -> Bay_6 [color=black]\n\tTVOC5 [label=TVOC5 color=\"#377EB8\" style=filled]\n\tBay_6 -> TVOC5 [color=black]\n\tNoise5 [label=Noise5 color=\"#377EB8\" style=filled]\n\tBay_6 -> Noise5 [color=black]\n\tHumidity5 [label=Humidity5 color=\"#377EB8\" style=filled]\n\tBay_6 -> Humidity5 [color=black]\n\tIlluminance5 [label=Illuminance5 color=\"#377EB8\" style=filled]\n\tBay_6 -> Illuminance5 [color=black]\n\tCO_5 [label=CO_5 color=\"#377EB8\" style=filled]\n\tBay_6 -> CO_5 [color=black]\n\tCO2_5 [label=CO2_5 color=\"#377EB8\" style=filled]\n\tBay_6 -> CO2_5 [color=black]\n\t\"PresenceToLunchLengthc275417e-54ce-4c50-a54f-065005db7f38\" [label=PresenceToLunchLength color=\"#FFFF33\" style=filled]\n\tCO2_5 -> \"PresenceToLunchLengthc275417e-54ce-4c50-a54f-065005db7f38\" [color=black]\n\t\"PresenceToLunchLengthc275417e-54ce-4c50-a54f-065005db7f38\" -> Lunch_Length [color=black]\n\t\"CO2ToOccupantCounte13c5ab4-edca-4e9c-95ba-e978581800a9\" [label=CO2ToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_5 -> \"CO2ToOccupantCounte13c5ab4-edca-4e9c-95ba-e978581800a9\" [color=black]\n\t\"OccupantCounte13c5ab4-edca-4e9c-95ba-e978581800a9\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"CO2ToOccupantCounte13c5ab4-edca-4e9c-95ba-e978581800a9\" -> \"OccupantCounte13c5ab4-edca-4e9c-95ba-e978581800a9\" [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCount800ef4ce-9980-40b3-af8c-8eb8030923e2\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_5 -> \"PresenceCO2AndTemperatureToOccupantCount800ef4ce-9980-40b3-af8c-8eb8030923e2\" [color=black]\n\t\"OccupantCount800ef4ce-9980-40b3-af8c-8eb8030923e2\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCount800ef4ce-9980-40b3-af8c-8eb8030923e2\" -> \"OccupantCount800ef4ce-9980-40b3-af8c-8eb8030923e2\" [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCount9f0341fc-729c-45d9-972c-92aeab323815\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_5 -> \"PresenceCO2AndTemperatureToOccupantCount9f0341fc-729c-45d9-972c-92aeab323815\" [color=black]\n\t\"OccupantCount9f0341fc-729c-45d9-972c-92aeab323815\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCount9f0341fc-729c-45d9-972c-92aeab323815\" -> \"OccupantCount9f0341fc-729c-45d9-972c-92aeab323815\" [color=black]\n\t\"CO2ToPresence67ac2c84-89e2-47d8-b1f3-f4aba3231eb1\" [label=CO2ToPresence color=\"#A65628\" style=filled]\n\tCO2_5 -> \"CO2ToPresence67ac2c84-89e2-47d8-b1f3-f4aba3231eb1\" [color=black]\n\t\"PresenceStream67ac2c84-89e2-47d8-b1f3-f4aba3231eb1\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"CO2ToPresence67ac2c84-89e2-47d8-b1f3-f4aba3231eb1\" -> \"PresenceStream67ac2c84-89e2-47d8-b1f3-f4aba3231eb1\" [color=black]\n\t\"PresenceToOccupantOfficeHours49a739aa-d94e-4e02-8b47-4fc091abacd8\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStream67ac2c84-89e2-47d8-b1f3-f4aba3231eb1\" -> \"PresenceToOccupantOfficeHours49a739aa-d94e-4e02-8b47-4fc091abacd8\" [color=black]\n\t\"PresenceToOccupantOfficeHours49a739aa-d94e-4e02-8b47-4fc091abacd8\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"PresenceStream67ac2c84-89e2-47d8-b1f3-f4aba3231eb1\" -> \"PresenceCO2AndTemperatureToOccupantCount800ef4ce-9980-40b3-af8c-8eb8030923e2\" [color=black]\n\t\"PresenceToWorkDaysecabe0cd-126e-46a5-833f-297c3bd2de36\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStream67ac2c84-89e2-47d8-b1f3-f4aba3231eb1\" -> \"PresenceToWorkDaysecabe0cd-126e-46a5-833f-297c3bd2de36\" [color=black]\n\t\"PresenceToWorkDaysecabe0cd-126e-46a5-833f-297c3bd2de36\" -> Work_day_Single_Office_Room [color=black]\n\tDewPoint_5 [label=DewPoint_5 color=\"#377EB8\" style=filled]\n\tBay_6 -> DewPoint_5 [color=black]\n\tEnthalpy_5 [label=Enthalpy_5 color=\"#377EB8\" style=filled]\n\tBay_6 -> Enthalpy_5 [color=black]\n\tTemperature5 [label=Temperature5 color=\"#377EB8\" style=filled]\n\tBay_6 -> Temperature5 [color=black]\n\tTemperature5 -> \"PresenceCO2AndTemperatureToOccupantCount800ef4ce-9980-40b3-af8c-8eb8030923e2\" [color=black]\n\tTemperature5 -> \"PresenceCO2AndTemperatureToOccupantCount9f0341fc-729c-45d9-972c-92aeab323815\" [color=black]\n\tTVOC_5 [label=TVOC_5 color=\"#377EB8\" style=filled]\n\tBay_6 -> TVOC_5 [color=black]\n\tPIR5 [label=PIR5 color=\"#377EB8\" style=filled]\n\tBay_6 -> PIR5 [color=black]\n\t\"PIRToPresenceac1da812-9be3-4648-bbb9-78b7ca4cdd79\" [label=PIRToPresence color=\"#A65628\" style=filled]\n\tPIR5 -> \"PIRToPresenceac1da812-9be3-4648-bbb9-78b7ca4cdd79\" [color=black]\n\t\"PresenceStreamac1da812-9be3-4648-bbb9-78b7ca4cdd79\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"PIRToPresenceac1da812-9be3-4648-bbb9-78b7ca4cdd79\" -> \"PresenceStreamac1da812-9be3-4648-bbb9-78b7ca4cdd79\" [color=black]\n\t\"PresenceToWorkDays03b4df17-2048-4951-82fe-9970dc4e5d2f\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStreamac1da812-9be3-4648-bbb9-78b7ca4cdd79\" -> \"PresenceToWorkDays03b4df17-2048-4951-82fe-9970dc4e5d2f\" [color=black]\n\t\"PresenceToWorkDays03b4df17-2048-4951-82fe-9970dc4e5d2f\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceToOccupantOfficeHours792a4aad-de3b-4812-8a01-7912d9baeff0\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStreamac1da812-9be3-4648-bbb9-78b7ca4cdd79\" -> \"PresenceToOccupantOfficeHours792a4aad-de3b-4812-8a01-7912d9baeff0\" [color=black]\n\t\"PresenceToOccupantOfficeHours792a4aad-de3b-4812-8a01-7912d9baeff0\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"PresenceStreamac1da812-9be3-4648-bbb9-78b7ca4cdd79\" -> \"PresenceCO2AndTemperatureToOccupantCount9f0341fc-729c-45d9-972c-92aeab323815\" [color=black]\n\tParticulateMatter25_5 [label=ParticulateMatter25_5 color=\"#377EB8\" style=filled]\n\tBay_6 -> ParticulateMatter25_5 [color=black]\n\tBay_12 [label=Bay_12 color=\"#999999\" style=filled]\n\tRoom -> Bay_12 [color=black]\n\tTVOC_11 [label=TVOC_11 color=\"#377EB8\" style=filled]\n\tBay_12 -> TVOC_11 [color=black]\n\tEnthalpy_11 [label=Enthalpy_11 color=\"#377EB8\" style=filled]\n\tBay_12 -> Enthalpy_11 [color=black]\n\tParticulateMatter25_11 [label=ParticulateMatter25_11 color=\"#377EB8\" style=filled]\n\tBay_12 -> ParticulateMatter25_11 [color=black]\n\tCO2_11 [label=CO2_11 color=\"#377EB8\" style=filled]\n\tBay_12 -> CO2_11 [color=black]\n\t\"CO2ToPresencebf2e7966-d199-4c75-9c7e-79f7d0c3b395\" [label=CO2ToPresence color=\"#A65628\" style=filled]\n\tCO2_11 -> \"CO2ToPresencebf2e7966-d199-4c75-9c7e-79f7d0c3b395\" [color=black]\n\t\"PresenceStreambf2e7966-d199-4c75-9c7e-79f7d0c3b395\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"CO2ToPresencebf2e7966-d199-4c75-9c7e-79f7d0c3b395\" -> \"PresenceStreambf2e7966-d199-4c75-9c7e-79f7d0c3b395\" [color=black]\n\t\"PresenceToWorkDays7d3f50b7-300e-4e95-a7bf-fb32ec768258\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStreambf2e7966-d199-4c75-9c7e-79f7d0c3b395\" -> \"PresenceToWorkDays7d3f50b7-300e-4e95-a7bf-fb32ec768258\" [color=black]\n\t\"PresenceToWorkDays7d3f50b7-300e-4e95-a7bf-fb32ec768258\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceToOccupantOfficeHours8c7eff73-3b9f-4146-88bf-90c28fc1aba9\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStreambf2e7966-d199-4c75-9c7e-79f7d0c3b395\" -> \"PresenceToOccupantOfficeHours8c7eff73-3b9f-4146-88bf-90c28fc1aba9\" [color=black]\n\t\"PresenceToOccupantOfficeHours8c7eff73-3b9f-4146-88bf-90c28fc1aba9\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"CO2ToOccupantCount75c4348b-23a5-4848-a8b1-e98be2c0adbc\" [label=CO2ToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_11 -> \"CO2ToOccupantCount75c4348b-23a5-4848-a8b1-e98be2c0adbc\" [color=black]\n\t\"OccupantCount75c4348b-23a5-4848-a8b1-e98be2c0adbc\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"CO2ToOccupantCount75c4348b-23a5-4848-a8b1-e98be2c0adbc\" -> \"OccupantCount75c4348b-23a5-4848-a8b1-e98be2c0adbc\" [color=black]\n\t\"PresenceToLunchLengthcb5923ce-71a5-408d-9812-ba1f8d53e204\" [label=PresenceToLunchLength color=\"#FFFF33\" style=filled]\n\tCO2_11 -> \"PresenceToLunchLengthcb5923ce-71a5-408d-9812-ba1f8d53e204\" [color=black]\n\t\"PresenceToLunchLengthcb5923ce-71a5-408d-9812-ba1f8d53e204\" -> Lunch_Length [color=black]\n\tDewPoint_11 [label=DewPoint_11 color=\"#377EB8\" style=filled]\n\tBay_12 -> DewPoint_11 [color=black]\n\tCO_11 [label=CO_11 color=\"#377EB8\" style=filled]\n\tBay_12 -> CO_11 [color=black]\n\tTVOC11 [label=TVOC11 color=\"#377EB8\" style=filled]\n\tBay_12 -> TVOC11 [color=black]\n\tBay_3 [label=Bay_3 color=\"#999999\" style=filled]\n\tRoom -> Bay_3 [color=black]\n\tCO_2 [label=CO_2 color=\"#377EB8\" style=filled]\n\tBay_3 -> CO_2 [color=black]\n\tCO2_2 [label=CO2_2 color=\"#377EB8\" style=filled]\n\tBay_3 -> CO2_2 [color=black]\n\t\"CO2ToPresence5dadc4c6-1195-4fc5-b8b5-d59fa33f001e\" [label=CO2ToPresence color=\"#A65628\" style=filled]\n\tCO2_2 -> \"CO2ToPresence5dadc4c6-1195-4fc5-b8b5-d59fa33f001e\" [color=black]\n\t\"PresenceStream5dadc4c6-1195-4fc5-b8b5-d59fa33f001e\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"CO2ToPresence5dadc4c6-1195-4fc5-b8b5-d59fa33f001e\" -> \"PresenceStream5dadc4c6-1195-4fc5-b8b5-d59fa33f001e\" [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCount2bb953b0-c7e5-4c5b-8eae-0fbac247631d\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\t\"PresenceStream5dadc4c6-1195-4fc5-b8b5-d59fa33f001e\" -> \"PresenceCO2AndTemperatureToOccupantCount2bb953b0-c7e5-4c5b-8eae-0fbac247631d\" [color=black]\n\t\"OccupantCount2bb953b0-c7e5-4c5b-8eae-0fbac247631d\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCount2bb953b0-c7e5-4c5b-8eae-0fbac247631d\" -> \"OccupantCount2bb953b0-c7e5-4c5b-8eae-0fbac247631d\" [color=black]\n\t\"PresenceToOccupantOfficeHours277ec762-0277-46e8-9f2a-0eec32e5405c\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStream5dadc4c6-1195-4fc5-b8b5-d59fa33f001e\" -> \"PresenceToOccupantOfficeHours277ec762-0277-46e8-9f2a-0eec32e5405c\" [color=black]\n\t\"PresenceToOccupantOfficeHours277ec762-0277-46e8-9f2a-0eec32e5405c\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"PresenceToWorkDays126fffe8-b25d-48eb-b551-87247dbf723f\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStream5dadc4c6-1195-4fc5-b8b5-d59fa33f001e\" -> \"PresenceToWorkDays126fffe8-b25d-48eb-b551-87247dbf723f\" [color=black]\n\t\"PresenceToWorkDays126fffe8-b25d-48eb-b551-87247dbf723f\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceToLunchLengthe48227e7-cf35-40d1-930e-6a56f5630088\" [label=PresenceToLunchLength color=\"#FFFF33\" style=filled]\n\tCO2_2 -> \"PresenceToLunchLengthe48227e7-cf35-40d1-930e-6a56f5630088\" [color=black]\n\t\"PresenceToLunchLengthe48227e7-cf35-40d1-930e-6a56f5630088\" -> Lunch_Length [color=black]\n\t\"CO2ToOccupantCount68703f76-5ca2-4f87-9348-639bdeeefc2f\" [label=CO2ToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_2 -> \"CO2ToOccupantCount68703f76-5ca2-4f87-9348-639bdeeefc2f\" [color=black]\n\t\"OccupantCount68703f76-5ca2-4f87-9348-639bdeeefc2f\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"CO2ToOccupantCount68703f76-5ca2-4f87-9348-639bdeeefc2f\" -> \"OccupantCount68703f76-5ca2-4f87-9348-639bdeeefc2f\" [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCount226dd2a0-38b2-4bf7-8f1f-e78ad5f85d91\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_2 -> \"PresenceCO2AndTemperatureToOccupantCount226dd2a0-38b2-4bf7-8f1f-e78ad5f85d91\" [color=black]\n\t\"OccupantCount226dd2a0-38b2-4bf7-8f1f-e78ad5f85d91\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCount226dd2a0-38b2-4bf7-8f1f-e78ad5f85d91\" -> \"OccupantCount226dd2a0-38b2-4bf7-8f1f-e78ad5f85d91\" [color=black]\n\tCO2_2 -> \"PresenceCO2AndTemperatureToOccupantCount2bb953b0-c7e5-4c5b-8eae-0fbac247631d\" [color=black]\n\tTVOC2 [label=TVOC2 color=\"#377EB8\" style=filled]\n\tBay_3 -> TVOC2 [color=black]\n\tTemperature2 [label=Temperature2 color=\"#377EB8\" style=filled]\n\tBay_3 -> Temperature2 [color=black]\n\tTemperature2 -> \"PresenceCO2AndTemperatureToOccupantCount2bb953b0-c7e5-4c5b-8eae-0fbac247631d\" [color=black]\n\tTemperature2 -> \"PresenceCO2AndTemperatureToOccupantCount226dd2a0-38b2-4bf7-8f1f-e78ad5f85d91\" [color=black]\n\tNoise2 [label=Noise2 color=\"#377EB8\" style=filled]\n\tBay_3 -> Noise2 [color=black]\n\tIlluminance2 [label=Illuminance2 color=\"#377EB8\" style=filled]\n\tBay_3 -> Illuminance2 [color=black]\n\tHumidity2 [label=Humidity2 color=\"#377EB8\" style=filled]\n\tBay_3 -> Humidity2 [color=black]\n\tPIR2 [label=PIR2 color=\"#377EB8\" style=filled]\n\tBay_3 -> PIR2 [color=black]\n\t\"PIRToPresence5d1c29b1-b98f-495a-a38f-c6ab44cf2c16\" [label=PIRToPresence color=\"#A65628\" style=filled]\n\tPIR2 -> \"PIRToPresence5d1c29b1-b98f-495a-a38f-c6ab44cf2c16\" [color=black]\n\t\"PresenceStream5d1c29b1-b98f-495a-a38f-c6ab44cf2c16\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"PIRToPresence5d1c29b1-b98f-495a-a38f-c6ab44cf2c16\" -> \"PresenceStream5d1c29b1-b98f-495a-a38f-c6ab44cf2c16\" [color=black]\n\t\"PresenceToOccupantOfficeHours6492d482-645c-48d0-a146-b78dbf9cb414\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStream5d1c29b1-b98f-495a-a38f-c6ab44cf2c16\" -> \"PresenceToOccupantOfficeHours6492d482-645c-48d0-a146-b78dbf9cb414\" [color=black]\n\t\"PresenceToOccupantOfficeHours6492d482-645c-48d0-a146-b78dbf9cb414\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"PresenceToWorkDays3bf8c044-ceb8-453b-90ec-308fbe3ad2a6\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStream5d1c29b1-b98f-495a-a38f-c6ab44cf2c16\" -> \"PresenceToWorkDays3bf8c044-ceb8-453b-90ec-308fbe3ad2a6\" [color=black]\n\t\"PresenceToWorkDays3bf8c044-ceb8-453b-90ec-308fbe3ad2a6\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceStream5d1c29b1-b98f-495a-a38f-c6ab44cf2c16\" -> \"PresenceCO2AndTemperatureToOccupantCount226dd2a0-38b2-4bf7-8f1f-e78ad5f85d91\" [color=black]\n\tBay_11 [label=Bay_11 color=\"#999999\" style=filled]\n\tRoom -> Bay_11 [color=black]\n\tCO_10 [label=CO_10 color=\"#377EB8\" style=filled]\n\tBay_11 -> CO_10 [color=black]\n\tTVOC10 [label=TVOC10 color=\"#377EB8\" style=filled]\n\tBay_11 -> TVOC10 [color=black]\n\tCO2_10 [label=CO2_10 color=\"#377EB8\" style=filled]\n\tBay_11 -> CO2_10 [color=black]\n\t\"CO2ToOccupantCountb8ea2fa5-23db-483e-991f-bdc6c61d0a7f\" [label=CO2ToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_10 -> \"CO2ToOccupantCountb8ea2fa5-23db-483e-991f-bdc6c61d0a7f\" [color=black]\n\t\"OccupantCountb8ea2fa5-23db-483e-991f-bdc6c61d0a7f\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"CO2ToOccupantCountb8ea2fa5-23db-483e-991f-bdc6c61d0a7f\" -> \"OccupantCountb8ea2fa5-23db-483e-991f-bdc6c61d0a7f\" [color=black]\n\t\"PresenceToLunchLength9822d652-aa51-48a2-b12f-40cd4df980e1\" [label=PresenceToLunchLength color=\"#FFFF33\" style=filled]\n\tCO2_10 -> \"PresenceToLunchLength9822d652-aa51-48a2-b12f-40cd4df980e1\" [color=black]\n\t\"PresenceToLunchLength9822d652-aa51-48a2-b12f-40cd4df980e1\" -> Lunch_Length [color=black]\n\t\"CO2ToPresencea53abdcc-54d9-44f7-a7bd-7a9a2f3157b4\" [label=CO2ToPresence color=\"#A65628\" style=filled]\n\tCO2_10 -> \"CO2ToPresencea53abdcc-54d9-44f7-a7bd-7a9a2f3157b4\" [color=black]\n\t\"PresenceStreama53abdcc-54d9-44f7-a7bd-7a9a2f3157b4\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"CO2ToPresencea53abdcc-54d9-44f7-a7bd-7a9a2f3157b4\" -> \"PresenceStreama53abdcc-54d9-44f7-a7bd-7a9a2f3157b4\" [color=black]\n\t\"PresenceToOccupantOfficeHours52635433-8657-422f-af1c-9b558828b4d2\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStreama53abdcc-54d9-44f7-a7bd-7a9a2f3157b4\" -> \"PresenceToOccupantOfficeHours52635433-8657-422f-af1c-9b558828b4d2\" [color=black]\n\t\"PresenceToOccupantOfficeHours52635433-8657-422f-af1c-9b558828b4d2\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"PresenceToWorkDays7d2f3036-25eb-4483-a024-75da976179c9\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStreama53abdcc-54d9-44f7-a7bd-7a9a2f3157b4\" -> \"PresenceToWorkDays7d2f3036-25eb-4483-a024-75da976179c9\" [color=black]\n\t\"PresenceToWorkDays7d2f3036-25eb-4483-a024-75da976179c9\" -> Work_day_Single_Office_Room [color=black]\n\tBay_5 [label=Bay_5 color=\"#999999\" style=filled]\n\tRoom -> Bay_5 [color=black]\n\tPIR4 [label=PIR4 color=\"#377EB8\" style=filled]\n\tBay_5 -> PIR4 [color=black]\n\t\"PIRToPresencea6b5176e-c320-4222-8a7b-fb75fdcead20\" [label=PIRToPresence color=\"#A65628\" style=filled]\n\tPIR4 -> \"PIRToPresencea6b5176e-c320-4222-8a7b-fb75fdcead20\" [color=black]\n\t\"PresenceStreama6b5176e-c320-4222-8a7b-fb75fdcead20\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"PIRToPresencea6b5176e-c320-4222-8a7b-fb75fdcead20\" -> \"PresenceStreama6b5176e-c320-4222-8a7b-fb75fdcead20\" [color=black]\n\t\"PresenceToWorkDaysb6588153-bd6e-4236-bbb3-79bf09a9f03d\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStreama6b5176e-c320-4222-8a7b-fb75fdcead20\" -> \"PresenceToWorkDaysb6588153-bd6e-4236-bbb3-79bf09a9f03d\" [color=black]\n\t\"PresenceToWorkDaysb6588153-bd6e-4236-bbb3-79bf09a9f03d\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceToOccupantOfficeHours42c524ff-0cf2-4a4d-ab4e-23a1174898f7\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStreama6b5176e-c320-4222-8a7b-fb75fdcead20\" -> \"PresenceToOccupantOfficeHours42c524ff-0cf2-4a4d-ab4e-23a1174898f7\" [color=black]\n\t\"PresenceToOccupantOfficeHours42c524ff-0cf2-4a4d-ab4e-23a1174898f7\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCountf22d7e26-7934-47a5-bbed-9f3957b47628\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\t\"PresenceStreama6b5176e-c320-4222-8a7b-fb75fdcead20\" -> \"PresenceCO2AndTemperatureToOccupantCountf22d7e26-7934-47a5-bbed-9f3957b47628\" [color=black]\n\t\"OccupantCountf22d7e26-7934-47a5-bbed-9f3957b47628\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCountf22d7e26-7934-47a5-bbed-9f3957b47628\" -> \"OccupantCountf22d7e26-7934-47a5-bbed-9f3957b47628\" [color=black]\n\tCO_4 [label=CO_4 color=\"#377EB8\" style=filled]\n\tBay_5 -> CO_4 [color=black]\n\tHumidity4 [label=Humidity4 color=\"#377EB8\" style=filled]\n\tBay_5 -> Humidity4 [color=black]\n\tTemperature4 [label=Temperature4 color=\"#377EB8\" style=filled]\n\tBay_5 -> Temperature4 [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCount1b27688d-44e8-4605-98ea-d175c6d3144e\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\tTemperature4 -> \"PresenceCO2AndTemperatureToOccupantCount1b27688d-44e8-4605-98ea-d175c6d3144e\" [color=black]\n\t\"OccupantCount1b27688d-44e8-4605-98ea-d175c6d3144e\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCount1b27688d-44e8-4605-98ea-d175c6d3144e\" -> \"OccupantCount1b27688d-44e8-4605-98ea-d175c6d3144e\" [color=black]\n\tTemperature4 -> \"PresenceCO2AndTemperatureToOccupantCountf22d7e26-7934-47a5-bbed-9f3957b47628\" [color=black]\n\tNoise4 [label=Noise4 color=\"#377EB8\" style=filled]\n\tBay_5 -> Noise4 [color=black]\n\tIlluminance4 [label=Illuminance4 color=\"#377EB8\" style=filled]\n\tBay_5 -> Illuminance4 [color=black]\n\tTVOC4 [label=TVOC4 color=\"#377EB8\" style=filled]\n\tBay_5 -> TVOC4 [color=black]\n\tCO2_4 [label=CO2_4 color=\"#377EB8\" style=filled]\n\tBay_5 -> CO2_4 [color=black]\n\t\"PresenceToLunchLengtheec3026e-1aa8-461e-b67e-58aa489aee90\" [label=PresenceToLunchLength color=\"#FFFF33\" style=filled]\n\tCO2_4 -> \"PresenceToLunchLengtheec3026e-1aa8-461e-b67e-58aa489aee90\" [color=black]\n\t\"PresenceToLunchLengtheec3026e-1aa8-461e-b67e-58aa489aee90\" -> Lunch_Length [color=black]\n\t\"CO2ToOccupantCounte77fcb4e-7704-449e-8ee4-4093bb3a4a44\" [label=CO2ToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_4 -> \"CO2ToOccupantCounte77fcb4e-7704-449e-8ee4-4093bb3a4a44\" [color=black]\n\t\"OccupantCounte77fcb4e-7704-449e-8ee4-4093bb3a4a44\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"CO2ToOccupantCounte77fcb4e-7704-449e-8ee4-4093bb3a4a44\" -> \"OccupantCounte77fcb4e-7704-449e-8ee4-4093bb3a4a44\" [color=black]\n\tCO2_4 -> \"PresenceCO2AndTemperatureToOccupantCount1b27688d-44e8-4605-98ea-d175c6d3144e\" [color=black]\n\t\"CO2ToPresenceac88d6eb-cd65-4f4a-ba3e-6979ad3e796d\" [label=CO2ToPresence color=\"#A65628\" style=filled]\n\tCO2_4 -> \"CO2ToPresenceac88d6eb-cd65-4f4a-ba3e-6979ad3e796d\" [color=black]\n\t\"PresenceStreamac88d6eb-cd65-4f4a-ba3e-6979ad3e796d\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"CO2ToPresenceac88d6eb-cd65-4f4a-ba3e-6979ad3e796d\" -> \"PresenceStreamac88d6eb-cd65-4f4a-ba3e-6979ad3e796d\" [color=black]\n\t\"PresenceToOccupantOfficeHours9917e957-d193-4b5a-96aa-eb1b9f774e08\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStreamac88d6eb-cd65-4f4a-ba3e-6979ad3e796d\" -> \"PresenceToOccupantOfficeHours9917e957-d193-4b5a-96aa-eb1b9f774e08\" [color=black]\n\t\"PresenceToOccupantOfficeHours9917e957-d193-4b5a-96aa-eb1b9f774e08\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"PresenceToWorkDaysf103da72-39f2-464e-bdf6-0c3e37725816\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStreamac88d6eb-cd65-4f4a-ba3e-6979ad3e796d\" -> \"PresenceToWorkDaysf103da72-39f2-464e-bdf6-0c3e37725816\" [color=black]\n\t\"PresenceToWorkDaysf103da72-39f2-464e-bdf6-0c3e37725816\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceStreamac88d6eb-cd65-4f4a-ba3e-6979ad3e796d\" -> \"PresenceCO2AndTemperatureToOccupantCount1b27688d-44e8-4605-98ea-d175c6d3144e\" [color=black]\n\tCO2_4 -> \"PresenceCO2AndTemperatureToOccupantCountf22d7e26-7934-47a5-bbed-9f3957b47628\" [color=black]\n\tBay_7 [label=Bay_7 color=\"#999999\" style=filled]\n\tRoom -> Bay_7 [color=black]\n\tTVOC6 [label=TVOC6 color=\"#377EB8\" style=filled]\n\tBay_7 -> TVOC6 [color=black]\n\tNoise6 [label=Noise6 color=\"#377EB8\" style=filled]\n\tBay_7 -> Noise6 [color=black]\n\tIlluminance6 [label=Illuminance6 color=\"#377EB8\" style=filled]\n\tBay_7 -> Illuminance6 [color=black]\n\tPIR6 [label=PIR6 color=\"#377EB8\" style=filled]\n\tBay_7 -> PIR6 [color=black]\n\t\"PIRToPresence5103ade0-8abb-4c3e-a8a5-b0bafbf49a37\" [label=PIRToPresence color=\"#A65628\" style=filled]\n\tPIR6 -> \"PIRToPresence5103ade0-8abb-4c3e-a8a5-b0bafbf49a37\" [color=black]\n\t\"PresenceStream5103ade0-8abb-4c3e-a8a5-b0bafbf49a37\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"PIRToPresence5103ade0-8abb-4c3e-a8a5-b0bafbf49a37\" -> \"PresenceStream5103ade0-8abb-4c3e-a8a5-b0bafbf49a37\" [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCount656ba26c-deeb-45ea-a402-eea0f74c2ba3\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\t\"PresenceStream5103ade0-8abb-4c3e-a8a5-b0bafbf49a37\" -> \"PresenceCO2AndTemperatureToOccupantCount656ba26c-deeb-45ea-a402-eea0f74c2ba3\" [color=black]\n\t\"OccupantCount656ba26c-deeb-45ea-a402-eea0f74c2ba3\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCount656ba26c-deeb-45ea-a402-eea0f74c2ba3\" -> \"OccupantCount656ba26c-deeb-45ea-a402-eea0f74c2ba3\" [color=black]\n\t\"PresenceToWorkDays829c229d-097a-484b-bc26-d3e07000928c\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStream5103ade0-8abb-4c3e-a8a5-b0bafbf49a37\" -> \"PresenceToWorkDays829c229d-097a-484b-bc26-d3e07000928c\" [color=black]\n\t\"PresenceToWorkDays829c229d-097a-484b-bc26-d3e07000928c\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceToOccupantOfficeHours8478569f-eca2-4b8d-9bba-482d66f7bd3d\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStream5103ade0-8abb-4c3e-a8a5-b0bafbf49a37\" -> \"PresenceToOccupantOfficeHours8478569f-eca2-4b8d-9bba-482d66f7bd3d\" [color=black]\n\t\"PresenceToOccupantOfficeHours8478569f-eca2-4b8d-9bba-482d66f7bd3d\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\tTemperature6 [label=Temperature6 color=\"#377EB8\" style=filled]\n\tBay_7 -> Temperature6 [color=black]\n\t\"PresenceCO2AndTemperatureToOccupantCount3a8a850a-771a-4b3c-9954-673aaea05f31\" [label=PresenceCO2AndTemperatureToOccupantCount color=\"#A65628\" style=filled]\n\tTemperature6 -> \"PresenceCO2AndTemperatureToOccupantCount3a8a850a-771a-4b3c-9954-673aaea05f31\" [color=black]\n\t\"OccupantCount3a8a850a-771a-4b3c-9954-673aaea05f31\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"PresenceCO2AndTemperatureToOccupantCount3a8a850a-771a-4b3c-9954-673aaea05f31\" -> \"OccupantCount3a8a850a-771a-4b3c-9954-673aaea05f31\" [color=black]\n\tTemperature6 -> \"PresenceCO2AndTemperatureToOccupantCount656ba26c-deeb-45ea-a402-eea0f74c2ba3\" [color=black]\n\tHumidity6 [label=Humidity6 color=\"#377EB8\" style=filled]\n\tBay_7 -> Humidity6 [color=black]\n\tCO_6 [label=CO_6 color=\"#377EB8\" style=filled]\n\tBay_7 -> CO_6 [color=black]\n\tCO2_6 [label=CO2_6 color=\"#377EB8\" style=filled]\n\tBay_7 -> CO2_6 [color=black]\n\t\"CO2ToOccupantCount706d5412-91c6-4613-ac46-22a9bea5750f\" [label=CO2ToOccupantCount color=\"#A65628\" style=filled]\n\tCO2_6 -> \"CO2ToOccupantCount706d5412-91c6-4613-ac46-22a9bea5750f\" [color=black]\n\t\"OccupantCount706d5412-91c6-4613-ac46-22a9bea5750f\" [label=OccupantCount color=\"#377EB8\" style=filled]\n\t\"CO2ToOccupantCount706d5412-91c6-4613-ac46-22a9bea5750f\" -> \"OccupantCount706d5412-91c6-4613-ac46-22a9bea5750f\" [color=black]\n\t\"CO2ToPresence8481fd5a-e1e5-4142-bbee-ac221efc1ac5\" [label=CO2ToPresence color=\"#A65628\" style=filled]\n\tCO2_6 -> \"CO2ToPresence8481fd5a-e1e5-4142-bbee-ac221efc1ac5\" [color=black]\n\t\"PresenceStream8481fd5a-e1e5-4142-bbee-ac221efc1ac5\" [label=PresenceStream color=\"#377EB8\" style=filled]\n\t\"CO2ToPresence8481fd5a-e1e5-4142-bbee-ac221efc1ac5\" -> \"PresenceStream8481fd5a-e1e5-4142-bbee-ac221efc1ac5\" [color=black]\n\t\"PresenceToOccupantOfficeHours5424b44c-d86a-4eae-9f09-c53056c940a8\" [label=PresenceToOccupantOfficeHours color=\"#FFFF33\" style=filled]\n\t\"PresenceStream8481fd5a-e1e5-4142-bbee-ac221efc1ac5\" -> \"PresenceToOccupantOfficeHours5424b44c-d86a-4eae-9f09-c53056c940a8\" [color=black]\n\t\"PresenceToOccupantOfficeHours5424b44c-d86a-4eae-9f09-c53056c940a8\" -> OccupantOfficeHours_Single_Office_Room [color=black]\n\t\"PresenceToWorkDays0fa17b9d-1813-49cb-8042-6efc6102a024\" [label=PresenceToWorkDays color=\"#FFFF33\" style=filled]\n\t\"PresenceStream8481fd5a-e1e5-4142-bbee-ac221efc1ac5\" -> \"PresenceToWorkDays0fa17b9d-1813-49cb-8042-6efc6102a024\" [color=black]\n\t\"PresenceToWorkDays0fa17b9d-1813-49cb-8042-6efc6102a024\" -> Work_day_Single_Office_Room [color=black]\n\t\"PresenceStream8481fd5a-e1e5-4142-bbee-ac221efc1ac5\" -> \"PresenceCO2AndTemperatureToOccupantCount3a8a850a-771a-4b3c-9954-673aaea05f31\" [color=black]\n\tCO2_6 -> \"PresenceCO2AndTemperatureToOccupantCount656ba26c-deeb-45ea-a402-eea0f74c2ba3\" [color=black]\n\tCO2_6 -> \"PresenceCO2AndTemperatureToOccupantCount3a8a850a-771a-4b3c-9954-673aaea05f31\" [color=black]\n\t\"PresenceToLunchLength2ea0c34d-287c-419d-b376-c548095c2d0a\" [label=PresenceToLunchLength color=\"#FFFF33\" style=filled]\n\tCO2_6 -> \"PresenceToLunchLength2ea0c34d-287c-419d-b376-c548095c2d0a\" [color=black]\n\t\"PresenceToLunchLength2ea0c34d-287c-419d-b376-c548095c2d0a\" -> Lunch_Length [color=black]\n\tEnthalpy_room [label=Enthalpy_room color=\"#377EB8\" style=filled]\n\tRoom -> Enthalpy_room [color=black]\n\tContextLocation2 [label=ContextLocation2 color=\"#FF7F00\" style=filled]\n\tRoom -> ContextLocation2 [color=black]\n\t\"ContextLocationToRoomIdentity712a0e37-8190-4ba3-ac58-69a4102f1c65\" [label=ContextLocationToRoomIdentity color=\"#FFFF33\" style=filled]\n\tContextLocation2 -> \"ContextLocationToRoomIdentity712a0e37-8190-4ba3-ac58-69a4102f1c65\" [color=black]\n\t\"ContextLocationToRoomIdentity712a0e37-8190-4ba3-ac58-69a4102f1c65\" -> ContextIdentity_Room [color=black]\n\tNoise_room [label=Noise_room color=\"#377EB8\" style=filled]\n\tRoom -> Noise_room [color=black]\n\tDewPoint_room [label=DewPoint_room color=\"#377EB8\" style=filled]\n\tRoom -> DewPoint_room [color=black]\n\tTVOC_room [label=TVOC_room color=\"#377EB8\" style=filled]\n\tRoom -> TVOC_room [color=black]\n\tHumidity_room [label=Humidity_room color=\"#377EB8\" style=filled]\n\tRoom -> Humidity_room [color=black]\n\tParticulateMatter25_room [label=ParticulateMatter25_room color=\"#377EB8\" style=filled]\n\tRoom -> ParticulateMatter25_room [color=black]\n\tOutside [label=Outside color=\"#999999\" style=filled]\n\tOutside -> Building [color=black]\n\tOutside -> Room [color=black]\n\tTemperature_outside [label=Temperature_outside color=\"#377EB8\" style=filled]\n\tOutside -> Temperature_outside [color=black]\n}",
+    "privacy_report": {
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_1": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_10": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_11": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_12": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_13": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_14": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_15": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_2": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_3": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_4": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_5": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_6": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_7": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_8": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Bay_9": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Building": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ContextIdentity_Room",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 1,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_0": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_1": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_10": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_11": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_12": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_13": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_14": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_2": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_3": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_4": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_5": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_6": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_7": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_8": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_9": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 7,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO2_Conference": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_0": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_1": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_10": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_11": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_12": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_13": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_14": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_2": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_3": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_4": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_5": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_6": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_7": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_8": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_9": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#CO_Conference": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Conference": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ContextIdentity_Room",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 1,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ContextLocation": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ContextLocation2": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ContextIdentity_Room",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 1,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ContextLocation3": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ContextIdentity_Room",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 1,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#DewPoint_11": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#DewPoint_12": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#DewPoint_5": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#DewPoint_Conference": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#DewPoint_room": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Enthalpy_11": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Enthalpy_12": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Enthalpy_5": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Enthalpy_Conference": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Enthalpy_room": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity1": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity12": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity2": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity3": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity4": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity5": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity6": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity7": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity8": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity9": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity_conference": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Humidity_room": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance1": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance12": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance2": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance3": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance4": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance5": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance6": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance7": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance8": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance9": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Illuminance_conference": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise1": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise12": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise2": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise3": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise4": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise5": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise6": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise7": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise8": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise9": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise_Conference": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Noise_room": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount093fbd79-0d91-4c95-be8d-c32da365e326": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount1b27688d-44e8-4605-98ea-d175c6d3144e": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount1d3a663f-63bc-443a-b258-57eb98c6065a": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount226dd2a0-38b2-4bf7-8f1f-e78ad5f85d91": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount23e8dabc-b873-4ecd-9d3a-89a0fecc8c11": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount2bb953b0-c7e5-4c5b-8eae-0fbac247631d": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount2ca4b928-74d0-4df0-95d7-a363b77622dd": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount370ec533-4cb6-4c76-a8bc-001c1321f420": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount3a8a850a-771a-4b3c-9954-673aaea05f31": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount3f6b2d27-9caf-4212-ae3f-770c1e651511": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount561da4c6-877f-4091-9d4e-a122121d8434": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount5efcef78-c2c4-4b43-b6d9-5606d9a821e2": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount61840884-2291-496f-8e3a-fb326dac3575": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount648aaffa-f161-4802-b9f5-da34cad51c28": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount656ba26c-deeb-45ea-a402-eea0f74c2ba3": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount68703f76-5ca2-4f87-9348-639bdeeefc2f": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount6e3b077f-a7b2-4412-8944-7c93965a9fc0": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount706d5412-91c6-4613-ac46-22a9bea5750f": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount75c4348b-23a5-4848-a8b1-e98be2c0adbc": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount7eac2be0-1a50-4cde-b47d-4f659cd99dcb": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount800ef4ce-9980-40b3-af8c-8eb8030923e2": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount82da78f5-46a7-4533-afb9-76c07a97c06b": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount8f2bf800-3a72-4098-940f-12f4227900d0": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount9b64caa4-e270-4041-b19b-30bdae49c034": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCount9f0341fc-729c-45d9-972c-92aeab323815": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCounta667ed90-51bf-47d7-b726-c9be23fb1192": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCountae891443-cab5-4fc6-85c1-0a1489855eec": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCountb8ea2fa5-23db-483e-991f-bdc6c61d0a7f": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCountc3802850-0f90-4030-8a0f-667087aaab4e": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCountdda80029-85c7-4c5e-830d-4cb4180418bc": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCounte13c5ab4-edca-4e9c-95ba-e978581800a9": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCounte77fcb4e-7704-449e-8ee4-4093bb3a4a44": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCounted4baefa-24e8-4ce9-9d9e-f177d2ad5f47": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCountee90ec43-5ceb-45b6-9d4a-cb7434487299": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCounteeee39c3-c475-46b2-b56c-8042b4f47863": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCountf1ea01de-80ed-465f-bc9b-6b666017c51c": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCountf22d7e26-7934-47a5-bbed-9f3957b47628": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantCountfb47fe2a-eeff-44a5-b432-ca48ab4d2267": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Outside": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ContextIdentity_Room",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 8,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR1": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR12": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR2": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR3": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR4": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR5": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR6": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR7": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR8": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR9": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PIR_Conference": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ParticulateMatter25_11": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ParticulateMatter25_12": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ParticulateMatter25_5": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ParticulateMatter25_Conference": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ParticulateMatter25_room": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStream009f7038-b1f9-4bc3-8f9c-90e0e0c00787": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStream039d5364-2c1e-4465-97ab-a8f68c19fc14": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStream12df3592-bb00-4202-b31c-97c92f58b4d0": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStream3e06fc8a-7106-4c95-8d34-f8571074c8d1": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStream455902dc-4236-4395-92c7-156aa35900d6": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStream5103ade0-8abb-4c3e-a8a5-b0bafbf49a37": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStream56de0e99-b87f-400b-b8fc-4704b9dc44a4": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStream5d1c29b1-b98f-495a-a38f-c6ab44cf2c16": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStream5dadc4c6-1195-4fc5-b8b5-d59fa33f001e": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStream60c35f14-c2b0-4024-912b-63cda8edf597": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStream67ac2c84-89e2-47d8-b1f3-f4aba3231eb1": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStream737f9a78-e011-4ddf-89b1-3681d4acf9e0": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStream7456d6bb-9126-416b-be7d-d99fdf9bd4f8": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStream8481fd5a-e1e5-4142-bbee-ac221efc1ac5": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStream86c3131b-19a2-4c61-903f-952b9c054a39": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStream8781db52-d795-480a-888d-07e9e3fada6d": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStream9ebd036a-93eb-495a-9991-1eba4fb680ef": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStreama13978e1-f919-49d6-86d6-c286da0a53ad": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStreama53abdcc-54d9-44f7-a7bd-7a9a2f3157b4": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStreama6b5176e-c320-4222-8a7b-fb75fdcead20": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStreamac1da812-9be3-4648-bbb9-78b7ca4cdd79": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStreamac88d6eb-cd65-4f4a-ba3e-6979ad3e796d": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStreambf2e7966-d199-4c75-9c7e-79f7d0c3b395": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStreamc1253d50-f0e1-4e65-9527-d11ae4cbfb63": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStreamd5bb0baf-f7c4-4b77-841d-6f04038178eb": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStreame4832801-1bc7-4d13-aab9-8594a2742c72": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#PresenceStreamf455ac52-3a61-44d8-9bae-aebcbab5359d": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                }
+            ],
+            "privacy_score": 6,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Room": {
+            "privacy_risks": [
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Work_day_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#OccupantOfficeHours_Single_Office_Room",
+                    "privacy_score": 3,
+                    "privacy_strategies": [],
+                    "template_count": 2
+                },
+                {
+                    "privacy_risk_description": "Lunch length",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Lunch_Length",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                },
+                {
+                    "privacy_risk_description": "This is bad!",
+                    "privacy_risks_name": "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#ContextIdentity_Room",
+                    "privacy_score": 1,
+                    "privacy_strategies": [],
+                    "template_count": 1
+                }
+            ],
+            "privacy_score": 8,
+            "type": "Context"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC0": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC1": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC10": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC11": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC12": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC13": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC14": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC2": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC3": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC4": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC5": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC6": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC7": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC8": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC9": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC_11": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC_12": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC_5": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC_Conference": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#TVOC_room": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature1": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature12": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature2": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature3": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature4": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature5": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature6": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature7": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature8": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature9": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature_conference": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        },
+        "https://ontology.hviidnet.com/2020/01/03/privacyvunl-model.ttl#Temperature_outside": {
+            "privacy_risks": [],
+            "privacy_score": 0,
+            "type": "Data Stream"
+        }
+    }
+}

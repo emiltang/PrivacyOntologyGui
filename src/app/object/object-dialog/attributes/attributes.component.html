@@ -1,4 +1,4 @@
-<mat-expansion-panel hideToggle>
+<mat-expansion-panel>
     <mat-expansion-panel-header>
         <mat-panel-title>
             Attributes
@@ -10,16 +10,18 @@
     <mat-list>
         <mat-list-item *ngFor="let attribute of attributes">
             <mat-icon mat-list-icon>attach_file</mat-icon>
-            <div mat-line>{{attribute.name |truncateRdfUrl}}</div>
+            <div mat-line>{{attribute.name | truncateRdfUrl}}</div>
             <div mat-line>{{attribute.value}} : {{attribute.dataType}}</div>
             <button (click)="deleteAttribute(attribute)" mat-button>
                 <mat-icon>delete</mat-icon>
             </button>
         </mat-list-item>
     </mat-list>
-    <div fxLayoutAlign="end">
-        <button (click)="openNewDialog()" color="accent" mat-button>
+    <mat-action-row>
+        <button (click)="openNewDialog()"
+                color="accent"
+                mat-button>
             NEW
         </button>
-    </div>
+    </mat-action-row>
 </mat-expansion-panel>

@@ -4,26 +4,45 @@
 </button>
 <div class="padding">
     <div *ngIf="result | async as result; else loading">
-        <div *ngFor="let p of result.privacy_report | keyvalue">
-            <h2>{{p.key | truncateRdfUrl}}</h2>
-            <div class="padding">
-                <p><label>Privacy Score</label> {{p.value.privacy_score}}</p>
-                <p><label>Type</label> {{p.value.type}}</p>
-                <p><label>Privacy Risks</label></p>
-                <div class="padding">
-                    <div *ngFor="let r of p.value.privacy_risks">
-                        <p><label>Name</label> {{r.privacy_risks_name}}</p>
-                        <p><label>Description</label> {{r.privacy_risk_description}}
-                        <p>
-                        <p><label>Score</label> {{r.privacy_score}}
-                        <p>
-                        <p><label>Template Count</label> {{r.template_count}}
-                        <p>
-                        <mat-divider></mat-divider>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <mat-accordion class="example-headers-align">
+
+            <mat-expansion-panel *ngFor="let p of result.privacy_report | keyvalue">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>{{p.key | truncateRdfUrl}}</mat-panel-title>
+                    <mat-panel-description>{{p.value.type}}</mat-panel-description>
+                </mat-expansion-panel-header>
+                <h4>Privacy Score</h4>
+                <p>{{p.value.privacy_score}}</p>
+                <h4>Type</h4>
+                <p>{{p.value.type}}</p>
+                <h4>Privacy Risks</h4>
+                <table [dataSource]="p.value.privacy_risks" fxFlexFill mat-table>
+
+                    <ng-container matColumnDef="name">
+                        <th *matHeaderCellDef mat-header-cell>Name</th>
+                        <td *matCellDef="let risk" mat-cell> {{risk.privacy_risks_name | truncateRdfUrl}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="description">
+                        <th *matHeaderCellDef mat-header-cell>Description</th>
+                        <td *matCellDef="let risk" mat-cell> {{risk.privacy_risk_description}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="score">
+                        <th *matHeaderCellDef mat-header-cell>Score</th>
+                        <td *matCellDef="let risk" mat-cell> {{risk.privacy_score}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="template_count">
+                        <th *matHeaderCellDef mat-header-cell>Template Count</th>
+                        <td *matCellDef="let risk" mat-cell> {{risk.template_count}} </td>
+                    </ng-container>
+
+                    <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+                    <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+                </table>
+            </mat-expansion-panel>
+        </mat-accordion>
     </div>
 </div>
 <ng-template #loading>
