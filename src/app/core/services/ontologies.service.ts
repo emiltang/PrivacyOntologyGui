@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import ontologies from '../../../assets/ontologies.json';
-import { ElectronService } from 'ngx-electron';
 import { BehaviorSubject, defer, Observable } from 'rxjs';
+import { ElectronService } from './electron.service';
 
 @Injectable({
     providedIn: 'root'

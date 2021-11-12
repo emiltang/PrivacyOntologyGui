@@ -4,11 +4,6 @@ import * as fs from 'fs';
 import * as url from 'url';
 import { Sparql } from "./sparql";
 
-// Initialize remote module
-import { initialize } from "@electron/remote/main";
-
-initialize();
-
 let win: BrowserWindow = null;
 const args = process.argv.slice(1), serve = args.some(val => val === '--serve');
 
@@ -21,8 +16,7 @@ ipc.handle('get-predicates', async (event, namespace) => await Sparql.queryPredi
 
 function createWindow(): BrowserWindow {
 
-    const electronScreen = screen;
-    const size = electronScreen.getPrimaryDisplay().workAreaSize;
+    const size = screen.getPrimaryDisplay().workAreaSize;
 
     // Create the browser window.
     // noinspection RedundantConditionalExpressionJS
@@ -34,8 +28,7 @@ function createWindow(): BrowserWindow {
         webPreferences: {
             nodeIntegration: true,
             allowRunningInsecureContent: (serve) ? true : false,
-            contextIsolation: false,  // false if you want to run e2e test with Spectron
-            enableRemoteModule: true // true if you want to run e2e test with Spectron or use remote module in renderer context (ie. Angular)
+            //contextIsolation: false,  // false if you want to run e2e test with Spectron
         },
     });
 

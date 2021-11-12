@@ -9,10 +9,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTableModule } from '@angular/material/table';
+import { FilterContextPipe } from './filter-context.pipe';
+import { FilterDataPipe } from './filter-data.pipe';
 
 @NgModule({
     declarations: [
-        ResultComponent
+        ResultComponent,
+        FilterContextPipe,
+        FilterDataPipe
     ],
     imports: [
         CommonModule,
