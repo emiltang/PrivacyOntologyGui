@@ -4,6 +4,8 @@
 </button>
 <div class="padding">
     <div *ngIf="result | async as result; else loading">
+
+
         <mat-accordion class="example-headers-align">
 
             <mat-expansion-panel *ngFor="let p of result.privacy_report | keyvalue">
