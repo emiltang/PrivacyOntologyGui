@@ -50,3 +50,4 @@ Thumbs.db
 
 app/**/*.js
 !angular.webpack.js
+/.angular/
