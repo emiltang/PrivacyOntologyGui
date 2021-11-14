@@ -3,48 +3,28 @@
     BACK
 </button>
 <div class="padding">
-    <div *ngIf="result | async as result; else loading">
 
+    <ngx-charts-advanced-pie-chart *ngIf="data | async as d"
+                                   [gradient]="true"
+                                   [results]="d"
+                                   [view]="view">
+    </ngx-charts-advanced-pie-chart>
+
+    <div *ngIf="results | async as results; else loading">
 
         <mat-accordion class="example-headers-align">
-
-            <mat-expansion-panel *ngFor="let p of result.privacy_report | keyvalue">
-                <mat-expansion-panel-header>
-                    <mat-panel-title>{{p.key | truncateRdfUrl}}</mat-panel-title>
-                    <mat-panel-description>{{p.value.type}}</mat-panel-description>
-                </mat-expansion-panel-header>
-                <h4>Privacy Score</h4>
-                <p>{{p.value.privacy_score}}</p>
-                <h4>Type</h4>
-                <p>{{p.value.type}}</p>
-                <h4>Privacy Risks</h4>
-                <table [dataSource]="p.value.privacy_risks" fxFlexFill mat-table>
-
-                    <ng-container matColumnDef="name">
-                        <th *matHeaderCellDef mat-header-cell>Name</th>
-                        <td *matCellDef="let risk" mat-cell> {{risk.privacy_risks_name | truncateRdfUrl}} </td>
-                    </ng-container>
-
-                    <ng-container matColumnDef="description">
-                        <th *matHeaderCellDef mat-header-cell>Description</th>
-                        <td *matCellDef="let risk" mat-cell> {{risk.privacy_risk_description}} </td>
-                    </ng-container>
-
-                    <ng-container matColumnDef="score">
-                        <th *matHeaderCellDef mat-header-cell>Score</th>
-                        <td *matCellDef="let risk" mat-cell> {{risk.privacy_score}} </td>
-                    </ng-container>
-
-                    <ng-container matColumnDef="template_count">
-                        <th *matHeaderCellDef mat-header-cell>Template Count</th>
-                        <td *matCellDef="let risk" mat-cell> {{risk.template_count}} </td>
-                    </ng-container>
-
-                    <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
-                    <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
-                </table>
-            </mat-expansion-panel>
+            <app-privacy-risk *ngFor="let result of results | sortRisk | filter: 'DataStream' "
+                              [result]="result">
+            </app-privacy-risk>
         </mat-accordion>
+
+        <mat-accordion class="example-headers-align">
+            <app-privacy-risk *ngFor="let result of results | sortRisk | filter: 'Context' "
+                              [result]="result">
+            </app-privacy-risk>
+        </mat-accordion>
+
+
     </div>
 </div>
 <ng-template #loading>

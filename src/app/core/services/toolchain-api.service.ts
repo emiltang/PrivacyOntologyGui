@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { DTO, ResultDTO } from '../dto';
-import { INode } from '../model';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {PrivacyRiskResultDTO, ResultDTO} from '../dto';
+import {INode, IResult} from '../model';
+import {map} from 'rxjs/operators';
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
 const options = {headers: {'Content-Type': 'application/json'}};
@@ -30,12 +31,28 @@ export class ToolchainApiService {
         }
     }
 
-    // TODO: fix address url
-    public postToolchain(nodes: INode[]): Observable<ResultDTO> {
-        const data: DTO = {
+    private static resultDTOtoResultList(result: ResultDTO): IResult[] {
+        return Object.entries(result.privacy_report)
+            .map(([title, report]: [string, PrivacyRiskResultDTO]): IResult => ({
+                title,
+                score: report.privacy_score,
+                type: report.type,
+                privacyRisks: report.privacy_risks.map(value => ({
+                        name: value.privacy_risks_name,
+                        description: value.privacy_risk_description,
+                        privacyStrategies: value.privacy_strategies,
+                        score: value.privacy_score,
+                        templateCount: value.template_count
+                    })
+                )
+            }));
+    }
+
+    private static nodeListToDTO(nodes: INode[], namespace: string) {
+        return {
             nodes: nodes.map(node => ({
                 name: node.name,
-                address: `${this.namespace}${node.name}`,
+                address: `${namespace}${node.name}`,
                 type: node.type,
                 superType: node.superType,
                 attributes: node.attributes.map(attr => ({
@@ -45,13 +62,19 @@ export class ToolchainApiService {
                 }))
             })),
             links: nodes.flatMap(node => node.links.map(link => ({
-                subject: `${this.namespace}${node.name}`,
+                subject: `${namespace}${node.name}`,
                 predicate: link.predicate,
-                object: `${this.namespace}${link.object.name}`
+                object: `${namespace}${link.object.name}`
             }))),
-            namespace: this.namespace
+            namespace
         };
+    }
+
+    // TODO: fix address url
+    public postToolchain(nodes: INode[]): Observable<IResult[]> {
+        const data = ToolchainApiService.nodeListToDTO(nodes, this.namespace);
         // console.log(JSON.stringify(data));
-        return this.http.post<ResultDTO>(url, data, options);
+        return this.http.post<ResultDTO>(url, data, options)
+            .pipe(map(result => ToolchainApiService.resultDTOtoResultList(result)));
     }
 }

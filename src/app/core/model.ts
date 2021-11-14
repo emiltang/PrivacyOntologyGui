@@ -14,7 +14,7 @@ export interface ILink {
 export interface INode {
     id: string;
     name: string;
-    comment?: string;
+//    comment?: string;
     nodeType: NodeType;
     type: string;
     superType: string;
@@ -22,4 +22,16 @@ export interface INode {
     links: ILink[];
 }
 
+export interface IResult {
+    title: string;
+    score: number;
+    type: string;
+    privacyRisks: IPrivacyRisk[];
+}
 
+export interface IPrivacyRisk {
+    description: string;
+    name: string;
+    score: number;
+    templateCount: number;
+}
