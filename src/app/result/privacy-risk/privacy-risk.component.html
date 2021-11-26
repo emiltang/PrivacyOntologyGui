@@ -1,0 +1,36 @@
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-title>{{result.title | truncateRdfUrl}}</mat-panel-title>
+        <mat-panel-description>{{result.type}}</mat-panel-description>
+    </mat-expansion-panel-header>
+    <h4>Privacy Score</h4>
+    <p>{{result.score}}</p>
+    <h4>Type</h4>
+    <p>{{result.type}}</p>
+    <h4>Privacy Risks</h4>
+    <table [dataSource]="result.privacyRisks" fxFlexFill mat-table>
+
+        <ng-container matColumnDef="name">
+            <th *matHeaderCellDef mat-header-cell>Name</th>
+            <td *matCellDef="let risk" mat-cell> {{risk.name | truncateRdfUrl}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="description">
+            <th *matHeaderCellDef mat-header-cell>Description</th>
+            <td *matCellDef="let risk" mat-cell> {{risk.description}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="score">
+            <th *matHeaderCellDef mat-header-cell>Score</th>
+            <td *matCellDef="let risk" mat-cell> {{risk.score}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="templateCount">
+            <th *matHeaderCellDef mat-header-cell>Template Count</th>
+            <td *matCellDef="let risk" mat-cell> {{risk.templateCount}} </td>
+        </ng-container>
+
+        <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+        <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+    </table>
+</mat-expansion-panel>
