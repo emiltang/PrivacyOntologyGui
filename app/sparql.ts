@@ -18,9 +18,9 @@ export namespace Sparql {
         `;
         const result = <IQueryResultBindings>await myEngine.query(query, {
             sources: [
-                {type: 'file', value: 'http://localhost:4200/assets/privacyvunlv2.rdf'},
-                {type: 'file', value: 'http://localhost:4200/assets/privacyvunl.rdf'},
-                {type: 'file', value: `http://localhost:4200/assets/${namespace}`}
+                {type: 'file', value: 'http://127.0.0.1:4200/assets/privacyvunlv2.rdf'},
+                {type: 'file', value: 'http://127.0.0.1:4200/assets/privacyvunl.rdf'},
+                {type: 'file', value: `http://127.0.0.1:4200/assets/${namespace}`}
             ],
         });
         const bindings = await result.bindings();
@@ -39,9 +39,9 @@ export namespace Sparql {
         `;
         const result = <IQueryResultBindings>await myEngine.query(query, {
             sources: [
-                {type: 'file', value: 'http://localhost:4200/assets/privacyvunlv2.rdf'},
-                {type: 'file', value: 'http://localhost:4200/assets/privacyvunl.rdf'},
-                {type: 'file', value: `http://localhost:4200/assets/${namespace}`}
+                {type: 'file', value: 'http://127.0.0.1:4200/assets/privacyvunlv2.rdf'},
+                {type: 'file', value: 'http://127.0.0.1:4200/assets/privacyvunl.rdf'},
+                {type: 'file', value: `http://127.0.0.1:4200/assets/${namespace}`}
             ],
         });
         const bindings = await result.bindings();
@@ -57,9 +57,9 @@ export namespace Sparql {
         `;
         const result = <IQueryResultBindings>await myEngine.query(query, {
             sources: [
-                {type: 'file', value: 'http://localhost:4200/assets/privacyvunlv2.rdf'},
-                {type: 'file', value: 'http://localhost:4200/assets/privacyvunl.rdf'},
-                {type: 'file', value: `http://localhost:4200/assets/${namespace}`}
+                {type: 'file', value: 'http://127.0.0.1:4200/assets/privacyvunlv2.rdf'},
+                {type: 'file', value: 'http://127.0.0.1:4200/assets/privacyvunl.rdf'},
+                {type: 'file', value: `http://127.0.0.1:4200/assets/${namespace}`}
             ],
         });
         const bindings = await result.bindings();
@@ -84,9 +84,9 @@ export namespace Sparql {
 	    `;
         const sources = {
             sources: [
-                {type: 'file', value: 'http://localhost:4200/assets/privacyvunlv2.rdf'},
-                {type: 'file', value: 'http://localhost:4200/assets/privacyvunl.rdf'},
-                {type: 'file', value: `http://localhost:4200/assets/${namespace}`}
+                {type: 'file', value: 'http://127.0.0.1:4200/assets/privacyvunlv2.rdf'},
+                {type: 'file', value: 'http://127.0.0.1:4200/assets/privacyvunl.rdf'},
+                {type: 'file', value: `http://127.0.0.1:4200/assets/${namespace}`}
             ]
         };
         const result = <IQueryResultBindings>await myEngine.query(query, sources);
@@ -105,9 +105,9 @@ export namespace Sparql {
 	    `;
         const sources = {
             sources: [
-                {type: 'file', value: 'http://localhost:4200/assets/privacyvunlv2.rdf'},
-                {type: 'file', value: 'http://localhost:4200/assets/privacyvunl.rdf'},
-                {type: 'file', value: `http://localhost:4200/assets/${namespace}`}
+                {type: 'file', value: 'http://127.0.0.1:4200/assets/privacyvunlv2.rdf'},
+                {type: 'file', value: 'http://127.0.0.1:4200/assets/privacyvunl.rdf'},
+                {type: 'file', value: `http://127.0.0.1:4200/assets/${namespace}`}
             ]
         };
         const result = <IQueryResultBindings>await myEngine.query(query, sources);

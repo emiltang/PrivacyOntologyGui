@@ -1,10 +1,10 @@
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
+
 /**
  * Custom angular webpack configuration
  */
-
 module.exports = (config, options) => {
     config.target = 'electron-renderer';
-
 
     if (options.fileReplacements) {
         for(let fileReplacement of options.fileReplacements) {
@@ -19,6 +19,13 @@ module.exports = (config, options) => {
             break;
         }
     }
+
+    config.plugins = [
+        ...config.plugins,
+        new NodePolyfillPlugin({
+            excludeAliases: ["console"]
+        })
+    ];
 
     return config;
 }

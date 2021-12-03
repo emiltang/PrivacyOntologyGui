@@ -89,8 +89,9 @@
         "chai": "4.3.4",
         "conventional-changelog-cli": "2.1.1",
         "cross-env": "7.0.3",
-        "electron-builder": "22.13.1",
-        "electron-reload": "2.0.0-alpha.1",
+        "electron": "16.0.3",
+        "electron-builder": "^22.14.5",
+        "electron-reload": "^2.0.0-alpha.1",
         "eslint": "^8.1.0",
         "eslint-plugin-import": "2.25.3",
         "eslint-plugin-jsdoc": "37.0.3",
@@ -109,7 +110,8 @@
         "ts-node": "10.4.0",
         "typescript": "~4.4.4",
         "wait-on": "6.0.0",
-        "webdriver-manager": "12.1.8"
+        "webdriver-manager": "12.1.8",
+        "node-polyfill-webpack-plugin": "^1.1.4"
     },
     "engines": {
         "node": ">=14.0.0"
